@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-sand-50 text-ink font-sans antialiased;
+    overflow-x: hidden;
+  }
+  [dir='rtl'] body {
+    @apply font-arabic;
+  }
+  ::selection {
+    @apply bg-gold/20 text-ink;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-6 md:px-10;
+  }
+  .eyebrow {
+    @apply inline-block text-xs font-medium uppercase tracking-widest2 text-gold;
+  }
+  .heading-serif {
+    @apply font-serif font-medium leading-[1.05] text-ink;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-medium tracking-wide transition-all duration-300;
+  }
+  .btn-dark {
+    @apply btn bg-ink text-sand-50 hover:bg-ink-soft hover:shadow-soft;
+  }
+  .btn-ghost {
+    @apply btn border border-ink/20 text-ink hover:border-ink hover:bg-ink hover:text-sand-50;
+  }
+  .link-underline {
+    @apply relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full;
+  }
+}
+
+/* Custom thin scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #f3ece0; }
+::-webkit-scrollbar-thumb { background: #c5a273; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #b5895a; }
+
+/* Decorative animated grain / shimmer line */
+.shimmer-text {
+  background: linear-gradient(90deg, #a8854e 0%, #e7d9c4 50%, #a8854e 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @apply animate-shimmer;
+}
+
+.weave-bg {
+  background-image:
+    linear-gradient(135deg, rgba(168,133,78,0.06) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(168,133,78,0.06) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(168,133,78,0.06) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(168,133,78,0.06) 25%, transparent 25%);
+  background-size: 22px 22px;
+  background-position: 11px 0, 11px 0, 0 0, 0 0;
+}
