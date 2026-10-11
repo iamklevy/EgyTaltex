@@ -1,166 +1,164 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { motion, useReducedMotion, useScroll, useSpring } from "motion/react";
 
 import { Link, usePathname } from "@/i18n/navigation";
 import { languages } from "@/i18n/routing";
+import { EMAIL, PHONE_1, telHref } from "@/lib/contact";
 import { cn } from "@/lib/utils";
-import { EASE } from "@/components/site/motion";
-import { Logo } from "@/components/site/logo";
-import { NAV_LINKS } from "@/components/site/nav-links";
+import { DARK_HERO_PATHS, HEADER_LINKS } from "./nav-links";
+import { ProductsMenu } from "./products-menu";
+import { MobileMenu } from "./mobile-menu";
 
+/**
+ * Masthead: a thin label line over a full-width frosted bar whose bottom edge
+ * is a dashed seam. A red thread is pulled along the seam as the page is read.
+ * At the very top it lies flat and clear over the hero; once scrolled the
+ * label line folds away and the bar frosts over.
+ */
 export function SiteHeader() {
   const t = useTranslations();
   const locale = useLocale();
   const pathname = usePathname();
+  const reduce = useReducedMotion();
+  const [productsOpen, setProductsOpen] = useState(false);
+
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
-  const [lastPath, setLastPath] = useState(pathname);
-  const langRef = useRef<HTMLDivElement>(null);
-  const currentLang = languages.find((l) => l.code === locale);
-
-  // Close the mobile menu on navigation (state adjusted during render, not in an effect).
-  if (pathname !== lastPath) {
-    setLastPath(pathname);
-    setOpen(false);
-  }
-
   useEffect(() => {
-    const onClickOutside = (e: MouseEvent) => {
-      if (langRef.current && !langRef.current.contains(e.target as Node)) setLangOpen(false);
-    };
-    document.addEventListener("mousedown", onClickOutside);
-    return () => document.removeEventListener("mousedown", onClickOutside);
+    const sync = () => setScrolled(window.scrollY > 24);
+    sync();
+    window.addEventListener("scroll", sync, { passive: true });
+    return () => window.removeEventListener("scroll", sync);
   }, []);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const { scrollYProgress } = useScroll();
+  const thread = useSpring(scrollYProgress, { stiffness: 140, damping: 30, mass: 0.3 });
 
-  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
+  // inner pages that still open on the dark PageHero need light type up top;
+  // an open products panel is paper, so the bar goes paper with it
+  const frosted = scrolled || productsOpen;
+  const onDark = !frosted && DARK_HERO_PATHS.some((p) => pathname.startsWith(p));
 
   return (
-    <motion.header
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: EASE }}
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled ? "bg-sand-50/85 shadow-[0_1px_0_rgba(28,26,23,0.06)] backdrop-blur-md" : "bg-transparent"
-      )}
-    >
-      <nav className="container-x flex items-center justify-between py-4">
-        <Link href="/" aria-label={t("common.homeLabel")}>
-          <Logo alt={t("common.brand")} />
-        </Link>
-
-        <div className="hidden items-center gap-8 lg:flex">
-          {NAV_LINKS.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              aria-current={isActive(l.href) ? "page" : undefined}
-              className={cn(
-                "link-underline text-sm tracking-wide transition-colors",
-                isActive(l.href) ? "text-ink" : "text-ink-muted hover:text-ink"
-              )}
-            >
-              {t(`nav.${l.key}`)}
-            </Link>
-          ))}
-        </div>
-
-        <div className="flex items-center gap-3">
-          <div className="relative" ref={langRef}>
-            <button
-              type="button"
-              onClick={() => setLangOpen((o) => !o)}
-              className="rounded-full border border-ink/15 px-4 py-2 text-xs font-medium tracking-widest2 text-ink uppercase transition-colors hover:border-ink hover:bg-ink hover:text-sand-50"
-              aria-label={t("common.changeLanguage")}
-              aria-expanded={langOpen}
-            >
-              {currentLang?.label}
-            </button>
-            <AnimatePresence>
-              {langOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -6 }}
-                  transition={{ duration: 0.15 }}
-                  className="absolute end-0 top-full mt-2 min-w-36 overflow-hidden rounded-xl border border-ink/10 bg-sand-50 py-1 shadow-lg"
-                >
-                  {languages.map((l) => (
-                    <Link
-                      key={l.code}
-                      href={pathname}
-                      locale={l.code}
-                      onClick={() => setLangOpen(false)}
-                      className={cn(
-                        "flex w-full items-center justify-between px-4 py-2 text-sm transition-colors",
-                        l.code === locale ? "bg-ink text-sand-50" : "text-ink hover:bg-sand-100"
-                      )}
-                    >
-                      <span>{l.name}</span>
-                      <span className="text-xs tracking-widest2 uppercase opacity-70">{l.label}</span>
-                    </Link>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
+    <header className={cn("fixed inset-x-0 top-0 z-50 transition-colors duration-500", onDark ? "text-paper" : "text-ink")}>
+      {/* label line — folds away on scroll */}
+      <div
+        className={cn(
+          "hidden transition-[grid-template-rows,opacity] duration-500 ease-out md:grid",
+          frosted ? "grid-rows-[0fr] opacity-0" : "grid-rows-[1fr] opacity-100",
+        )}
+      >
+        <div className="overflow-hidden">
+          <div
+            className={cn(
+              "container-x label-mono flex h-9 items-center justify-between gap-6",
+              onDark ? "text-paper/60" : "text-ink-muted",
+            )}
+          >
+            <span>{t("common.brandFull")}</span>
+            <span className="flex items-center gap-5">
+              <a href={`mailto:${EMAIL}`} className="normal-case transition-colors hover:text-stitch">
+                {EMAIL}
+              </a>
+              <a href={telHref(PHONE_1)} dir="ltr" className="transition-colors hover:text-stitch">
+                {PHONE_1}
+              </a>
+            </span>
           </div>
-          <Link href="/contact" className="btn-dark hidden px-5! py-2.5! sm:inline-flex">
-            {t("nav.cta")}
-          </Link>
-          <button
-            type="button"
-            onClick={() => setOpen((o) => !o)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-ink/15 lg:hidden"
-            aria-label={t("common.menu")}
-            aria-expanded={open}
-          >
-            <div className="space-y-1.5">
-              <span className={cn("block h-px w-5 bg-ink transition-transform", open && "translate-y-1.5 rotate-45")} />
-              <span className={cn("block h-px w-5 bg-ink transition-opacity", open && "opacity-0")} />
-              <span className={cn("block h-px w-5 bg-ink transition-transform", open && "-translate-y-1.5 -rotate-45")} />
-            </div>
-          </button>
         </div>
-      </nav>
+      </div>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.4, ease: EASE }}
-            className="overflow-hidden border-t border-ink/10 bg-sand-50/95 backdrop-blur-md lg:hidden"
-          >
-            <div className="container-x flex flex-col gap-1 py-4">
-              {NAV_LINKS.map((l) => (
+      {/* the bar */}
+      <div className="relative">
+        {/* the frost lives on its own layer: a backdrop-filter on the bar itself
+            would stop the products panel inside it from blurring the page */}
+        <span
+          aria-hidden
+          className={cn(
+            "absolute inset-0 -z-10 transition-[background-color,backdrop-filter] duration-500",
+            frosted ? "bg-paper/75 backdrop-blur-xl backdrop-saturate-150" : "bg-transparent",
+          )}
+        />
+        <div className="container-x flex h-16 items-center gap-8">
+          <Link href="/" aria-label={t("common.homeLabel")} className="flex shrink-0 items-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo.png"
+              alt={t("common.brand")}
+              className={cn("h-7 w-auto transition-[filter] duration-500", onDark && "brightness-0 invert")}
+            />
+          </Link>
+
+          <nav className="hidden flex-1 items-center justify-center gap-9 text-[0.92rem] lg:flex">
+            <ProductsMenu open={productsOpen} setOpen={setProductsOpen} active={pathname.startsWith("/products")} />
+            {HEADER_LINKS.map(({ href, key }) => {
+              const active = pathname.startsWith(href);
+              return (
                 <Link
-                  key={l.href}
-                  href={l.href}
-                  aria-current={isActive(l.href) ? "page" : undefined}
-                  className={cn(
-                    "rounded-lg px-4 py-3 text-base transition-colors",
-                    isActive(l.href) ? "bg-ink text-sand-50" : "text-ink hover:bg-sand-100"
-                  )}
+                  key={href}
+                  href={href}
+                  aria-current={active ? "page" : undefined}
+                  className={cn("stitch-link py-2", active && "is-active")}
                 >
-                  {t(`nav.${l.key}`)}
+                  {t(`nav.${key}`)}
                 </Link>
+              );
+            })}
+          </nav>
+
+          <div className="ms-auto flex items-center gap-6 lg:ms-0">
+            {/* language — inline, like a masthead edition line */}
+            <div className="label-mono hidden items-center gap-2 sm:flex" aria-label={t("common.changeLanguage")}>
+              {languages.map((l, i) => (
+                <span key={l.code} className="flex items-center gap-2">
+                  {i > 0 && (
+                    <span aria-hidden className="opacity-30">
+                      /
+                    </span>
+                  )}
+                  <Link
+                    href={pathname}
+                    locale={l.code}
+                    aria-current={l.code === locale ? "true" : undefined}
+                    title={l.name}
+                    className={cn("transition-opacity", l.code === locale ? "opacity-100" : "opacity-50 hover:opacity-100")}
+                  >
+                    {l.label}
+                  </Link>
+                </span>
               ))}
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.header>
+
+            <Link
+              href="/contact"
+              className={cn(
+                "hidden rounded-full px-5 py-2.5 text-sm font-medium whitespace-nowrap transition-colors sm:inline-flex",
+                onDark ? "bg-paper text-ink hover:bg-paper-2" : "bg-ink text-paper hover:bg-ink-soft",
+              )}
+            >
+              {t("home.heroCtaPrimary")}
+            </Link>
+
+            <MobileMenu onDark={onDark} />
+          </div>
+        </div>
+
+        {/* the seam, and the thread pulled along it */}
+        <span
+          aria-hidden
+          className={cn(
+            "absolute inset-x-0 bottom-0 border-b border-dashed transition-colors duration-500",
+            onDark ? "border-paper/20" : frosted ? "border-ink/25" : "border-ink/12",
+          )}
+        />
+        <motion.span
+          aria-hidden
+          style={{ scaleX: reduce ? scrollYProgress : thread }}
+          className="absolute inset-x-0 -bottom-px h-[2px] origin-left bg-stitch rtl:origin-right"
+        />
+      </div>
+    </header>
   );
 }
