@@ -1,0 +1,198 @@
+{
+  "nav": {
+    "home": "Home",
+    "company": "Company",
+    "products": "Products",
+    "clients": "Clients",
+    "contact": "Contact",
+    "cta": "Get in touch"
+  },
+  "common": {
+    "since": "Since 2001",
+    "readMore": "Discover more",
+    "viewAll": "View all",
+    "brand": "Egytaltex",
+    "brandFull": "Egyptian Italian Company for Textiles & Garments",
+    "menu": "Menu",
+    "changeLanguage": "Change language",
+    "homeLabel": "Egytaltex home",
+    "mapIframe": "Egytaltex location",
+    "production": "production"
+  },
+  "home": {
+    "heroEyebrow": "Egyptian craft · Italian mentality",
+    "heroTitle1": "The art of",
+    "heroTitleHighlight": "fine textiles",
+    "heroTitle2": "woven with intention",
+    "heroLead": "Born in Egypt with an Italian soul, Egytaltex is a vertical house crafting premium yarn, fabric and garments for an elite clientele — because we truly love what we do.",
+    "heroCtaPrimary": "Explore our work",
+    "heroCtaSecondary": "Our story",
+    "scroll": "Scroll",
+    "statYears": "Years of craft",
+    "statClients": "Elite clients served",
+    "statVertical": "Vertical & in-house",
+    "statCotton": "Finest world cotton",
+    "introEyebrow": "Who we are",
+    "introTitle": "A small vertical house, an outsized standard of quality.",
+    "introBody": "Founded in 2001 on Egyptian land but with an Italian mentality, Egytaltex grew, season after season, into a compact vertical company built to fulfil the needs of our elite clients. From yarn to finished garment, we keep every step close — and we do it our way.",
+    "pillarsEyebrow": "What we master",
+    "pillarsTitle": "Four disciplines, one obsession with quality",
+    "pillar1Title": "Premium cotton yarn",
+    "pillar1Body": "We source and work the best cotton yarn in the world, the foundation of every piece we make.",
+    "pillar2Title": "Knit & fabric",
+    "pillar2Body": "Soft, durable, beautifully finished fabrics engineered for comfort and longevity.",
+    "pillar3Title": "Garment making",
+    "pillar3Body": "Cut, sewn and finished in-house with the patience of true craftspeople.",
+    "pillar4Title": "Vertical control",
+    "pillar4Body": "One roof, full control — from raw fibre to the label, quality is never outsourced.",
+    "processEyebrow": "How we work",
+    "processTitle": "From fibre to finished, kept in our own hands",
+    "step1": "Yarn selection",
+    "step1Body": "Only the finest long-staple cotton enters our floor.",
+    "step2": "Knitting & weaving",
+    "step2Body": "Precision machines tended by experienced hands.",
+    "step3": "Dyeing & finishing",
+    "step3Body": "Colour and hand-feel refined to an exacting standard.",
+    "step4": "Cut, make & trim",
+    "step4Body": "Tailored, inspected and packed, ready for our clients.",
+    "ctaTitle": "Let's make something beautiful together",
+    "ctaBody": "Tell us what you need — we build to order for brands who care about how things are made.",
+    "ctaButton": "Start a conversation"
+  },
+  "company": {
+    "heroEyebrow": "The company",
+    "heroTitle": "Egyptian land, Italian mentality",
+    "heroLead": "Egytaltex was born in 2001 — Egyptian by ground, Italian by mindset. What began as a love for the craft became a vertical house serving an elite clientele.",
+    "storyTitle": "Our story",
+    "storyP1": "We started with a simple conviction: that textiles made with care feel different in the hand and last longer in the wardrobe. From a modest beginning we built, step by step, a small vertical company — keeping yarn, fabric and garment under one roof.",
+    "storyP2": "Operating from the Free Zone in Nasr City, Cairo, we pair Egyptian heritage in cotton with an Italian sense of refinement. We do love what we do, and we do it our way.",
+    "valuesTitle": "What guides us",
+    "value1Title": "Craft over volume",
+    "value1Body": "We would rather make less, beautifully, than more, carelessly.",
+    "value2Title": "Vertical integrity",
+    "value2Body": "Owning the full chain means quality answers to us alone.",
+    "value3Title": "Elite by design",
+    "value3Body": "We build for clients who notice — and reward — the details.",
+    "value4Title": "Honest materials",
+    "value4Body": "The best world cotton, treated with the respect it deserves.",
+    "factsEyebrow": "By the numbers",
+    "factsTitle": "A compact house, real production",
+    "fact1Label": "Export-oriented facility",
+    "fact2Label": "Garments produced daily",
+    "fact3Label": "In-house production lines",
+    "marketsLabel": "Exported worldwide to",
+    "markets": [
+      "Italy",
+      "USA",
+      "England",
+      "South Africa"
+    ],
+    "timelineTitle": "A journey in seasons",
+    "t2001": "Founded in Cairo with an Italian mentality and a love of craft.",
+    "t2008": "Expanded into a vertical setup — yarn to garment under one roof.",
+    "t2015": "Refined our finishing to serve a growing elite clientele.",
+    "tToday": "A trusted house for brands who value how things are made."
+  },
+  "products": {
+    "heroEyebrow": "Products",
+    "heroTitle": "What we make",
+    "heroLead": "A focused range, made vertically and finished by hand. Every category begins with the best cotton yarn in the world.",
+    "items": [
+      {
+        "name": "Cotton Yarn",
+        "desc": "Premium long-staple cotton yarn, the foundation of everything we craft."
+      },
+      {
+        "name": "Knitted Fabrics",
+        "desc": "Single jersey, interlock, rib and piqué — soft, stable and beautifully finished."
+      },
+      {
+        "name": "T-Shirts & Tops",
+        "desc": "Tailored knit garments with an impeccable hand-feel and clean construction."
+      },
+      {
+        "name": "Polo Shirts",
+        "desc": "Structured piqué polos, finished to a refined, lasting standard."
+      },
+      {
+        "name": "Loungewear",
+        "desc": "Relaxed, breathable pieces engineered for comfort and longevity."
+      },
+      {
+        "name": "Private Label",
+        "desc": "Made-to-order production for brands who care how things are made."
+      }
+    ],
+    "featureTitle": "Built to order, finished to last",
+    "featureBody": "We do not mass-produce. Each program is developed with the client, sampled with care and produced under our own roof so quality is never left to chance.",
+    "tag1": "Best world cotton",
+    "tag2": "In-house finishing",
+    "tag3": "Small-batch quality",
+    "tag4": "Vertical control",
+    "galleryEyebrow": "From our floor",
+    "galleryTitle": "Real garments, made in Cairo"
+  },
+  "clients": {
+    "heroEyebrow": "Clients",
+    "heroTitle": "In good company",
+    "heroLead": "We craft quietly for an elite clientele — brands and houses that value how a thing is made as much as how it looks.",
+    "bodyTitle": "Trusted by those who notice the details",
+    "bodyText": "Our clients return not for the lowest price, but for the surest quality. We work as a partner: developing programs, protecting standards, and delivering with the consistency a serious brand requires.",
+    "sisterTitle": "Sister companies",
+    "sisterText": "Egytaltex is part of a small family of aligned textile ventures, allowing us to keep more of the process close and our standards uncompromised.",
+    "sisterList": [
+      {
+        "name": "Global Textile Industries",
+        "role": "Yarn dyeing"
+      },
+      {
+        "name": "Odiba Textile",
+        "role": "Fabric dyeing & finishing"
+      },
+      {
+        "name": "Italian Touch",
+        "role": "T-shirt printing"
+      }
+    ],
+    "testimonialQuote": "“They treat our product like their own. The hand-feel, the finishing, the consistency — it is exactly why we keep coming back.”",
+    "testimonialName": "A long-standing client"
+  },
+  "contact": {
+    "heroEyebrow": "Contact",
+    "heroTitle": "Let's talk textiles",
+    "heroLead": "Tell us about your project. We build to order and reply to every serious enquiry.",
+    "formName": "Your name",
+    "formEmail": "Email address",
+    "formCompany": "Company",
+    "formMessage": "How can we help?",
+    "formSubmit": "Send message",
+    "formSent": "Thank you — we will be in touch shortly.",
+    "formError": "Something went wrong — please try again or email us directly.",
+    "infoTitle": "Get in touch",
+    "addressLabel": "Address",
+    "address": "Free Zone, Nasr City, Cairo, Egypt",
+    "phoneLabel": "Phone",
+    "faxLabel": "Fax",
+    "emailLabel": "Email",
+    "hoursLabel": "Hours",
+    "hours": "Sun – Thu · 9:00 – 17:00",
+    "mapTitle": "Find us"
+  },
+  "footer": {
+    "tagline": "Egyptian Italian Company for Textiles & Garments.",
+    "blurb": "A vertical house crafting premium yarn, fabric and garments since 2001.",
+    "explore": "Explore",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "madeWith": "Crafted in Cairo"
+  },
+  "meta": {
+    "title": "Egytaltex · Egyptian Italian Textiles & Garments",
+    "description": "Egytaltex — Egyptian Italian Company for Textiles and Garments. Premium cotton yarn, fabrics and vertical garment manufacturing since 2001."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you are looking for does not exist or has moved.",
+    "back": "Back to home"
+  }
+}
