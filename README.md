@@ -3,8 +3,9 @@
 A modern, trilingual (English / Italian / Arabic RTL) rebuild of the
 Egytaltex site — the Egyptian Italian Company for Textiles & Garments.
 
-Built with **React + Vite + Tailwind CSS + Framer Motion**, in an elegant,
-premium aesthetic with smooth scroll animations and full RTL support.
+Built with **Next.js 16 (App Router) + React 19 + TypeScript + Tailwind CSS v4 +
+shadcn/ui + next-intl + Motion**, in an elegant, premium aesthetic with smooth
+scroll animations and full RTL support.
 
 ## Pages
 
@@ -16,50 +17,57 @@ premium aesthetic with smooth scroll animations and full RTL support.
 - **Clients** — real client logos (OVS, Coin, Delta Galil, Bob Company,
   Roy Roger's, La Société, Del Mare 1911, Klevy), testimonial, sister
   companies
-- **Contact** — form (wired to Formspree, see below), contact details,
+- **Contact** — form (sent via Resend, see below), contact details,
   embedded Google Map
 
 ## Run locally
 
 ```bash
 npm install
-npm run dev              # start dev server (http://localhost:5173)
-npm run dev -- --host    # also expose it on your LAN, to test on mobile
-npm run build             # production build → dist/
-npm run preview           # preview the production build
+cp .env.example .env.local   # then fill in RESEND_API_KEY
+npm run dev                  # http://localhost:3000
+npm run build                # production build
+npm run start                # serve the production build
+npm run lint
 ```
 
-## Language switcher
+## Languages
 
-Click the language pill in the navbar (**EN / IT / ع**) to switch between
-English, Italian, and Arabic (RTL). The choice is saved to `localStorage`.
+Each language has its own URL, so all three are indexed by search engines:
 
-## Contact form setup
+| Language | URL prefix |
+| --- | --- |
+| English (default) | `/` |
+| Italiano | `/it` |
+| العربية (RTL) | `/ar` |
 
-The contact form posts to Formspree. Before it will actually deliver
-messages, create a free form at [formspree.io](https://formspree.io) and
-replace the placeholder endpoint in
-[`src/pages/Contact.jsx`](src/pages/Contact.jsx):
+Routing lives in [`i18n/routing.ts`](i18n/routing.ts) and
+[`proxy.ts`](proxy.ts); the language pill in the navbar switches between
+them on the same page.
 
-```js
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
-```
+## Contact form
 
-Until that's set, submissions will show the "something went wrong" error
-state instead of silently failing.
+Submissions go through a Server Action
+([`lib/contact-action.ts`](lib/contact-action.ts)) that emails the team with
+[Resend](https://resend.com). Set these in `.env.local` (and in your host's
+environment variables):
+
+- `RESEND_API_KEY` — from the Resend dashboard
+- `EMAIL_FROM` — sender; its domain must be verified in Resend
+- `CONTACT_TO` — inbox that receives enquiries (defaults to `egytaltex@yahoo.com`)
+
+Without `RESEND_API_KEY`, submissions show the "something went wrong" state.
 
 ## Customising content
 
-- **Site copy**: [`src/i18n/translations.js`](src/i18n/translations.js)
-  (all three languages) and contact details in the `contactInfo` export
-  there.
-- **Product photography**: [`public/products/`](public/products), wired
-  up in [`src/data/productImages.js`](src/data/productImages.js).
-- **Client logos**: [`public/clients/`](public/clients), listed in
-  [`src/pages/Clients.jsx`](src/pages/Clients.jsx).
-- **Home page imagery**: [`src/data/homeImages.js`](src/data/homeImages.js).
+- **Site copy**: [`messages/en.json`](messages/en.json),
+  [`messages/it.json`](messages/it.json), [`messages/ar.json`](messages/ar.json).
+- **Contact details**: [`lib/contact.ts`](lib/contact.ts).
+- **Images & client logos**: [`public/products/`](public/products) and
+  [`public/clients/`](public/clients), wired up in
+  [`content/images.ts`](content/images.ts).
 - **Logo / favicon**: [`public/logo.png`](public/logo.png) and
-  [`public/favicon.png`](public/favicon.png), rendered via
-  [`src/components/Logo.jsx`](src/components/Logo.jsx).
-- **Colours, fonts and animations**:
-  [`tailwind.config.js`](tailwind.config.js).
+  [`public/favicon.png`](public/favicon.png).
+- **Colours, fonts and utilities**: [`app/globals.css`](app/globals.css)
+  (Tailwind v4 `@theme`); fonts are loaded in
+  [`app/[locale]/layout.tsx`](app/[locale]/layout.tsx).

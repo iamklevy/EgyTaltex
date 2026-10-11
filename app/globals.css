@@ -1,0 +1,135 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*  Egytaltex brand tokens — a warm, premium textile palette, carried over
+    from the Vite build so the look is unchanged by the migration.        */
+@theme inline {
+  --color-sand-50: #faf7f2;
+  --color-sand-100: #f3ece0;
+  --color-sand-200: #e7d9c4;
+  --color-sand-300: #d8c1a0;
+  --color-sand-400: #c5a273;
+  --color-sand-500: #b5895a;
+  --color-ink: #1c1a17;
+  --color-ink-soft: #2a2722;
+  --color-ink-muted: #6b6259;
+  --color-gold: #a8854e;
+  --color-gold-light: #c2a26a;
+  --color-olive: #5a5640;
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-arabic: var(--font-tajawal), var(--font-inter), sans-serif;
+
+  --tracking-widest2: 0.25em;
+
+  --shadow-soft: 0 20px 60px -20px rgb(28 26 23 / 0.25);
+  --shadow-card: 0 10px 40px -12px rgb(28 26 23 / 0.18);
+
+  --animate-shimmer: shimmer 3s linear infinite;
+  --animate-float-slow: float-slow 7s ease-in-out infinite;
+
+  /* shadcn/ui semantic tokens, mapped onto the brand palette above. */
+  --color-background: var(--color-sand-50);
+  --color-foreground: var(--color-ink);
+  --color-primary: var(--color-ink);
+  --color-primary-foreground: var(--color-sand-50);
+  --color-muted: var(--color-sand-100);
+  --color-muted-foreground: var(--color-ink-muted);
+  --color-destructive: #b91c1c;
+  --color-border: rgb(28 26 23 / 0.1);
+  --color-input: rgb(28 26 23 / 0.15);
+  --color-ring: var(--color-gold);
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+:root {
+  --radius: 0.75rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
+  body {
+    @apply bg-sand-50 font-sans text-ink antialiased;
+    overflow-x: clip;
+  }
+  [dir="rtl"] body {
+    @apply font-arabic;
+  }
+  ::selection {
+    @apply bg-gold/20 text-ink;
+  }
+}
+
+@utility container-x {
+  @apply mx-auto w-full max-w-7xl px-6 md:px-10;
+}
+@utility eyebrow {
+  @apply inline-block text-xs font-medium tracking-widest2 text-gold uppercase;
+}
+@utility heading-serif {
+  @apply font-serif leading-[1.05] font-medium text-ink;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-medium tracking-wide transition-all duration-300;
+}
+@utility btn-dark {
+  @apply btn bg-ink text-sand-50 hover:bg-ink-soft hover:shadow-soft;
+}
+@utility btn-ghost {
+  @apply btn border border-ink/20 text-ink hover:border-ink hover:bg-ink hover:text-sand-50;
+}
+@utility link-underline {
+  @apply relative after:absolute after:start-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full;
+}
+
+/* Gold gradient sweep across the hero highlight word. */
+@utility shimmer-text {
+  background: linear-gradient(90deg, #a8854e 0%, #e7d9c4 50%, #a8854e 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: var(--animate-shimmer);
+}
+
+/* Faint woven texture used behind dark panels and the hero. */
+@utility weave-bg {
+  background-image:
+    linear-gradient(135deg, rgb(168 133 78 / 0.06) 25%, transparent 25%),
+    linear-gradient(225deg, rgb(168 133 78 / 0.06) 25%, transparent 25%),
+    linear-gradient(45deg, rgb(168 133 78 / 0.06) 25%, transparent 25%),
+    linear-gradient(315deg, rgb(168 133 78 / 0.06) 25%, transparent 25%);
+  background-size: 22px 22px;
+  background-position: 11px 0, 11px 0, 0 0, 0 0;
+}
+
+/* Custom thin scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #f3ece0; }
+::-webkit-scrollbar-thumb { background: #c5a273; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #b5895a; }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
