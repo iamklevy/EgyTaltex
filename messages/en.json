@@ -5,7 +5,10 @@
     "products": "Products",
     "clients": "Clients",
     "contact": "Contact",
-    "cta": "Get in touch"
+    "cta": "Get in touch",
+    "close": "Close menu",
+    "allProducts": "All products",
+    "whatsapp": "WhatsApp us"
   },
   "common": {
     "since": "Since 2001",
@@ -20,44 +23,80 @@
     "production": "production"
   },
   "home": {
-    "heroEyebrow": "Egyptian craft · Italian mentality",
-    "heroTitle1": "The art of",
-    "heroTitleHighlight": "fine textiles",
-    "heroTitle2": "woven with intention",
-    "heroLead": "Born in Egypt with an Italian soul, Egytaltex is a vertical house crafting premium yarn, fabric and garments for an elite clientele — because we truly love what we do.",
-    "heroCtaPrimary": "Explore our work",
-    "heroCtaSecondary": "Our story",
+    "heroKicker": "Est. 2001 · Free Zone, Cairo",
+    "heroLine1": "Egyptian land.",
+    "heroLine2": "Italian mentality.",
+    "heroLead": "A vertical knitwear house in Cairo, making polos, T-shirts and jerseywear for European and American brands — from dyed yarn to the sealed export carton.",
+    "heroCtaPrimary": "Start a programme",
+    "heroCtaSecondary": "Follow the thread",
+    "heroCaption": "Fig. 01 — Cotton yarn, before it becomes anything.",
     "scroll": "Scroll",
-    "statYears": "Years of craft",
-    "statClients": "Elite clients served",
-    "statVertical": "Vertical & in-house",
-    "statCotton": "Finest world cotton",
-    "introEyebrow": "Who we are",
-    "introTitle": "A small vertical house, an outsized standard of quality.",
-    "introBody": "Founded in 2001 on Egyptian land but with an Italian mentality, Egytaltex grew, season after season, into a compact vertical company built to fulfil the needs of our elite clients. From yarn to finished garment, we keep every step close — and we do it our way.",
-    "pillarsEyebrow": "What we master",
-    "pillarsTitle": "Four disciplines, one obsession with quality",
-    "pillar1Title": "Premium cotton yarn",
-    "pillar1Body": "We source and work the best cotton yarn in the world, the foundation of every piece we make.",
-    "pillar2Title": "Knit & fabric",
-    "pillar2Body": "Soft, durable, beautifully finished fabrics engineered for comfort and longevity.",
-    "pillar3Title": "Garment making",
-    "pillar3Body": "Cut, sewn and finished in-house with the patience of true craftspeople.",
-    "pillar4Title": "Vertical control",
-    "pillar4Body": "One roof, full control — from raw fibre to the label, quality is never outsourced.",
-    "processEyebrow": "How we work",
-    "processTitle": "From fibre to finished, kept in our own hands",
-    "step1": "Yarn selection",
-    "step1Body": "Only the finest long-staple cotton enters our floor.",
-    "step2": "Knitting & weaving",
-    "step2Body": "Precision machines tended by experienced hands.",
-    "step3": "Dyeing & finishing",
-    "step3Body": "Colour and hand-feel refined to an exacting standard.",
-    "step4": "Cut, make & trim",
-    "step4Body": "Tailored, inspected and packed, ready for our clients.",
-    "ctaTitle": "Let's make something beautiful together",
-    "ctaBody": "Tell us what you need — we build to order for brands who care about how things are made.",
-    "ctaButton": "Start a conversation"
+    "statFounded": "Founded",
+    "statDaily": "Pieces a day",
+    "statExport": "For export",
+    "statMarkets": "Export markets",
+    "manifestoChapter": "I — The house",
+    "manifestoQuote": "We are proud to say, not in a shy way, that we do it our way.",
+    "manifestoBody": "Egytaltex was born in 2001 on Egyptian land, but with an Italian mentality. Year after year, with a lot of hard work, it grew into a small vertical company built on one idea: if we control every step, we can stand behind every piece.",
+    "manifestoSign": "The Egytaltex way",
+    "manifestoLink": "Read our story",
+    "journeyChapter": "II — From fibre to finish",
+    "journeyTitle": "One thread, followed all the way.",
+    "journeyLead": "Four sister companies, one chain. Nothing leaves our hands until it is ready to leave Egypt.",
+    "inHouse": "In-house",
+    "sister": "Sister company",
+    "journey": [
+      {
+        "title": "Yarn dyeing",
+        "body": "The best cotton yarn in the world, dyed to the colour of the season."
+      },
+      {
+        "title": "Circular knitting",
+        "body": "Jersey, piqué and interlock, knitted every day on our own circular machines."
+      },
+      {
+        "title": "Fabric dyeing & finishing",
+        "body": "Colour, hand-feel and stability are set before a single cut is made."
+      },
+      {
+        "title": "Flat-knit collars",
+        "body": "Collars and cuffs knitted to match, so a polo reads as one piece."
+      },
+      {
+        "title": "Cut & sew",
+        "body": "Patterns cut and garments sewn on our own floor in the Free Zone."
+      },
+      {
+        "title": "Embroidery & print",
+        "body": "Logos embroidered in-house; prints by our sister studio."
+      },
+      {
+        "title": "Enzyme wash & softening",
+        "body": "Garment-washed for the lived-in softness Italian brands ask for."
+      },
+      {
+        "title": "Packed for export",
+        "body": "Inspected, folded and shipped to Italy, the USA, England and South Africa."
+      }
+    ],
+    "rangeChapter": "III — The range",
+    "rangeTitle": "Knitwear, made for people who notice.",
+    "rangeLead": "100% cotton, made to order, in the quantities a real collection needs.",
+    "rangeCta": "See the full range",
+    "marketsChapter": "IV — Worn in",
+    "marketsTitle": "Made in Cairo. Worn across four markets.",
+    "markets": [
+      "Italy",
+      "United States",
+      "England",
+      "South Africa"
+    ],
+    "clientsLabel": "Some of the houses we make for",
+    "ctaChapter": "V — Your programme",
+    "ctaTitle": "Have a programme in mind?",
+    "ctaBody": "Tell us the product, the quantities and the market. We'll come back with fabric options, samples and a straight answer on timing.",
+    "ctaButton": "Start a programme",
+    "ctaOr": "Or write to us directly"
   },
   "company": {
     "heroEyebrow": "The company",
@@ -94,43 +133,97 @@
     "tToday": "A trusted house for brands who value how things are made."
   },
   "products": {
-    "heroEyebrow": "Products",
-    "heroTitle": "What we make",
-    "heroLead": "A focused range, made vertically and finished by hand. Every category begins with the best cotton yarn in the world.",
+    "heroChapter": "The range",
+    "heroTitle": "Knitwear, made to order.",
+    "heroLead": "Eleven categories, one standard. Every programme is developed with the client, sampled, and produced inside our own chain — from dyed yarn to the finished garment.",
+    "indexLabel": "Index",
     "items": [
       {
-        "name": "Cotton Yarn",
-        "desc": "Premium long-staple cotton yarn, the foundation of everything we craft."
+        "name": "Polo shirts",
+        "desc": "Piqué and jersey polos with flat-knit collars, in short and long sleeve."
       },
       {
-        "name": "Knitted Fabrics",
-        "desc": "Single jersey, interlock, rib and piqué — soft, stable and beautifully finished."
+        "name": "T-shirts",
+        "desc": "Crew and V-neck tees in 100% cotton jersey, plain or printed."
       },
       {
-        "name": "T-Shirts & Tops",
-        "desc": "Tailored knit garments with an impeccable hand-feel and clean construction."
+        "name": "Jackets",
+        "desc": "Soft, unstructured knitted jackets, garment-washed for an easy hand."
       },
       {
-        "name": "Polo Shirts",
-        "desc": "Structured piqué polos, finished to a refined, lasting standard."
+        "name": "Sweatshirts & hoodies",
+        "desc": "Crewnecks, hoodies and zip-throughs for everyday wear."
       },
       {
-        "name": "Loungewear",
-        "desc": "Relaxed, breathable pieces engineered for comfort and longevity."
+        "name": "Sportswear",
+        "desc": "Active and leisure pieces cut for movement."
       },
       {
-        "name": "Private Label",
-        "desc": "Made-to-order production for brands who care how things are made."
+        "name": "Swimwear",
+        "desc": "Swim shorts and beachwear for resort collections."
+      },
+      {
+        "name": "Training suits",
+        "desc": "Matching tops and joggers, as sets or separates."
+      },
+      {
+        "name": "Vests",
+        "desc": "Tank tops and sleeveless vests in fine cotton jersey."
+      },
+      {
+        "name": "Ladies' dresses & underwear",
+        "desc": "Jersey dresses and everyday underwear for women."
+      },
+      {
+        "name": "Men's underwear",
+        "desc": "Briefs, boxers and undershirts in soft cotton knit."
+      },
+      {
+        "name": "Pyjamas",
+        "desc": "Sleepwear sets in soft, washed cotton."
       }
     ],
-    "featureTitle": "Built to order, finished to last",
-    "featureBody": "We do not mass-produce. Each program is developed with the client, sampled with care and produced under our own roof so quality is never left to chance.",
-    "tag1": "Best world cotton",
-    "tag2": "In-house finishing",
-    "tag3": "Small-batch quality",
-    "tag4": "Vertical control",
-    "galleryEyebrow": "From our floor",
-    "galleryTitle": "Real garments, made in Cairo"
+    "featureChapter": "Ref. 01 — The polo",
+    "featureTitle": "The polo, piece by piece.",
+    "featureBody": "Most of what leaves our floor is polos and T-shirts in 100% cotton. A polo shows the whole chain at once: the piqué is knitted on our circular machines, the collar and cuffs on our flat machines, and the finished garment is washed for softness before it is packed.",
+    "specs": [
+      {
+        "label": "Fabric",
+        "value": "100% cotton piqué or jersey"
+      },
+      {
+        "label": "Collar & cuffs",
+        "value": "Flat-knitted to match"
+      },
+      {
+        "label": "Finish",
+        "value": "Enzyme wash & softening"
+      },
+      {
+        "label": "Details",
+        "value": "Embroidery, printed facings, contrast trims"
+      }
+    ],
+    "catalogueChapter": "The catalogue",
+    "catalogueTitle": "Everything we make.",
+    "ref": "Ref.",
+    "enquire": "Enquire",
+    "finishChapter": "Made to your spec",
+    "finishTitle": "Options on every programme.",
+    "finishes": [
+      "Custom-dyed yarn",
+      "Piqué, jersey & interlock",
+      "Flat-knit collars & cuffs",
+      "Embroidery",
+      "Printing",
+      "Enzyme wash",
+      "Softening",
+      "Private label & packing"
+    ],
+    "galleryChapter": "From our floor",
+    "galleryTitle": "Real garments, made in Cairo.",
+    "customTitle": "Not on the list?",
+    "customBody": "If it can be knitted from cotton, ask us. Every client programme starts as a conversation."
   },
   "clients": {
     "heroEyebrow": "Clients",
@@ -180,7 +273,7 @@
   },
   "footer": {
     "tagline": "Egyptian Italian Company for Textiles & Garments.",
-    "blurb": "A vertical house crafting premium yarn, fabric and garments since 2001.",
+    "blurb": "A vertical knitwear house in Cairo, making for European and American brands since 2001.",
     "explore": "Explore",
     "contact": "Contact",
     "rights": "All rights reserved.",

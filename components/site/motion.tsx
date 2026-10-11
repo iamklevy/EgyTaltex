@@ -29,15 +29,18 @@ export function Reveal({
   delay = 0,
   direction = "up",
   className,
+  id,
 }: {
   children: React.ReactNode;
   delay?: number;
   direction?: Direction;
   className?: string;
+  id?: string;
 }) {
   const reduce = useReducedMotion();
   return (
     <motion.div
+      id={id}
       className={className}
       initial={reduce ? false : { opacity: 0, ...offset(direction) }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}

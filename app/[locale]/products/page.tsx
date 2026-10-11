@@ -4,10 +4,11 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/seo";
-import { cn } from "@/lib/utils";
-import { featureImage, productMedia, productionGallery } from "@/content/images";
-import { PageHero } from "@/components/site/page-hero";
-import { Reveal, ZoomIn } from "@/components/site/motion";
+import { categoryPhotos, poloGallery, productionGallery } from "@/content/images";
+import { Appear, Reveal } from "@/components/site/motion";
+import { Arrow, Chapter } from "@/components/site/editorial";
+import { PRODUCT_SLUGS } from "@/components/site/nav-links";
+import { ProgrammeCta } from "@/components/site/programme-cta";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -15,130 +16,225 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return { title: t("heroTitle"), description: t("heroLead"), alternates: alternatesFor(locale, "/products") };
 }
 
-// Editorial bento spans (desktop). Index matches messages `products.items` order.
-const spans = [
-  "md:col-span-4 md:row-span-2", // 0 Cotton Yarn — large feature
-  "md:col-span-2 md:row-span-1", // 1 Knitted Fabrics
-  "md:col-span-2 md:row-span-1", // 2 T-Shirts
-  "md:col-span-2 md:row-span-2", // 3 Polo — tall
-  "md:col-span-4 md:row-span-1", // 4 Loungewear — wide
-  "md:col-span-4 md:row-span-1", // 5 Private Label — wide
-];
-
-function ProductCard({ i, name, desc }: { i: number; name: string; desc: string }) {
-  const media = productMedia[i];
-  return (
-    <Reveal delay={(i % 3) * 0.08} className={cn("group relative min-h-65 overflow-hidden rounded-3xl bg-sand-200", spans[i])}>
-      <Image
-        src={media.src}
-        alt={name}
-        fill
-        sizes="(min-width: 768px) 66vw, 100vw"
-        className={cn("object-cover transition-transform duration-1200 ease-out group-hover:scale-110", media.pos)}
-      />
-      {/* gradient veil */}
-      <div className="absolute inset-0 bg-linear-to-t from-ink/90 via-ink/25 to-transparent transition-opacity duration-500 group-hover:from-ink/95" />
-      {/* index chip */}
-      <span className="absolute start-5 top-5 rounded-full bg-sand-50/85 px-3 py-1 text-[11px] font-medium tracking-widest2 text-ink uppercase backdrop-blur-sm">
-        0{i + 1}
-      </span>
-      {/* content */}
-      <div className="absolute inset-x-0 bottom-0 p-6 md:p-7">
-        <h3 className="font-serif text-2xl text-sand-50 md:text-3xl">{name}</h3>
-        <p className="mt-2 max-w-md text-sm leading-relaxed text-sand-100/0 transition-all duration-500 group-hover:text-sand-100 md:translate-y-2 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
-          {desc}
-        </p>
-        <span className="mt-3 inline-flex items-center gap-2 text-xs tracking-widest2 text-gold-light uppercase opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-          <span className="h-px w-6 bg-gold-light" /> Egytaltex
-        </span>
-      </div>
-    </Reveal>
-  );
-}
+const pad = (n: number) => String(n).padStart(2, "0");
 
 export default async function ProductsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations();
   const p = await getTranslations("products");
-  const items = p.raw("items") as { name: string; desc: string }[];
-  const tags = [p("tag1"), p("tag2"), p("tag3"), p("tag4")];
+
+  const items = (p.raw("items") as { name: string; desc: string }[]).map((item, i) => ({
+    ...item,
+    slug: PRODUCT_SLUGS[i],
+    photo: categoryPhotos[PRODUCT_SLUGS[i]],
+  }));
+  const specs = p.raw("specs") as { label: string; value: string }[];
+  const finishes = p.raw("finishes") as string[];
 
   return (
     <>
-      <PageHero eyebrow={p("heroEyebrow")} title={p("heroTitle")} lead={p("heroLead")} />
-
-      {/* BENTO GALLERY */}
-      <section className="py-16 md:py-24">
+      {/* HERO — title page of the catalogue, with its index */}
+      <section className="pt-28 md:pt-32">
         <div className="container-x">
-          <div className="grid auto-rows-[260px] grid-cols-1 gap-4 md:grid-cols-6 md:gap-5">
-            {items.map((item, i) => (
-              <ProductCard key={i} i={i} name={item.name} desc={item.desc} />
-            ))}
+          <Appear y={0} duration={0.8} className="border-b border-ink/15 pb-4">
+            <Chapter>{p("heroChapter")}</Chapter>
+          </Appear>
+
+          <div className="grid gap-14 pt-10 pb-20 md:pt-14 md:pb-28 lg:grid-cols-12">
+            <div className="lg:col-span-7">
+              <Appear as="h1" y={40} delay={0.1} className="heading-serif text-[clamp(3.2rem,8vw,7.25rem)] leading-[0.95]">
+                {p("heroTitle")}
+              </Appear>
+              <Appear as="p" y={20} delay={0.3} className="mt-8 max-w-xl text-lg leading-relaxed text-ink-muted">
+                {p("heroLead")}
+              </Appear>
+            </div>
+
+            <Appear y={20} delay={0.4} className="lg:col-span-5 lg:pt-4">
+              <nav aria-label={p("indexLabel")}>
+                <p className="label-mono text-ink-muted">{p("indexLabel")}</p>
+                <ol className="mt-4 grid border-t border-ink/15 sm:grid-cols-2 sm:gap-x-8">
+                  {items.map((item, i) => (
+                    <li key={item.slug} className="border-b border-ink/15">
+                      <a
+                        href={`#${item.slug}`}
+                        className="group flex items-baseline gap-3 py-2.5 transition-colors hover:text-stitch"
+                      >
+                        <span className="label-mono text-ink-muted group-hover:text-stitch">{pad(i + 1)}</span>
+                        <span className="text-[0.95rem]">{item.name}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            </Appear>
           </div>
         </div>
       </section>
 
-      {/* FEATURE — split image + copy */}
-      <section className="py-8 md:py-16">
-        <div className="container-x">
-          <div className="grid overflow-hidden rounded-[2.5rem] bg-ink lg:grid-cols-2">
-            <div className="relative min-h-85 overflow-hidden lg:min-h-full">
-              <ZoomIn className="absolute inset-0">
-                <Image src={featureImage} alt={p("featureTitle")} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover object-center" />
-              </ZoomIn>
-              <div className="absolute inset-0 bg-linear-to-r from-transparent to-ink/40 rtl:bg-linear-to-l" />
-            </div>
-            <div className="relative p-9 text-sand-50 md:p-14">
-              <div className="weave-bg pointer-events-none absolute inset-0 opacity-10" />
-              <div className="relative">
-                <span className="eyebrow text-gold-light">{p("heroEyebrow")}</span>
-                <h2 className="heading-serif mt-4 text-4xl text-sand-50 md:text-5xl">{p("featureTitle")}</h2>
-                <p className="mt-5 max-w-md text-lg leading-relaxed text-sand-200">{p("featureBody")}</p>
-                <div className="mt-8 grid grid-cols-2 gap-3">
-                  {tags.map((tag) => (
-                    <div
-                      key={tag}
-                      className="flex items-center gap-3 rounded-xl border border-sand-50/10 bg-sand-50/4 px-4 py-3 text-sm transition-colors duration-500 hover:border-gold/50"
-                    >
-                      <span className="text-gold-light">✦</span>
-                      <span className="text-sand-100">{tag}</span>
+      {/* FEATURE — the polo, where the whole chain shows */}
+      <section className="border-y border-ink/10 bg-paper-2 py-24 md:py-32">
+        <div className="container-x grid gap-14 lg:grid-cols-12">
+          <div className="grid grid-cols-2 content-start gap-4 md:gap-5 lg:col-span-7">
+            {[categoryPhotos["polo-shirts"]!, ...poloGallery].map((src, i) => (
+              <Reveal key={src} delay={(i % 3) * 0.08} className={i === 0 ? "col-span-2" : undefined}>
+                <figure>
+                  <div className={`relative overflow-hidden bg-paper-3 ${i === 0 ? "aspect-[16/10]" : "aspect-square"}`}>
+                    <Image
+                      src={src}
+                      alt={`${items[0].name} ${i + 1}`}
+                      fill
+                      sizes={i === 0 ? "(min-width: 1024px) 55vw, 100vw" : "(min-width: 1024px) 28vw, 50vw"}
+                      // multiply melts the photos' white studio backdrops into the paper
+                      className="object-cover mix-blend-multiply transition-transform duration-1000 ease-out hover:scale-105"
+                    />
+                  </div>
+                  <figcaption className="label-mono mt-2.5 text-ink-muted">
+                    Fig. {pad(i + 1)} — {items[0].name}
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+
+          <div className="lg:col-span-5">
+            <div className="lg:sticky lg:top-32">
+              <Reveal>
+                <Chapter>{p("featureChapter")}</Chapter>
+                <h2 className="heading-serif mt-6 text-5xl md:text-6xl">{p("featureTitle")}</h2>
+                <p className="mt-6 text-lg leading-relaxed text-ink-muted">{p("featureBody")}</p>
+              </Reveal>
+              <Reveal delay={0.1}>
+                <dl className="mt-10 border-t border-ink/15">
+                  {specs.map((s) => (
+                    <div key={s.label} className="grid grid-cols-5 gap-4 border-b border-ink/15 py-4">
+                      <dt className="label-mono col-span-2 pt-1.5 text-ink-muted">{s.label}</dt>
+                      <dd className="col-span-3 font-serif text-xl text-ink md:text-2xl">{s.value}</dd>
                     </div>
                   ))}
-                </div>
-                <Link href="/contact" className="btn mt-9 bg-sand-50 text-ink hover:bg-white">
-                  {t("nav.cta")} <span aria-hidden className="inline-block rtl:-scale-x-100">→</span>
+                </dl>
+                <Link href="/contact" className="btn-dark mt-10">
+                  {p("enquire")} <Arrow />
                 </Link>
-              </div>
+              </Reveal>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* CATALOGUE — one swatch card per category */}
+      <section className="py-28 md:py-36">
+        <div className="container-x">
+          <Reveal>
+            <Chapter>{p("catalogueChapter")}</Chapter>
+            <h2 className="heading-serif mt-6 text-5xl md:text-6xl">{p("catalogueTitle")}</h2>
+          </Reveal>
+
+          <div className="mt-16 grid gap-x-6 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+            {items.map((item, i) => (
+              <Reveal key={item.slug} id={item.slug} delay={(i % 3) * 0.08} className="scroll-mt-28">
+                <article className="group">
+                  <div className="relative aspect-4/3 overflow-hidden bg-paper-2 sm:aspect-4/5">
+                    {item.photo ? (
+                      <Image
+                        src={item.photo}
+                        alt={item.name}
+                        fill
+                        sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover mix-blend-multiply transition-transform duration-1000 ease-out group-hover:scale-105"
+                      />
+                    ) : (
+                      // not photographed yet: a knitted swatch carrying the reference number
+                      <div className="knit-texture absolute inset-0 grid place-items-center transition-transform duration-1000 ease-out group-hover:scale-105">
+                        <span className="font-serif text-[7rem] leading-none text-ink/85 italic" dir="ltr">
+                          {pad(i + 1)}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="label-mono mt-4 flex items-center justify-between text-ink-muted">
+                    <span>
+                      {p("ref")} {pad(i + 1)}
+                    </span>
+                    <Link href="/contact" className="inline-flex items-center gap-1.5 text-ink hover:text-stitch">
+                      {p("enquire")} <Arrow />
+                    </Link>
+                  </div>
+                  <h3 className="mt-3 font-serif text-3xl text-ink">{item.name}</h3>
+                  <p className="mt-2 leading-relaxed text-ink-muted">{item.desc}</p>
+                </article>
+              </Reveal>
+            ))}
+
+            {/* fills the twelfth slot of the grid: anything else they can knit */}
+            <Reveal delay={0.16} className="sm:col-span-2 lg:col-span-1">
+              <Link
+                href="/contact"
+                className="group flex h-full min-h-80 flex-col justify-between bg-ink p-8 text-paper transition-colors hover:bg-ink-soft"
+              >
+                <span className="label-mono text-stitch-light">
+                  {p("ref")} {pad(items.length + 1)}
+                </span>
+                <span>
+                  <span className="block font-serif text-4xl md:text-5xl">{p("customTitle")}</span>
+                  <span className="mt-4 block max-w-xs leading-relaxed text-paper-3">{p("customBody")}</span>
+                  <span className="label-mono mt-8 inline-flex items-center gap-2 text-paper group-hover:text-stitch-light">
+                    {p("enquire")} <Arrow />
+                  </span>
+                </span>
+              </Link>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* MADE TO YOUR SPEC */}
+      <section className="relative overflow-hidden bg-ink py-24 text-paper md:py-32">
+        <div className="weave-bg pointer-events-none absolute inset-0 opacity-40" />
+        <div className="container-x relative">
+          <Reveal>
+            <Chapter className="text-stitch-light">{p("finishChapter")}</Chapter>
+            <h2 className="heading-serif mt-6 max-w-3xl text-5xl text-paper md:text-6xl">{p("finishTitle")}</h2>
+          </Reveal>
+          <ul className="mt-14 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
+            {finishes.map((f, i) => (
+              <li key={f} className="flex items-baseline gap-4 border-t border-paper/20 py-5">
+                <span className="label-mono text-stitch-light">{pad(i + 1)}</span>
+                <span className="font-serif text-2xl">{f}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
       {/* FROM OUR FLOOR — real production photography */}
-      <section className="py-16 md:py-24">
+      <section className="pt-28 md:pt-36">
         <div className="container-x">
           <Reveal>
-            <span className="eyebrow">{p("galleryEyebrow")}</span>
-            <h2 className="heading-serif mt-4 max-w-xl text-4xl md:text-5xl">{p("galleryTitle")}</h2>
+            <Chapter>{p("galleryChapter")}</Chapter>
+            <h2 className="heading-serif mt-6 max-w-xl text-5xl md:text-6xl">{p("galleryTitle")}</h2>
           </Reveal>
-          <Reveal delay={0.1}>
-            <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 md:gap-4">
-              {productionGallery.map((src, i) => (
-                <div key={src} className="group relative aspect-square overflow-hidden rounded-2xl bg-sand-200">
+          <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-5">
+            {productionGallery.map((src, i) => (
+              <Reveal key={src} delay={(i % 4) * 0.06}>
+                <div className="group relative aspect-square overflow-hidden bg-paper-2">
                   <Image
                     src={src}
                     alt={`${t("common.brand")} ${t("common.production")} ${i + 1}`}
                     fill
                     sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw"
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                    className="object-cover mix-blend-multiply transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                 </div>
-              ))}
-            </div>
-          </Reveal>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
+
+      <ProgrammeCta chapter={t("nav.cta")} />
     </>
   );
 }

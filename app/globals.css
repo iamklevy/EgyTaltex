@@ -3,30 +3,41 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/*  Egytaltex brand tokens — a warm, premium textile palette, carried over
-    from the Vite build so the look is unchanged by the migration.        */
+/*  Egytaltex brand tokens — "editorial mill": ivory paper, deep navy ink
+    and one stitch-red thread. The older sand/gold names are kept as aliases
+    so every page picks up the new palette.                               */
 @theme inline {
-  --color-sand-50: #faf7f2;
-  --color-sand-100: #f3ece0;
-  --color-sand-200: #e7d9c4;
-  --color-sand-300: #d8c1a0;
-  --color-sand-400: #c5a273;
-  --color-sand-500: #b5895a;
-  --color-ink: #1c1a17;
-  --color-ink-soft: #2a2722;
-  --color-ink-muted: #6b6259;
-  --color-gold: #a8854e;
-  --color-gold-light: #c2a26a;
+  --color-paper: #f4efe6;
+  --color-paper-2: #ebe3d6;
+  --color-paper-3: #dcd2c2;
+  --color-ink: #131b2e;
+  --color-ink-soft: #1f2a44;
+  --color-ink-muted: #5b6272;
+  --color-stitch: #b23a2a;
+  --color-stitch-deep: #8f2c1f;
+  --color-stitch-light: #e48a74;
+
+  --color-sand-50: var(--color-paper);
+  --color-sand-100: var(--color-paper-2);
+  --color-sand-200: var(--color-paper-3);
+  --color-sand-300: #c9bca8;
+  --color-sand-400: #a99a84;
+  --color-sand-500: #8a7c67;
+  --color-gold: var(--color-stitch);
+  --color-gold-light: var(--color-stitch-light);
+  --color-gold-deep: var(--color-stitch-deep);
   --color-olive: #5a5640;
 
-  --font-serif: var(--font-cormorant), Georgia, serif;
+  /* the Latin display face has no Arabic glyphs, so Arabic falls through to Amiri */
+  --font-serif: var(--font-instrument), var(--font-amiri), Georgia, serif;
   --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
   --font-arabic: var(--font-tajawal), var(--font-inter), sans-serif;
 
   --tracking-widest2: 0.25em;
 
-  --shadow-soft: 0 20px 60px -20px rgb(28 26 23 / 0.25);
-  --shadow-card: 0 10px 40px -12px rgb(28 26 23 / 0.18);
+  --shadow-soft: 0 20px 60px -20px rgb(19 27 46 / 0.25);
+  --shadow-card: 0 10px 40px -12px rgb(19 27 46 / 0.18);
 
   --animate-shimmer: shimmer 3s linear infinite;
   --animate-float-slow: float-slow 7s ease-in-out infinite;
@@ -39,8 +50,8 @@
   --color-muted: var(--color-sand-100);
   --color-muted-foreground: var(--color-ink-muted);
   --color-destructive: #b91c1c;
-  --color-border: rgb(28 26 23 / 0.1);
-  --color-input: rgb(28 26 23 / 0.15);
+  --color-border: rgb(19 27 46 / 0.12);
+  --color-input: rgb(19 27 46 / 0.18);
   --color-ring: var(--color-gold);
 }
 
@@ -82,7 +93,11 @@
   @apply inline-block text-xs font-medium tracking-widest2 text-gold uppercase;
 }
 @utility heading-serif {
-  @apply font-serif leading-[1.05] font-medium text-ink;
+  @apply font-serif leading-[1.02] font-normal tracking-[-0.01em] text-ink;
+}
+/* small typewriter-style labels: chapter marks, figure captions, specs */
+@utility label-mono {
+  @apply font-mono text-[11px] tracking-[0.14em] uppercase;
 }
 @utility btn {
   @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-medium tracking-wide transition-all duration-300;
@@ -99,7 +114,7 @@
 
 /* Gold gradient sweep across the hero highlight word. */
 @utility shimmer-text {
-  background: linear-gradient(90deg, #a8854e 0%, #e7d9c4 50%, #a8854e 100%);
+  background: linear-gradient(90deg, #b23a2a 0%, #e48a74 50%, #b23a2a 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -110,19 +125,59 @@
 /* Faint woven texture used behind dark panels and the hero. */
 @utility weave-bg {
   background-image:
-    linear-gradient(135deg, rgb(168 133 78 / 0.06) 25%, transparent 25%),
-    linear-gradient(225deg, rgb(168 133 78 / 0.06) 25%, transparent 25%),
-    linear-gradient(45deg, rgb(168 133 78 / 0.06) 25%, transparent 25%),
-    linear-gradient(315deg, rgb(168 133 78 / 0.06) 25%, transparent 25%);
+    linear-gradient(135deg, rgb(228 138 116 / 0.05) 25%, transparent 25%),
+    linear-gradient(225deg, rgb(228 138 116 / 0.05) 25%, transparent 25%),
+    linear-gradient(45deg, rgb(228 138 116 / 0.05) 25%, transparent 25%),
+    linear-gradient(315deg, rgb(228 138 116 / 0.05) 25%, transparent 25%);
   background-size: 22px 22px;
   background-position: 11px 0, 11px 0, 0 0, 0 0;
 }
 
+/* Paper grain over the whole page — keeps the ivory from looking flat. */
+@utility grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.07 0 0 0 0 0.1 0 0 0 0 0.18 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Columns of jersey "V" stitches — stands in for a photo on catalogue swatches. */
+@utility knit-texture {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='12'%3E%3Cpath d='M1.5 1.5 L7 10 L12.5 1.5' fill='none' stroke='%23131b2e' stroke-opacity='0.11' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* Nav link: a dashed stitch sews itself in underneath on hover; the current
+   page gets a solid stitch-red thread. */
+@utility stitch-link {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: 2px;
+    height: 1.5px;
+    background-image: repeating-linear-gradient(90deg, currentColor 0 5px, transparent 5px 9px);
+    opacity: 0.6;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  &:where([dir="rtl"] *)::after {
+    transform-origin: right;
+  }
+  &:hover::after,
+  &:focus-visible::after {
+    transform: scaleX(1);
+  }
+  &.is-active::after {
+    transform: scaleX(1);
+    background: var(--color-stitch);
+    opacity: 1;
+  }
+}
+
 /* Custom thin scrollbar */
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #f3ece0; }
-::-webkit-scrollbar-thumb { background: #c5a273; border-radius: 999px; }
-::-webkit-scrollbar-thumb:hover { background: #b5895a; }
+::-webkit-scrollbar-track { background: #ebe3d6; }
+::-webkit-scrollbar-thumb { background: #a99a84; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #131b2e; }
 
 @media (prefers-reduced-motion: reduce) {
   *,

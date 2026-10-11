@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Cormorant_Garamond, Inter, Tajawal } from "next/font/google";
+import { Amiri, IBM_Plex_Mono, Instrument_Serif, Inter, Tajawal } from "next/font/google";
 
 import { routing, isRtl } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/contact";
@@ -11,11 +11,26 @@ import { SiteHeader } from "@/components/site/site-header";
 import { SiteFooter } from "@/components/site/site-footer";
 import "../globals.css";
 
-const cormorant = Cormorant_Garamond({
+const instrument = Instrument_Serif({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: "400",
   style: ["normal", "italic"],
-  variable: "--font-cormorant",
+  variable: "--font-instrument",
+  display: "swap",
+});
+
+const amiri = Amiri({
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-amiri",
+  display: "swap",
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-plex-mono",
   display: "swap",
 });
 
@@ -79,7 +94,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={isRtl(locale) ? "rtl" : "ltr"}
-      className={`${cormorant.variable} ${inter.variable} ${tajawal.variable}`}
+      className={`${instrument.variable} ${amiri.variable} ${plexMono.variable} ${inter.variable} ${tajawal.variable}`}
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
@@ -89,6 +104,8 @@ export default async function LocaleLayout({
           <main>{children}</main>
           <SiteFooter />
         </NextIntlClientProvider>
+        {/* paper grain over everything; multiply keeps it out of the way of clicks and contrast */}
+        <div aria-hidden className="grain pointer-events-none fixed inset-0 z-[100] mix-blend-multiply" />
       </body>
     </html>
   );

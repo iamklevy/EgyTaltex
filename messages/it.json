@@ -5,7 +5,10 @@
     "products": "Prodotti",
     "clients": "Clienti",
     "contact": "Contatti",
-    "cta": "Contattaci"
+    "cta": "Contattaci",
+    "close": "Chiudi menu",
+    "allProducts": "Tutti i prodotti",
+    "whatsapp": "Scrivici su WhatsApp"
   },
   "common": {
     "since": "Dal 2001",
@@ -20,44 +23,80 @@
     "production": "produzione"
   },
   "home": {
-    "heroEyebrow": "Artigianato egiziano · mentalità italiana",
-    "heroTitle1": "L'arte dei",
-    "heroTitleHighlight": "tessuti pregiati",
-    "heroTitle2": "tessuti con intenzione",
-    "heroLead": "Nata in Egitto con un'anima italiana, Egytaltex è una casa verticale che crea filati, tessuti e capi di alta qualità per una clientela d'élite — perché amiamo davvero ciò che facciamo.",
-    "heroCtaPrimary": "Scopri il nostro lavoro",
-    "heroCtaSecondary": "La nostra storia",
+    "heroKicker": "Dal 2001 · Free Zone, Il Cairo",
+    "heroLine1": "Terra egiziana.",
+    "heroLine2": "Mentalità italiana.",
+    "heroLead": "Una maglieria verticale al Cairo: polo, T-shirt e capi in jersey per marchi europei e americani — dal filato tinto al cartone sigillato per l'export.",
+    "heroCtaPrimary": "Avvia un programma",
+    "heroCtaSecondary": "Segui il filo",
+    "heroCaption": "Fig. 01 — Filato di cotone, prima di diventare qualcosa.",
     "scroll": "Scorri",
-    "statYears": "Anni di artigianato",
-    "statClients": "Clienti d'élite serviti",
-    "statVertical": "Verticale e interno",
-    "statCotton": "Il miglior cotone al mondo",
-    "introEyebrow": "Chi siamo",
-    "introTitle": "Una piccola casa verticale, uno standard di qualità straordinario.",
-    "introBody": "Fondata nel 2001 su suolo egiziano ma con una mentalità italiana, Egytaltex è cresciuta, stagione dopo stagione, in una compatta azienda verticale costruita per soddisfare le esigenze dei nostri clienti d'élite. Dal filato al capo finito, manteniamo ogni fase vicina — e lo facciamo a modo nostro.",
-    "pillarsEyebrow": "Ciò che padroneggiamo",
-    "pillarsTitle": "Quattro discipline, un'unica ossessione per la qualità",
-    "pillar1Title": "Filato di cotone pregiato",
-    "pillar1Body": "Selezioniamo e lavoriamo il miglior filato di cotone al mondo, la base di ogni pezzo che creiamo.",
-    "pillar2Title": "Maglieria e tessuti",
-    "pillar2Body": "Tessuti morbidi, durevoli e rifiniti splendidamente, progettati per comfort e longevità.",
-    "pillar3Title": "Confezione capi",
-    "pillar3Body": "Tagliati, cuciti e rifiniti internamente con la pazienza dei veri artigiani.",
-    "pillar4Title": "Controllo verticale",
-    "pillar4Body": "Un solo tetto, controllo totale — dalla fibra grezza all'etichetta, la qualità non è mai esternalizzata.",
-    "processEyebrow": "Come lavoriamo",
-    "processTitle": "Dalla fibra al finito, tutto nelle nostre mani",
-    "step1": "Selezione del filato",
-    "step1Body": "Solo il miglior cotone a fibra lunga entra nel nostro stabilimento.",
-    "step2": "Maglieria e tessitura",
-    "step2Body": "Macchine di precisione seguite da mani esperte.",
-    "step3": "Tintura e finissaggio",
-    "step3Body": "Colore e mano perfezionati secondo uno standard rigoroso.",
-    "step4": "Taglio, confezione e rifinitura",
-    "step4Body": "Su misura, ispezionato e imballato, pronto per i nostri clienti.",
-    "ctaTitle": "Creiamo insieme qualcosa di bello",
-    "ctaBody": "Dicci cosa ti serve — produciamo su ordinazione per marchi che si preoccupano di come le cose vengono fatte.",
-    "ctaButton": "Inizia una conversazione"
+    "statFounded": "Fondata",
+    "statDaily": "Capi al giorno",
+    "statExport": "Per l'export",
+    "statMarkets": "Mercati di export",
+    "manifestoChapter": "I — La casa",
+    "manifestoQuote": "Siamo orgogliosi di dirlo, senza timidezza: lo facciamo a modo nostro.",
+    "manifestoBody": "Egytaltex è nata nel 2001 in terra egiziana, ma con mentalità italiana. Anno dopo anno, con tanto lavoro, è cresciuta fino a diventare una piccola azienda verticale fondata su un'idea: se controlliamo ogni passaggio, possiamo garantire ogni capo.",
+    "manifestoSign": "Il metodo Egytaltex",
+    "manifestoLink": "Leggi la nostra storia",
+    "journeyChapter": "II — Dalla fibra al capo finito",
+    "journeyTitle": "Un solo filo, seguito fino in fondo.",
+    "journeyLead": "Quattro aziende sorelle, una sola filiera. Niente lascia le nostre mani finché non è pronto a lasciare l'Egitto.",
+    "inHouse": "Interno",
+    "sister": "Azienda sorella",
+    "journey": [
+      {
+        "title": "Tintura del filato",
+        "body": "Il miglior filato di cotone al mondo, tinto nel colore della stagione."
+      },
+      {
+        "title": "Maglieria circolare",
+        "body": "Jersey, piqué e interlock, lavorati ogni giorno sui nostri telai circolari."
+      },
+      {
+        "title": "Tintura e finissaggio",
+        "body": "Colore, mano e stabilità vengono definiti prima ancora del taglio."
+      },
+      {
+        "title": "Colli in rettilinea",
+        "body": "Colli e polsini lavorati in abbinamento, perché la polo sia un capo unico."
+      },
+      {
+        "title": "Taglio e confezione",
+        "body": "Cartamodelli tagliati e capi cuciti nel nostro reparto, nella Free Zone."
+      },
+      {
+        "title": "Ricamo e stampa",
+        "body": "Loghi ricamati internamente; stampe realizzate dal nostro studio gemello."
+      },
+      {
+        "title": "Lavaggio enzimatico e ammorbidimento",
+        "body": "Capi lavati per la morbidezza vissuta che i marchi italiani chiedono."
+      },
+      {
+        "title": "Imballato per l'export",
+        "body": "Controllato, piegato e spedito in Italia, USA, Inghilterra e Sudafrica."
+      }
+    ],
+    "rangeChapter": "III — La gamma",
+    "rangeTitle": "Maglieria, fatta per chi nota i dettagli.",
+    "rangeLead": "100% cotone, prodotta su ordinazione, nelle quantità che una vera collezione richiede.",
+    "rangeCta": "Vedi tutta la gamma",
+    "marketsChapter": "IV — Indossato in",
+    "marketsTitle": "Fatto al Cairo. Indossato in quattro mercati.",
+    "markets": [
+      "Italia",
+      "Stati Uniti",
+      "Inghilterra",
+      "Sudafrica"
+    ],
+    "clientsLabel": "Alcune delle case per cui produciamo",
+    "ctaChapter": "V — Il vostro programma",
+    "ctaTitle": "Avete un programma in mente?",
+    "ctaBody": "Diteci prodotto, quantità e mercato. Torneremo con proposte di tessuto, campioni e una risposta chiara sui tempi.",
+    "ctaButton": "Avvia un programma",
+    "ctaOr": "Oppure scriveteci direttamente"
   },
   "company": {
     "heroEyebrow": "L'azienda",
@@ -94,43 +133,97 @@
     "tToday": "Una casa affidabile per marchi che apprezzano come le cose vengono fatte."
   },
   "products": {
-    "heroEyebrow": "Prodotti",
-    "heroTitle": "Cosa produciamo",
-    "heroLead": "Una gamma mirata, prodotta verticalmente e rifinita a mano. Ogni categoria inizia con il miglior filato di cotone al mondo.",
+    "heroChapter": "La gamma",
+    "heroTitle": "Maglieria su ordinazione.",
+    "heroLead": "Undici categorie, un solo standard. Ogni programma viene sviluppato con il cliente, campionato e prodotto all'interno della nostra filiera — dal filato tinto al capo finito.",
+    "indexLabel": "Indice",
     "items": [
       {
-        "name": "Filato di cotone",
-        "desc": "Filato di cotone pregiato a fibra lunga, la base di tutto ciò che creiamo."
-      },
-      {
-        "name": "Tessuti a maglia",
-        "desc": "Jersey singolo, interlock, rib e piqué — morbidi, stabili e splendidamente rifiniti."
-      },
-      {
-        "name": "T-shirt e top",
-        "desc": "Capi in maglia su misura con una mano impeccabile e una costruzione pulita."
-      },
-      {
         "name": "Polo",
-        "desc": "Polo in piqué strutturate, rifinite secondo uno standard raffinato e duraturo."
+        "desc": "Polo in piqué e jersey con colli in maglieria rettilinea, a manica corta e lunga."
       },
       {
-        "name": "Abbigliamento comfort",
-        "desc": "Capi rilassati e traspiranti progettati per comfort e longevità."
+        "name": "T-shirt",
+        "desc": "T-shirt girocollo e scollo a V in jersey 100% cotone, tinta unita o stampate."
       },
       {
-        "name": "Private Label",
-        "desc": "Produzione su ordinazione per marchi che si preoccupano di come le cose vengono fatte."
+        "name": "Giacche",
+        "desc": "Giacche in maglia morbide e destrutturate, lavate in capo per una mano leggera."
+      },
+      {
+        "name": "Felpe e hoodie",
+        "desc": "Girocollo, felpe con cappuccio e full zip per tutti i giorni."
+      },
+      {
+        "name": "Abbigliamento sportivo",
+        "desc": "Capi active e tempo libero, tagliati per il movimento."
+      },
+      {
+        "name": "Costumi da bagno",
+        "desc": "Boxer da mare e beachwear per collezioni resort."
+      },
+      {
+        "name": "Tute da allenamento",
+        "desc": "Felpe e pantaloni coordinati, in set o separati."
+      },
+      {
+        "name": "Canotte",
+        "desc": "Canotte e smanicati in jersey di cotone fine."
+      },
+      {
+        "name": "Abiti e intimo donna",
+        "desc": "Abiti in jersey e intimo quotidiano da donna."
+      },
+      {
+        "name": "Intimo uomo",
+        "desc": "Slip, boxer e canottiere in morbida maglia di cotone."
+      },
+      {
+        "name": "Pigiami",
+        "desc": "Completi da notte in cotone morbido e lavato."
       }
     ],
-    "featureTitle": "Prodotto su ordinazione, rifinito per durare",
-    "featureBody": "Non produciamo in serie. Ogni programma viene sviluppato con il cliente, campionato con cura e prodotto sotto il nostro tetto affinché la qualità non sia mai lasciata al caso.",
-    "tag1": "Il miglior cotone al mondo",
-    "tag2": "Finissaggio interno",
-    "tag3": "Qualità a piccoli lotti",
-    "tag4": "Controllo verticale",
-    "galleryEyebrow": "Dal nostro stabilimento",
-    "galleryTitle": "Capi reali, prodotti al Cairo"
+    "featureChapter": "Rif. 01 — La polo",
+    "featureTitle": "La polo, pezzo per pezzo.",
+    "featureBody": "La maggior parte di ciò che esce dal nostro reparto sono polo e T-shirt in 100% cotone. Una polo mostra l'intera filiera in un colpo d'occhio: il piqué è lavorato sui nostri telai circolari, collo e polsini sulle nostre macchine rettilinee, e il capo finito viene lavato per la morbidezza prima dell'imballaggio.",
+    "specs": [
+      {
+        "label": "Tessuto",
+        "value": "Piqué o jersey 100% cotone"
+      },
+      {
+        "label": "Collo e polsini",
+        "value": "In maglieria rettilinea, abbinati"
+      },
+      {
+        "label": "Finissaggio",
+        "value": "Lavaggio enzimatico e ammorbidimento"
+      },
+      {
+        "label": "Dettagli",
+        "value": "Ricamo, paramonture stampate, finiture a contrasto"
+      }
+    ],
+    "catalogueChapter": "Il catalogo",
+    "catalogueTitle": "Tutto ciò che produciamo.",
+    "ref": "Rif.",
+    "enquire": "Richiedi info",
+    "finishChapter": "Su vostra specifica",
+    "finishTitle": "Opzioni per ogni programma.",
+    "finishes": [
+      "Filato tinto su richiesta",
+      "Piqué, jersey e interlock",
+      "Colli e polsini in rettilinea",
+      "Ricamo",
+      "Stampa",
+      "Lavaggio enzimatico",
+      "Ammorbidimento",
+      "Private label e confezionamento"
+    ],
+    "galleryChapter": "Dal nostro reparto",
+    "galleryTitle": "Capi veri, fatti al Cairo.",
+    "customTitle": "Non è in elenco?",
+    "customBody": "Se si può realizzare in maglia di cotone, chiedeteci. Ogni programma nasce da una conversazione."
   },
   "clients": {
     "heroEyebrow": "Clienti",
@@ -180,7 +273,7 @@
   },
   "footer": {
     "tagline": "Compagnia Egiziana Italiana per Tessuti e Abbigliamento.",
-    "blurb": "Una casa verticale che crea filati, tessuti e capi pregiati dal 2001.",
+    "blurb": "Una maglieria verticale al Cairo, che produce per marchi europei e americani dal 2001.",
     "explore": "Esplora",
     "contact": "Contatti",
     "rights": "Tutti i diritti riservati.",
