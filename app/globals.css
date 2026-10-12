@@ -3,70 +3,36 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/*  Egytaltex brand tokens — "editorial mill": ivory paper, deep navy ink
-    and one stitch-red thread. The older sand/gold names are kept as aliases
-    so every page picks up the new palette.                               */
+/*  Egytaltex brand tokens — a quiet catalogue: white pages, near-black type,
+    light grey tiles behind the garment photography, hairline rules. No accent
+    colour; the products and the facts carry the page.                      */
 @theme inline {
-  --color-paper: #f4efe6;
-  --color-paper-2: #ebe3d6;
-  --color-paper-3: #dcd2c2;
-  --color-ink: #131b2e;
-  --color-ink-soft: #1f2a44;
-  --color-ink-muted: #5b6272;
-  --color-stitch: #b23a2a;
-  --color-stitch-deep: #8f2c1f;
-  --color-stitch-light: #e48a74;
+  --color-paper: #ffffff;
+  --color-surface: #f3f3f1;
+  --color-surface-2: #e9e9e6;
+  --color-ink: #111111;
+  --color-ink-soft: #2a2a2a;
+  --color-ink-muted: #6b6b6b;
+  --color-line: #e2e2df;
+  --color-success: #2f6b3a;
 
-  --color-sand-50: var(--color-paper);
-  --color-sand-100: var(--color-paper-2);
-  --color-sand-200: var(--color-paper-3);
-  --color-sand-300: #c9bca8;
-  --color-sand-400: #a99a84;
-  --color-sand-500: #8a7c67;
-  --color-gold: var(--color-stitch);
-  --color-gold-light: var(--color-stitch-light);
-  --color-gold-deep: var(--color-stitch-deep);
-  --color-olive: #5a5640;
+  --font-sans: var(--font-geist), var(--font-plex-arabic), system-ui, sans-serif;
 
-  /* the Latin display face has no Arabic glyphs, so Arabic falls through to Amiri */
-  --font-serif: var(--font-instrument), var(--font-amiri), Georgia, serif;
-  --font-sans: var(--font-inter), system-ui, sans-serif;
-  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
-  --font-arabic: var(--font-tajawal), var(--font-inter), sans-serif;
-
-  --tracking-widest2: 0.25em;
-
-  --shadow-soft: 0 20px 60px -20px rgb(19 27 46 / 0.25);
-  --shadow-card: 0 10px 40px -12px rgb(19 27 46 / 0.18);
-
-  --animate-shimmer: shimmer 3s linear infinite;
-  --animate-float-slow: float-slow 7s ease-in-out infinite;
-
-  /* shadcn/ui semantic tokens, mapped onto the brand palette above. */
-  --color-background: var(--color-sand-50);
+  /* shadcn/ui semantic tokens */
+  --color-background: var(--color-paper);
   --color-foreground: var(--color-ink);
   --color-primary: var(--color-ink);
-  --color-primary-foreground: var(--color-sand-50);
-  --color-muted: var(--color-sand-100);
+  --color-primary-foreground: var(--color-paper);
+  --color-muted: var(--color-surface);
   --color-muted-foreground: var(--color-ink-muted);
-  --color-destructive: #b91c1c;
-  --color-border: rgb(19 27 46 / 0.12);
-  --color-input: rgb(19 27 46 / 0.18);
-  --color-ring: var(--color-gold);
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-@keyframes float-slow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-14px); }
+  --color-destructive: #b42318;
+  --color-border: var(--color-line);
+  --color-input: #cfcfcb;
+  --color-ring: var(--color-ink);
 }
 
 :root {
-  --radius: 0.75rem;
+  --radius: 0;
 }
 
 @layer base {
@@ -75,109 +41,48 @@
     overflow-x: clip;
   }
   body {
-    @apply bg-sand-50 font-sans text-ink antialiased;
+    @apply bg-paper font-sans text-ink antialiased;
     overflow-x: clip;
   }
-  [dir="rtl"] body {
-    @apply font-arabic;
-  }
   ::selection {
-    @apply bg-gold/20 text-ink;
+    @apply bg-ink text-paper;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ink;
   }
 }
 
 @utility container-x {
-  @apply mx-auto w-full max-w-7xl px-6 md:px-10;
+  @apply mx-auto w-full max-w-7xl px-5 md:px-10;
 }
-@utility eyebrow {
-  @apply inline-block text-xs font-medium tracking-widest2 text-gold uppercase;
+
+/* page and section headings */
+@utility h-display {
+  @apply text-[clamp(2.4rem,5.4vw,4.5rem)] leading-[1.04] font-medium tracking-[-0.03em] text-balance rtl:tracking-normal;
 }
-@utility heading-serif {
-  @apply font-serif leading-[1.02] font-normal tracking-[-0.01em] text-ink;
+@utility h-section {
+  @apply text-3xl leading-tight font-medium tracking-[-0.02em] text-balance md:text-4xl rtl:tracking-normal;
 }
-/* small typewriter-style labels: chapter marks, figure captions, specs */
-@utility label-mono {
-  @apply font-mono text-[11px] tracking-[0.14em] uppercase;
+
+/* small grey label above a value or a list */
+@utility label {
+  @apply text-sm text-ink-muted;
 }
+
 @utility btn {
-  @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-medium tracking-wide transition-all duration-300;
+  @apply inline-flex h-12 items-center justify-center gap-2 px-6 text-[0.95rem] font-medium whitespace-nowrap transition-colors duration-200;
 }
-@utility btn-dark {
-  @apply btn bg-ink text-sand-50 hover:bg-ink-soft hover:shadow-soft;
+@utility btn-primary {
+  @apply btn bg-ink text-paper hover:bg-ink-soft;
 }
-@utility btn-ghost {
-  @apply btn border border-ink/20 text-ink hover:border-ink hover:bg-ink hover:text-sand-50;
-}
-@utility link-underline {
-  @apply relative after:absolute after:start-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full;
+@utility btn-secondary {
+  @apply btn border border-ink/20 text-ink hover:border-ink;
 }
 
-/* Gold gradient sweep across the hero highlight word. */
-@utility shimmer-text {
-  background: linear-gradient(90deg, #b23a2a 0%, #e48a74 50%, #b23a2a 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: var(--animate-shimmer);
+/* underlined text link */
+@utility link {
+  @apply underline decoration-ink/25 underline-offset-4 transition-colors hover:decoration-ink;
 }
-
-/* Faint woven texture used behind dark panels and the hero. */
-@utility weave-bg {
-  background-image:
-    linear-gradient(135deg, rgb(228 138 116 / 0.05) 25%, transparent 25%),
-    linear-gradient(225deg, rgb(228 138 116 / 0.05) 25%, transparent 25%),
-    linear-gradient(45deg, rgb(228 138 116 / 0.05) 25%, transparent 25%),
-    linear-gradient(315deg, rgb(228 138 116 / 0.05) 25%, transparent 25%);
-  background-size: 22px 22px;
-  background-position: 11px 0, 11px 0, 0 0, 0 0;
-}
-
-/* Paper grain over the whole page — keeps the ivory from looking flat. */
-@utility grain {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.07 0 0 0 0 0.1 0 0 0 0 0.18 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* Columns of jersey "V" stitches — stands in for a photo on catalogue swatches. */
-@utility knit-texture {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='12'%3E%3Cpath d='M1.5 1.5 L7 10 L12.5 1.5' fill='none' stroke='%23131b2e' stroke-opacity='0.11' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
-}
-
-/* Nav link: a dashed stitch sews itself in underneath on hover; the current
-   page gets a solid stitch-red thread. */
-@utility stitch-link {
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    inset-inline: 0;
-    bottom: 2px;
-    height: 1.5px;
-    background-image: repeating-linear-gradient(90deg, currentColor 0 5px, transparent 5px 9px);
-    opacity: 0.6;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  &:where([dir="rtl"] *)::after {
-    transform-origin: right;
-  }
-  &:hover::after,
-  &:focus-visible::after {
-    transform: scaleX(1);
-  }
-  &.is-active::after {
-    transform: scaleX(1);
-    background: var(--color-stitch);
-    opacity: 1;
-  }
-}
-
-/* Custom thin scrollbar */
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #ebe3d6; }
-::-webkit-scrollbar-thumb { background: #a99a84; border-radius: 999px; }
-::-webkit-scrollbar-thumb:hover { background: #131b2e; }
 
 @media (prefers-reduced-motion: reduce) {
   *,

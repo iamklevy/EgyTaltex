@@ -1,16 +1,13 @@
 export const NAV_LINKS = [
   { href: "/", key: "home" },
-  { href: "/company", key: "company" },
   { href: "/products", key: "products" },
+  { href: "/company", key: "company" },
   { href: "/clients", key: "clients" },
   { href: "/contact", key: "contact" },
 ] as const;
 
-/** Plain links in the header pill, shown after the Products dropdown. */
-export const HEADER_LINKS = [
-  { href: "/company", key: "company" },
-  { href: "/clients", key: "clients" },
-] as const;
+/** Links in the header bar; Home is the logo. */
+export const HEADER_LINKS = NAV_LINKS.filter((l) => l.href !== "/");
 
 /** Anchor ids on the products page, in messages `products.items` order. */
 export const PRODUCT_SLUGS = [
@@ -28,6 +25,3 @@ export const PRODUCT_SLUGS = [
 ] as const;
 
 export type ProductSlug = (typeof PRODUCT_SLUGS)[number];
-
-/** Pages that open on the dark PageHero, where the unscrolled header needs light text. */
-export const DARK_HERO_PATHS = ["/company", "/clients", "/contact"] as const;

@@ -5,15 +5,12 @@
     "products": "Prodotti",
     "clients": "Clienti",
     "contact": "Contatti",
-    "cta": "Contattaci",
+    "cta": "Richiedi un preventivo",
     "close": "Chiudi menu",
     "allProducts": "Tutti i prodotti",
     "whatsapp": "Scrivici su WhatsApp"
   },
   "common": {
-    "since": "Dal 2001",
-    "readMore": "Scopri di più",
-    "viewAll": "Vedi tutto",
     "brand": "Egytaltex",
     "brandFull": "Compagnia Egiziana Italiana per Tessuti e Abbigliamento",
     "menu": "Menu",
@@ -23,26 +20,13 @@
     "production": "produzione"
   },
   "home": {
-    "heroKicker": "Dal 2001 · Free Zone, Il Cairo",
-    "heroLine1": "Terra egiziana.",
-    "heroLine2": "Mentalità italiana.",
-    "heroLead": "Una maglieria verticale al Cairo: polo, T-shirt e capi in jersey per marchi europei e americani — dal filato tinto al cartone sigillato per l'export.",
-    "heroCtaPrimary": "Avvia un programma",
-    "heroCtaSecondary": "Segui il filo",
-    "heroCaption": "Fig. 01 — Filato di cotone, prima di diventare qualcosa.",
-    "scroll": "Scorri",
+    "heroKicker": "Produttore verticale di maglieria · Il Cairo · Dal 2001",
+    "heroLead": "Produciamo polo, T-shirt e jersey per marchi europei e americani. Ogni fase, dal filato tinto al cartone pronto per l'export, avviene all'interno del nostro gruppo.",
+    "heroCtaPrimary": "Richiedi un preventivo",
     "statFounded": "Fondata",
     "statDaily": "Capi al giorno",
     "statExport": "Per l'export",
     "statMarkets": "Mercati di export",
-    "manifestoChapter": "I — La casa",
-    "manifestoQuote": "Siamo orgogliosi di dirlo, senza timidezza: lo facciamo a modo nostro.",
-    "manifestoBody": "Egytaltex è nata nel 2001 in terra egiziana, ma con mentalità italiana. Anno dopo anno, con tanto lavoro, è cresciuta fino a diventare una piccola azienda verticale fondata su un'idea: se controlliamo ogni passaggio, possiamo garantire ogni capo.",
-    "manifestoSign": "Il metodo Egytaltex",
-    "manifestoLink": "Leggi la nostra storia",
-    "journeyChapter": "II — Dalla fibra al capo finito",
-    "journeyTitle": "Un solo filo, seguito fino in fondo.",
-    "journeyLead": "Quattro aziende sorelle, una sola filiera. Niente lascia le nostre mani finché non è pronto a lasciare l'Egitto.",
     "inHouse": "Interno",
     "sister": "Azienda sorella",
     "journey": [
@@ -79,27 +63,63 @@
         "body": "Controllato, piegato e spedito in Italia, USA, Inghilterra e Sudafrica."
       }
     ],
-    "rangeChapter": "III — La gamma",
-    "rangeTitle": "Maglieria, fatta per chi nota i dettagli.",
-    "rangeLead": "100% cotone, prodotta su ordinazione, nelle quantità che una vera collezione richiede.",
-    "rangeCta": "Vedi tutta la gamma",
-    "marketsChapter": "IV — Indossato in",
-    "marketsTitle": "Fatto al Cairo. Indossato in quattro mercati.",
-    "markets": [
-      "Italia",
-      "Stati Uniti",
-      "Inghilterra",
-      "Sudafrica"
-    ],
-    "clientsLabel": "Alcune delle case per cui produciamo",
-    "ctaChapter": "V — Il vostro programma",
+    "clientsLabel": "Marchi per cui produciamo",
     "ctaTitle": "Avete un programma in mente?",
     "ctaBody": "Diteci prodotto, quantità e mercato. Torneremo con proposte di tessuto, campioni e una risposta chiara sui tempi.",
     "ctaButton": "Avvia un programma",
-    "ctaOr": "Oppure scriveteci direttamente"
+    "ctaOr": "Oppure scriveteci direttamente",
+    "heroTitle": "Maglieria in cotone, dal filato al cartone, al Cairo.",
+    "heroCtaProducts": "Vedi i prodotti",
+    "heroImageAlt": "Coni di filato di cotone tinto",
+    "productsTitle": "Cosa produciamo",
+    "productsLead": "100% cotone, su ordinazione, nelle quantità di cui una vera collezione ha bisogno.",
+    "productsCta": "Tutte le 11 categorie",
+    "processTitle": "Dal filato al cartone, in un unico gruppo",
+    "processLead": "Otto fasi, una sola filiera. Sei si svolgono nel nostro stabilimento; la tintura di filati e tessuti è affidata alle nostre aziende sorelle.",
+    "workTitle": "Come si svolge un programma",
+    "work": [
+      {
+        "title": "Brief",
+        "body": "Inviateci prodotto, quantità, mercato di riferimento ed eventuali capi di riferimento."
+      },
+      {
+        "title": "Tessuti e campioni",
+        "body": "Proponiamo filati, tessuti e finissaggi, poi realizziamo i campioni per la vostra approvazione."
+      },
+      {
+        "title": "Produzione",
+        "body": "Maglieria, tintura, taglio, confezione e finissaggio all'interno del gruppo, con controlli a ogni fase."
+      },
+      {
+        "title": "Imballaggio e spedizione",
+        "body": "I capi vengono ispezionati, piegati, imballati secondo le vostre specifiche e spediti per l'export."
+      }
+    ],
+    "glanceTitle": "In sintesi",
+    "glance": [
+      {
+        "label": "Capacità",
+        "value": "3.000 capi al giorno"
+      },
+      {
+        "label": "Materiali",
+        "value": "Piquet, jersey e interlock 100% cotone"
+      },
+      {
+        "label": "Servizi",
+        "value": "Private label, ricamo, stampa, lavaggio capo"
+      },
+      {
+        "label": "Mercati",
+        "value": "Italia, USA, Inghilterra, Sudafrica"
+      },
+      {
+        "label": "Sede",
+        "value": "Zona Franca, Nasr City, Il Cairo (orientata all'export)"
+      }
+    ]
   },
   "company": {
-    "heroEyebrow": "L'azienda",
     "heroTitle": "Terra egiziana, mentalità italiana",
     "heroLead": "Egytaltex è nata nel 2001 — egiziana per terra, italiana per mentalità. Ciò che è iniziato come amore per l'artigianato è diventato una casa verticale al servizio di una clientela d'élite.",
     "storyTitle": "La nostra storia",
@@ -114,7 +134,6 @@
     "value3Body": "Costruiamo per clienti che notano — e premiano — i dettagli.",
     "value4Title": "Materiali onesti",
     "value4Body": "Il miglior cotone al mondo, trattato con il rispetto che merita.",
-    "factsEyebrow": "In cifre",
     "factsTitle": "Una casa compatta, produzione reale",
     "fact1Label": "Struttura orientata all’export",
     "fact2Label": "Capi prodotti al giorno",
@@ -130,13 +149,12 @@
     "t2001": "Fondata al Cairo con una mentalità italiana e un amore per l'artigianato.",
     "t2008": "Ci siamo espansi in un assetto verticale — dal filato al capo sotto un solo tetto.",
     "t2015": "Abbiamo affinato le nostre finiture per servire una crescente clientela d'élite.",
-    "tToday": "Una casa affidabile per marchi che apprezzano come le cose vengono fatte."
+    "tToday": "Una casa affidabile per marchi che apprezzano come le cose vengono fatte.",
+    "quote": "Siamo orgogliosi di dirlo, senza timidezza: lo facciamo a modo nostro."
   },
   "products": {
-    "heroChapter": "La gamma",
     "heroTitle": "Maglieria su ordinazione.",
     "heroLead": "Undici categorie, un solo standard. Ogni programma viene sviluppato con il cliente, campionato e prodotto all'interno della nostra filiera — dal filato tinto al capo finito.",
-    "indexLabel": "Indice",
     "items": [
       {
         "name": "Polo",
@@ -183,8 +201,7 @@
         "desc": "Completi da notte in cotone morbido e lavato."
       }
     ],
-    "featureChapter": "Rif. 01 — La polo",
-    "featureTitle": "La polo, pezzo per pezzo.",
+    "featureTitle": "La polo, nel dettaglio",
     "featureBody": "La maggior parte di ciò che esce dal nostro reparto sono polo e T-shirt in 100% cotone. Una polo mostra l'intera filiera in un colpo d'occhio: il piqué è lavorato sui nostri telai circolari, collo e polsini sulle nostre macchine rettilinee, e il capo finito viene lavato per la morbidezza prima dell'imballaggio.",
     "specs": [
       {
@@ -204,11 +221,8 @@
         "value": "Ricamo, paramonture stampate, finiture a contrasto"
       }
     ],
-    "catalogueChapter": "Il catalogo",
-    "catalogueTitle": "Tutto ciò che produciamo.",
-    "ref": "Rif.",
+    "catalogueTitle": "Tutte le categorie",
     "enquire": "Richiedi info",
-    "finishChapter": "Su vostra specifica",
     "finishTitle": "Opzioni per ogni programma.",
     "finishes": [
       "Filato tinto su richiesta",
@@ -220,13 +234,11 @@
       "Ammorbidimento",
       "Private label e confezionamento"
     ],
-    "galleryChapter": "Dal nostro reparto",
-    "galleryTitle": "Capi veri, fatti al Cairo.",
+    "galleryTitle": "Dalla nostra produzione",
     "customTitle": "Non è in elenco?",
     "customBody": "Se si può realizzare in maglia di cotone, chiedeteci. Ogni programma nasce da una conversazione."
   },
   "clients": {
-    "heroEyebrow": "Clienti",
     "heroTitle": "In buona compagnia",
     "heroLead": "Lavoriamo silenziosamente per una clientela d'élite — marchi e case che apprezzano come una cosa è fatta tanto quanto il suo aspetto.",
     "bodyTitle": "Scelti da chi nota i dettagli",
@@ -251,7 +263,6 @@
     "testimonialName": "Un cliente di lunga data"
   },
   "contact": {
-    "heroEyebrow": "Contatti",
     "heroTitle": "Parliamo di tessuti",
     "heroLead": "Raccontaci del tuo progetto. Produciamo su ordinazione e rispondiamo a ogni richiesta seria.",
     "formName": "Il tuo nome",
@@ -261,7 +272,6 @@
     "formSubmit": "Invia messaggio",
     "formSent": "Grazie — ti contatteremo a breve.",
     "formError": "Qualcosa è andato storto — riprova o scrivici direttamente.",
-    "infoTitle": "Mettiti in contatto",
     "addressLabel": "Indirizzo",
     "address": "Zona Franca, Nasr City, Il Cairo, Egitto",
     "phoneLabel": "Telefono",
@@ -272,12 +282,11 @@
     "mapTitle": "Dove siamo"
   },
   "footer": {
-    "tagline": "Compagnia Egiziana Italiana per Tessuti e Abbigliamento.",
     "blurb": "Una maglieria verticale al Cairo, che produce per marchi europei e americani dal 2001.",
     "explore": "Esplora",
     "contact": "Contatti",
     "rights": "Tutti i diritti riservati.",
-    "madeWith": "Realizzato al Cairo"
+    "language": "Lingua"
   },
   "meta": {
     "title": "Egytaltex · Tessuti e Abbigliamento Egiziano Italiano",
