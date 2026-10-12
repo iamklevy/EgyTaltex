@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-
+import { Analytics } from '@vercel/analytics/next';
 import { Link } from "@/i18n/navigation";
 import { categoryPhotos, clientLogos, unsplash } from "@/content/images";
 import { Arrow } from "@/components/site/editorial";
@@ -90,6 +90,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
+      <Analytics />
+      
       {/* CLIENTS */}
       <section className="border-y border-line">
         <div className="container-x pt-12">
