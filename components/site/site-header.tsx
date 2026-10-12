@@ -44,6 +44,10 @@ export function SiteHeader() {
             "glass-layer relative isolate flex h-16 items-center gap-10 rounded-(--ui-radius) ps-2 pe-2 text-ink data-[tone=dark]:text-paper lg:px-6",
             // resting (mobile, top of home): the bar's own glass and padding fall away
             "max-lg:data-rest:px-0 max-lg:data-rest:before:opacity-0",
+            // the mobile menu panel grows out of the bar and covers it exactly, so hide the bar while
+            // it's up. Resting has no bar to hide: the logo stays (the panel's own logo lands on it) and
+            // only the language button hides here, the menu button in MobileMenu.
+            "[&:has([data-panel]):not([data-rest])]:opacity-0 [&:has([data-panel])_[data-lang-menu]]:opacity-0",
             // on load/navigation everything must switch instantly; after that, scroll changes animate
             animate
               ? "transition-[color,padding] duration-500 ease-out"
@@ -84,7 +88,7 @@ export function SiteHeader() {
             <Link href="/contact" className="btn-primary hidden h-10 px-5 text-sm sm:inline-flex nav-dark:bg-paper nav-dark:text-ink nav-dark:hover:bg-surface">
               {t("nav.cta")}
             </Link>
-            <MobileMenu />
+            <MobileMenu tone={tone} rest={rest} />
           </div>
         </div>
       </div>
