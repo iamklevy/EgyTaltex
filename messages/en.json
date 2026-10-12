@@ -5,15 +5,12 @@
     "products": "Products",
     "clients": "Clients",
     "contact": "Contact",
-    "cta": "Get in touch",
+    "cta": "Request a quote",
     "close": "Close menu",
     "allProducts": "All products",
     "whatsapp": "WhatsApp us"
   },
   "common": {
-    "since": "Since 2001",
-    "readMore": "Discover more",
-    "viewAll": "View all",
     "brand": "Egytaltex",
     "brandFull": "Egyptian Italian Company for Textiles & Garments",
     "menu": "Menu",
@@ -23,26 +20,13 @@
     "production": "production"
   },
   "home": {
-    "heroKicker": "Est. 2001 · Free Zone, Cairo",
-    "heroLine1": "Egyptian land.",
-    "heroLine2": "Italian mentality.",
-    "heroLead": "A vertical knitwear house in Cairo, making polos, T-shirts and jerseywear for European and American brands — from dyed yarn to the sealed export carton.",
-    "heroCtaPrimary": "Start a programme",
-    "heroCtaSecondary": "Follow the thread",
-    "heroCaption": "Fig. 01 — Cotton yarn, before it becomes anything.",
-    "scroll": "Scroll",
+    "heroKicker": "Vertical knitwear manufacturer · Cairo · Since 2001",
+    "heroLead": "We make polos, T-shirts and jerseywear for European and American brands. Every step, from dyed yarn to the packed export carton, happens inside our own group.",
+    "heroCtaPrimary": "Request a quote",
     "statFounded": "Founded",
     "statDaily": "Pieces a day",
     "statExport": "For export",
     "statMarkets": "Export markets",
-    "manifestoChapter": "I — The house",
-    "manifestoQuote": "We are proud to say, not in a shy way, that we do it our way.",
-    "manifestoBody": "Egytaltex was born in 2001 on Egyptian land, but with an Italian mentality. Year after year, with a lot of hard work, it grew into a small vertical company built on one idea: if we control every step, we can stand behind every piece.",
-    "manifestoSign": "The Egytaltex way",
-    "manifestoLink": "Read our story",
-    "journeyChapter": "II — From fibre to finish",
-    "journeyTitle": "One thread, followed all the way.",
-    "journeyLead": "Four sister companies, one chain. Nothing leaves our hands until it is ready to leave Egypt.",
     "inHouse": "In-house",
     "sister": "Sister company",
     "journey": [
@@ -79,27 +63,63 @@
         "body": "Inspected, folded and shipped to Italy, the USA, England and South Africa."
       }
     ],
-    "rangeChapter": "III — The range",
-    "rangeTitle": "Knitwear, made for people who notice.",
-    "rangeLead": "100% cotton, made to order, in the quantities a real collection needs.",
-    "rangeCta": "See the full range",
-    "marketsChapter": "IV — Worn in",
-    "marketsTitle": "Made in Cairo. Worn across four markets.",
-    "markets": [
-      "Italy",
-      "United States",
-      "England",
-      "South Africa"
-    ],
-    "clientsLabel": "Some of the houses we make for",
-    "ctaChapter": "V — Your programme",
+    "clientsLabel": "Brands we make for",
     "ctaTitle": "Have a programme in mind?",
     "ctaBody": "Tell us the product, the quantities and the market. We'll come back with fabric options, samples and a straight answer on timing.",
     "ctaButton": "Start a programme",
-    "ctaOr": "Or write to us directly"
+    "ctaOr": "Or write to us directly",
+    "heroTitle": "Cotton knitwear, made from yarn to carton in Cairo.",
+    "heroCtaProducts": "View products",
+    "heroImageAlt": "Cones of dyed cotton yarn",
+    "productsTitle": "What we make",
+    "productsLead": "100% cotton, made to order, in the quantities a real collection needs.",
+    "productsCta": "All 11 categories",
+    "processTitle": "From yarn to carton, in one group",
+    "processLead": "Eight steps, one chain. Six run on our own floor; yarn and fabric dyeing are done by our sister companies.",
+    "workTitle": "How a programme runs",
+    "work": [
+      {
+        "title": "Brief",
+        "body": "Send us the product, quantities, target market and any reference garments."
+      },
+      {
+        "title": "Fabric & samples",
+        "body": "We propose yarns, fabrics and finishes, then make samples for your approval."
+      },
+      {
+        "title": "Production",
+        "body": "Knitting, dyeing, cutting, sewing and finishing inside our group, checked at every step."
+      },
+      {
+        "title": "Packing & shipping",
+        "body": "Garments are inspected, folded, packed to your spec and shipped for export."
+      }
+    ],
+    "glanceTitle": "At a glance",
+    "glance": [
+      {
+        "label": "Capacity",
+        "value": "3,000 pieces per day"
+      },
+      {
+        "label": "Materials",
+        "value": "100% cotton piqué, jersey and interlock"
+      },
+      {
+        "label": "Services",
+        "value": "Private label, embroidery, printing, garment wash"
+      },
+      {
+        "label": "Markets",
+        "value": "Italy, USA, England, South Africa"
+      },
+      {
+        "label": "Location",
+        "value": "Free Zone, Nasr City, Cairo (export-oriented)"
+      }
+    ]
   },
   "company": {
-    "heroEyebrow": "The company",
     "heroTitle": "Egyptian land, Italian mentality",
     "heroLead": "Egytaltex was born in 2001 — Egyptian by ground, Italian by mindset. What began as a love for the craft became a vertical house serving an elite clientele.",
     "storyTitle": "Our story",
@@ -114,7 +134,6 @@
     "value3Body": "We build for clients who notice — and reward — the details.",
     "value4Title": "Honest materials",
     "value4Body": "The best world cotton, treated with the respect it deserves.",
-    "factsEyebrow": "By the numbers",
     "factsTitle": "A compact house, real production",
     "fact1Label": "Export-oriented facility",
     "fact2Label": "Garments produced daily",
@@ -130,13 +149,12 @@
     "t2001": "Founded in Cairo with an Italian mentality and a love of craft.",
     "t2008": "Expanded into a vertical setup — yarn to garment under one roof.",
     "t2015": "Refined our finishing to serve a growing elite clientele.",
-    "tToday": "A trusted house for brands who value how things are made."
+    "tToday": "A trusted house for brands who value how things are made.",
+    "quote": "We are proud to say, not in a shy way, that we do it our way."
   },
   "products": {
-    "heroChapter": "The range",
     "heroTitle": "Knitwear, made to order.",
     "heroLead": "Eleven categories, one standard. Every programme is developed with the client, sampled, and produced inside our own chain — from dyed yarn to the finished garment.",
-    "indexLabel": "Index",
     "items": [
       {
         "name": "Polo shirts",
@@ -183,8 +201,7 @@
         "desc": "Sleepwear sets in soft, washed cotton."
       }
     ],
-    "featureChapter": "Ref. 01 — The polo",
-    "featureTitle": "The polo, piece by piece.",
+    "featureTitle": "The polo, in detail",
     "featureBody": "Most of what leaves our floor is polos and T-shirts in 100% cotton. A polo shows the whole chain at once: the piqué is knitted on our circular machines, the collar and cuffs on our flat machines, and the finished garment is washed for softness before it is packed.",
     "specs": [
       {
@@ -204,11 +221,8 @@
         "value": "Embroidery, printed facings, contrast trims"
       }
     ],
-    "catalogueChapter": "The catalogue",
-    "catalogueTitle": "Everything we make.",
-    "ref": "Ref.",
+    "catalogueTitle": "All categories",
     "enquire": "Enquire",
-    "finishChapter": "Made to your spec",
     "finishTitle": "Options on every programme.",
     "finishes": [
       "Custom-dyed yarn",
@@ -220,13 +234,11 @@
       "Softening",
       "Private label & packing"
     ],
-    "galleryChapter": "From our floor",
-    "galleryTitle": "Real garments, made in Cairo.",
+    "galleryTitle": "From our production",
     "customTitle": "Not on the list?",
     "customBody": "If it can be knitted from cotton, ask us. Every client programme starts as a conversation."
   },
   "clients": {
-    "heroEyebrow": "Clients",
     "heroTitle": "In good company",
     "heroLead": "We craft quietly for an elite clientele — brands and houses that value how a thing is made as much as how it looks.",
     "bodyTitle": "Trusted by those who notice the details",
@@ -251,7 +263,6 @@
     "testimonialName": "A long-standing client"
   },
   "contact": {
-    "heroEyebrow": "Contact",
     "heroTitle": "Let's talk textiles",
     "heroLead": "Tell us about your project. We build to order and reply to every serious enquiry.",
     "formName": "Your name",
@@ -261,7 +272,6 @@
     "formSubmit": "Send message",
     "formSent": "Thank you — we will be in touch shortly.",
     "formError": "Something went wrong — please try again or email us directly.",
-    "infoTitle": "Get in touch",
     "addressLabel": "Address",
     "address": "Free Zone, Nasr City, Cairo, Egypt",
     "phoneLabel": "Phone",
@@ -272,12 +282,11 @@
     "mapTitle": "Find us"
   },
   "footer": {
-    "tagline": "Egyptian Italian Company for Textiles & Garments.",
     "blurb": "A vertical knitwear house in Cairo, making for European and American brands since 2001.",
     "explore": "Explore",
     "contact": "Contact",
     "rights": "All rights reserved.",
-    "madeWith": "Crafted in Cairo"
+    "language": "Language"
   },
   "meta": {
     "title": "Egytaltex · Egyptian Italian Textiles & Garments",

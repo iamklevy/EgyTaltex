@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 
 import { HONEYPOT_FIELD } from "@/lib/contact";
@@ -12,7 +11,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 const fieldClass =
-  "h-auto rounded-xl border-ink/15 bg-white/70 px-4 py-3 text-base text-ink transition-all duration-300 placeholder:text-ink-muted/50 focus-visible:border-gold focus-visible:bg-white focus-visible:ring-2 focus-visible:ring-gold/20 md:text-base";
+  "h-12 rounded-none border-input bg-paper px-4 text-base text-ink placeholder:text-ink-muted/60 focus-visible:border-ink focus-visible:ring-0 md:text-base";
 
 function Field({
   label,
@@ -29,13 +28,13 @@ function Field({
 }) {
   return (
     <div>
-      <Label htmlFor={name} className="mb-2 block text-xs font-medium tracking-widest2 text-ink-muted uppercase">
+      <Label htmlFor={name} className="mb-2 block text-sm font-normal text-ink-muted">
         {label}
       </Label>
       {textarea ? (
-        <Textarea id={name} name={name} rows={4} required={required} placeholder={label} className={cn(fieldClass, "resize-none")} />
+        <Textarea id={name} name={name} rows={6} required={required} className={cn(fieldClass, "h-auto min-h-40 resize-y py-3")} />
       ) : (
-        <Input id={name} name={name} type={type} required={required} placeholder={label} className={fieldClass} />
+        <Input id={name} name={name} type={type} required={required} className={fieldClass} />
       )}
     </div>
   );
@@ -78,30 +77,12 @@ export function ContactForm() {
       {/* Honeypot — off-screen and skipped by keyboard/assistive tech. */}
       <input type="text" name={HONEYPOT_FIELD} tabIndex={-1} autoComplete="off" aria-hidden className="absolute -start-[9999px] h-0 w-0 opacity-0" />
 
-      <div className="flex flex-wrap items-center gap-4 pt-2" aria-live="polite">
-        <button type="submit" disabled={status === "sending"} className="btn-dark disabled:opacity-60">
-          {t("formSubmit")} <span aria-hidden className="inline-block rtl:-scale-x-100">→</span>
+      <div className="flex flex-wrap items-center gap-5 pt-2" aria-live="polite">
+        <button type="submit" disabled={status === "sending"} className="btn-primary disabled:opacity-60">
+          {t("formSubmit")}
         </button>
-        {status === "sent" && (
-          <motion.span
-            initial={{ opacity: 0, x: -8 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="inline-flex items-center gap-2 text-sm font-medium text-olive"
-          >
-            <span className="grid h-5 w-5 place-items-center rounded-full bg-olive text-[11px] text-sand-50">✓</span>
-            {t("formSent")}
-          </motion.span>
-        )}
-        {status === "error" && (
-          <motion.span
-            initial={{ opacity: 0, x: -8 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="inline-flex items-center gap-2 text-sm font-medium text-red-700"
-          >
-            <span className="grid h-5 w-5 place-items-center rounded-full bg-red-700 text-[11px] text-sand-50">!</span>
-            {t("formError")}
-          </motion.span>
-        )}
+        {status === "sent" && <span className="text-sm text-success">{t("formSent")}</span>}
+        {status === "error" && <span className="text-sm text-destructive">{t("formError")}</span>}
       </div>
     </form>
   );

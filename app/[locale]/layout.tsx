@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Amiri, IBM_Plex_Mono, Instrument_Serif, Inter, Tajawal } from "next/font/google";
+import { Geist, IBM_Plex_Sans_Arabic } from "next/font/google";
 
 import { routing, isRtl } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/contact";
@@ -11,40 +11,17 @@ import { SiteHeader } from "@/components/site/site-header";
 import { SiteFooter } from "@/components/site/site-footer";
 import "../globals.css";
 
-const instrument = Instrument_Serif({
+const geist = Geist({
   subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-instrument",
+  variable: "--font-geist",
   display: "swap",
 });
 
-const amiri = Amiri({
+// Geist has no Arabic glyphs, so Arabic text falls through to Plex Sans Arabic
+const plexArabic = IBM_Plex_Sans_Arabic({
   subsets: ["arabic"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-amiri",
-  display: "swap",
-});
-
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-plex-mono",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const tajawal = Tajawal({
-  subsets: ["arabic"],
-  weight: ["300", "400", "500", "700"],
-  variable: "--font-tajawal",
+  weight: ["400", "500", "600"],
+  variable: "--font-plex-arabic",
   display: "swap",
 });
 
@@ -94,7 +71,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={isRtl(locale) ? "rtl" : "ltr"}
-      className={`${instrument.variable} ${amiri.variable} ${plexMono.variable} ${inter.variable} ${tajawal.variable}`}
+      className={`${geist.variable} ${plexArabic.variable}`}
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
@@ -104,8 +81,6 @@ export default async function LocaleLayout({
           <main>{children}</main>
           <SiteFooter />
         </NextIntlClientProvider>
-        {/* paper grain over everything; multiply keeps it out of the way of clicks and contrast */}
-        <div aria-hidden className="grain pointer-events-none fixed inset-0 z-[100] mix-blend-multiply" />
       </body>
     </html>
   );
