@@ -2,37 +2,30 @@ import { getTranslations } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
 import { EMAIL, PHONE_1, telHref } from "@/lib/contact";
-import { Reveal } from "@/components/site/motion";
 import { Arrow } from "@/components/site/editorial";
 
-/** "Have a programme in mind?" — the closing enquiry block shared by editorial pages. */
+/** Closing enquiry band shared by the main pages. */
 export async function ProgrammeCta() {
   const h = await getTranslations("home");
 
   return (
-    <section className="py-28 md:py-40">
-      <div className="container-x">
-        <Reveal>
-          <h2 className="heading-serif max-w-4xl text-[clamp(3rem,7.5vw,6.75rem)] leading-[0.98]">
-            {h("ctaTitle")}
-          </h2>
-        </Reveal>
-        <div className="mt-14 grid gap-12 border-t border-ink/15 pt-10 lg:grid-cols-12">
-          <Reveal className="lg:col-span-7">
-            <p className="max-w-xl text-lg leading-relaxed text-ink-muted">{h("ctaBody")}</p>
-            <Link href="/contact" className="btn-dark mt-9">
-              {h("ctaButton")} <Arrow />
-            </Link>
-          </Reveal>
-          <Reveal delay={0.1} className="lg:col-span-5">
-            <p className="label-mono text-ink-muted">{h("ctaOr")}</p>
-            <a href={`mailto:${EMAIL}`} className="link-underline mt-4 inline-block font-serif text-3xl text-ink">
-              {EMAIL}
-            </a>
-            <a href={telHref(PHONE_1)} dir="ltr" className="mt-2 block font-serif text-3xl text-ink-muted hover:text-ink">
-              {PHONE_1}
-            </a>
-          </Reveal>
+    <section className="bg-ink text-paper">
+      <div className="container-x grid gap-10 py-20 md:py-24 lg:grid-cols-12">
+        <div className="lg:col-span-7">
+          <h2 className="h-section">{h("ctaTitle")}</h2>
+          <p className="mt-5 max-w-xl text-lg leading-relaxed text-paper/70">{h("ctaBody")}</p>
+          <Link href="/contact" className="btn mt-8 bg-paper text-ink hover:bg-surface">
+            {h("ctaButton")} <Arrow />
+          </Link>
+        </div>
+        <div className="lg:col-span-4 lg:col-start-9 lg:self-end">
+          <p className="text-sm text-paper/60">{h("ctaOr")}</p>
+          <a href={`mailto:${EMAIL}`} className="mt-3 block text-xl hover:underline">
+            {EMAIL}
+          </a>
+          <a href={telHref(PHONE_1)} dir="ltr" className="mt-1 block text-xl text-paper/70 hover:text-paper">
+            {PHONE_1}
+          </a>
         </div>
       </div>
     </section>
