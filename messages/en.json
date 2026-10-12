@@ -122,22 +122,8 @@
   "company": {
     "heroTitle": "Egyptian land, Italian mentality",
     "heroLead": "Egytaltex was born in 2001 — Egyptian by ground, Italian by mindset. What began as a love for the craft became a vertical house serving an elite clientele.",
-    "storyTitle": "Our story",
     "storyP1": "We started with a simple conviction: that textiles made with care feel different in the hand and last longer in the wardrobe. From a modest beginning we built, step by step, a small vertical company — keeping yarn, fabric and garment under one roof.",
     "storyP2": "Operating from the Free Zone in Nasr City, Cairo, we pair Egyptian heritage in cotton with an Italian sense of refinement. We do love what we do, and we do it our way.",
-    "valuesTitle": "What guides us",
-    "value1Title": "Craft over volume",
-    "value1Body": "We would rather make less, beautifully, than more, carelessly.",
-    "value2Title": "Vertical integrity",
-    "value2Body": "Owning the full chain means quality answers to us alone.",
-    "value3Title": "Elite by design",
-    "value3Body": "We build for clients who notice — and reward — the details.",
-    "value4Title": "Honest materials",
-    "value4Body": "The best world cotton, treated with the respect it deserves.",
-    "factsTitle": "A compact house, real production",
-    "fact1Label": "Export-oriented facility",
-    "fact2Label": "Garments produced daily",
-    "fact3Label": "In-house production lines",
     "marketsLabel": "Exported worldwide to",
     "markets": [
       "Italy",
@@ -146,11 +132,111 @@
       "South Africa"
     ],
     "timelineTitle": "A journey in seasons",
-    "t2001": "Founded in Cairo with an Italian mentality and a love of craft.",
-    "t2008": "Expanded into a vertical setup — yarn to garment under one roof.",
-    "t2015": "Refined our finishing to serve a growing elite clientele.",
-    "tToday": "A trusted house for brands who value how things are made.",
-    "quote": "We are proud to say, not in a shy way, that we do it our way."
+    "quote": "We are proud to say, not in a shy way, that we do it our way.",
+    "heroKicker": "Company",
+    "heroImageAlt": "Looking up into a circular knitting machine and its yarn feeders",
+    "storyLabel": "Our story",
+    "manifesto": "Textiles made with care feel different in the hand — and last longer in the wardrobe.",
+    "quoteBy": "TBD",
+    "groupLabel": "The group",
+    "groupTitle": "One group, from yarn to export carton",
+    "groupLead": "Every step of a garment happens inside our own group of companies, so quality answers to us alone.",
+    "groupSister": "Sister company",
+    "groupHome": "This is us",
+    "groupRole": "Role",
+    "groupSteps": "Runs these steps",
+    "tbd": "TBD",
+    "floorLabel": "Inside the factory",
+    "floorTitle": "On the floor in the Free Zone",
+    "floorLead": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh lkasjd oasdjh asdlkj qwe oiasd lkasjd.",
+    "photoSoon": "Photo coming soon",
+    "floor": [
+      {
+        "title": "Circular knitting",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "Dyeing & finishing",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "Cutting",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "Sewing",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "Quality control",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "Packing",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      }
+    ],
+    "capacityLabel": "Capacity",
+    "capacityTitle": "Built for real production",
+    "capacity": {
+      "area": "Factory floor",
+      "knitting": "Circular knitting machines",
+      "lines": "Sewing lines",
+      "staff": "People on the floor",
+      "daily": "Pieces a day",
+      "moq": "Minimum per style (pieces)",
+      "leadTime": "Lead time (days)",
+      "markets": "Export markets"
+    },
+    "qualityLabel": "Quality & compliance",
+    "qualityTitle": "Checked at every step",
+    "qualityLead": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh lkasjd oasdjh asdlkj qwe oiasd lkasjd.",
+    "qualitySteps": [
+      {
+        "title": "Yarn inspection",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "Fabric inspection",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "In-line checks",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "Final inspection",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      }
+    ],
+    "certsTitle": "Certifications & audits",
+    "marketsTitle": "Where our garments go",
+    "marketsLink": "See who we make for",
+    "timeline": [
+      {
+        "year": "TBD",
+        "body": "TBD"
+      },
+      {
+        "year": "TBD",
+        "body": "TBD"
+      },
+      {
+        "year": "TBD",
+        "body": "TBD"
+      },
+      {
+        "year": "TBD",
+        "body": "TBD"
+      },
+      {
+        "year": "TBD",
+        "body": "TBD"
+      }
+    ],
+    "visitTitle": "Come and see how it's made",
+    "visitBody": "Buyers and auditors are welcome on our floor in Nasr City. Book a visit, or ask for a virtual walkthrough.",
+    "visitButton": "Book a factory visit"
   },
   "products": {
     "heroTitle": "Knitwear, made to order.",

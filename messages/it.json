@@ -122,22 +122,8 @@
   "company": {
     "heroTitle": "Terra egiziana, mentalità italiana",
     "heroLead": "Egytaltex è nata nel 2001 — egiziana per terra, italiana per mentalità. Ciò che è iniziato come amore per l'artigianato è diventato una casa verticale al servizio di una clientela d'élite.",
-    "storyTitle": "La nostra storia",
     "storyP1": "Siamo partiti da una convinzione semplice: che i tessuti realizzati con cura si sentano diversi al tatto e durino più a lungo nel guardaroba. Da un inizio modesto abbiamo costruito, passo dopo passo, una piccola azienda verticale — mantenendo filato, tessuto e capo sotto lo stesso tetto.",
     "storyP2": "Operando dalla Zona Franca di Nasr City, al Cairo, uniamo l'eredità egiziana nel cotone a un senso italiano di raffinatezza. Amiamo davvero ciò che facciamo, e lo facciamo a modo nostro.",
-    "valuesTitle": "Cosa ci guida",
-    "value1Title": "Artigianato prima del volume",
-    "value1Body": "Preferiamo produrre meno, splendidamente, che di più, con noncuranza.",
-    "value2Title": "Integrità verticale",
-    "value2Body": "Possedere l’intera catena significa che la qualità risponde solo a noi.",
-    "value3Title": "D'élite per progetto",
-    "value3Body": "Costruiamo per clienti che notano — e premiano — i dettagli.",
-    "value4Title": "Materiali onesti",
-    "value4Body": "Il miglior cotone al mondo, trattato con il rispetto che merita.",
-    "factsTitle": "Una casa compatta, produzione reale",
-    "fact1Label": "Struttura orientata all’export",
-    "fact2Label": "Capi prodotti al giorno",
-    "fact3Label": "Linee di produzione interne",
     "marketsLabel": "Esportato in tutto il mondo verso",
     "markets": [
       "Italia",
@@ -146,11 +132,111 @@
       "Sud Africa"
     ],
     "timelineTitle": "Un viaggio tra le stagioni",
-    "t2001": "Fondata al Cairo con una mentalità italiana e un amore per l'artigianato.",
-    "t2008": "Ci siamo espansi in un assetto verticale — dal filato al capo sotto un solo tetto.",
-    "t2015": "Abbiamo affinato le nostre finiture per servire una crescente clientela d'élite.",
-    "tToday": "Una casa affidabile per marchi che apprezzano come le cose vengono fatte.",
-    "quote": "Siamo orgogliosi di dirlo, senza timidezza: lo facciamo a modo nostro."
+    "quote": "Siamo orgogliosi di dirlo, senza timidezza: lo facciamo a modo nostro.",
+    "heroKicker": "Azienda",
+    "heroImageAlt": "Uno sguardo dal basso dentro una macchina circolare e i suoi alimentatori di filato",
+    "storyLabel": "La nostra storia",
+    "manifesto": "I tessuti fatti con cura si sentono diversi in mano — e durano più a lungo nel guardaroba.",
+    "quoteBy": "TBD",
+    "groupLabel": "Il gruppo",
+    "groupTitle": "Un unico gruppo, dal filato al cartone d'export",
+    "groupLead": "Ogni fase di un capo avviene all'interno del nostro gruppo di aziende, così la qualità risponde solo a noi.",
+    "groupSister": "Azienda sorella",
+    "groupHome": "Siamo noi",
+    "groupRole": "Ruolo",
+    "groupSteps": "Gestisce queste fasi",
+    "tbd": "TBD",
+    "floorLabel": "Dentro la fabbrica",
+    "floorTitle": "Il nostro reparto nella Free Zone",
+    "floorLead": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh lkasjd oasdjh asdlkj qwe oiasd lkasjd.",
+    "photoSoon": "Foto in arrivo",
+    "floor": [
+      {
+        "title": "Maglieria circolare",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "Tintura e finissaggio",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "Taglio",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "Confezione",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "Controllo qualità",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "Imballaggio",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      }
+    ],
+    "capacityLabel": "Capacità",
+    "capacityTitle": "Pensati per una produzione reale",
+    "capacity": {
+      "area": "Superficie produttiva",
+      "knitting": "Macchine circolari",
+      "lines": "Linee di confezione",
+      "staff": "Persone in produzione",
+      "daily": "Capi al giorno",
+      "moq": "Minimo per modello (capi)",
+      "leadTime": "Tempi di consegna (giorni)",
+      "markets": "Mercati di export"
+    },
+    "qualityLabel": "Qualità e conformità",
+    "qualityTitle": "Controllato a ogni fase",
+    "qualityLead": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh lkasjd oasdjh asdlkj qwe oiasd lkasjd.",
+    "qualitySteps": [
+      {
+        "title": "Ispezione del filato",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "Ispezione del tessuto",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "Controlli in linea",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "Ispezione finale",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      }
+    ],
+    "certsTitle": "Certificazioni e audit",
+    "marketsTitle": "Dove vanno i nostri capi",
+    "marketsLink": "Scopri per chi produciamo",
+    "timeline": [
+      {
+        "year": "TBD",
+        "body": "TBD"
+      },
+      {
+        "year": "TBD",
+        "body": "TBD"
+      },
+      {
+        "year": "TBD",
+        "body": "TBD"
+      },
+      {
+        "year": "TBD",
+        "body": "TBD"
+      },
+      {
+        "year": "TBD",
+        "body": "TBD"
+      }
+    ],
+    "visitTitle": "Venite a vedere come nasce",
+    "visitBody": "Buyer e auditor sono i benvenuti nel nostro stabilimento a Nasr City. Prenotate una visita o chiedete un tour virtuale.",
+    "visitButton": "Prenota una visita"
   },
   "products": {
     "heroTitle": "Maglieria su ordinazione.",

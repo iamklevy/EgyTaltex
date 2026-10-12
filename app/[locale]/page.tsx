@@ -3,22 +3,11 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
 import { categoryPhotos, clientLogos, heroPhoto } from "@/content/images";
+import { JOURNEY_OWNERS } from "@/content/group";
 import { Arrow } from "@/components/site/editorial";
 import { PRODUCT_SLUGS } from "@/components/site/nav-links";
 import { ProductTile } from "@/components/site/product-tile";
 import { ProgrammeCta } from "@/components/site/programme-cta";
-
-/** Who runs each step of the chain, in messages `home.journey` order. */
-const JOURNEY_OWNERS: { who: string; sister: boolean }[] = [
-  { who: "Global Textile Industries", sister: true },
-  { who: "Egytaltex", sister: false },
-  { who: "Odiba Textile", sister: true },
-  { who: "Egytaltex", sister: false },
-  { who: "Egytaltex", sister: false },
-  { who: "Egytaltex · Italian Touch", sister: false },
-  { who: "Egytaltex", sister: false },
-  { who: "Egytaltex", sister: false },
-];
 
 const pad = (n: number) => String(n).padStart(2, "0");
 
