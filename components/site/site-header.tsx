@@ -11,14 +11,17 @@ import { MobileMenu } from "./mobile-menu";
 import { ProductsMenu } from "./products-menu";
 import { useNavTone } from "./use-nav-tone";
 
+/** Pages that open on a dark full-bleed hero, so the header is server-rendered dark there (no flash). */
+const DARK_HERO_ROUTES = ["/", "/company"];
+
 /** Frosted-glass panel floating over the top of the page; heroes pad by `--header-h` to clear it. */
 export function SiteHeader() {
   const t = useTranslations();
   const pathname = usePathname();
   const bar = useRef<HTMLDivElement>(null);
   // Over dark sections the glass smokes and the contents turn white (the `nav-dark:` variant).
-  // The home page opens on its dark hero, so the server renders it dark: no light-to-dark flash.
-  const { tone, animate } = useNavTone(bar, pathname === "/" ? "dark" : "light", [pathname]);
+  // Pages with a dark hero start dark on the server, so there's no light-to-dark flash on load.
+  const { tone, animate } = useNavTone(bar, DARK_HERO_ROUTES.includes(pathname) ? "dark" : "light", [pathname]);
 
   // MediaPrint-style: at the very top of the home page the mobile bar "rests" (no bar, just the
   // logo and language on the photo, the menu button in its own glass chip) and expands into the

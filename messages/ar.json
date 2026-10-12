@@ -122,22 +122,8 @@
   "company": {
     "heroTitle": "أرض مصرية، عقلية إيطالية",
     "heroLead": "وُلدت إيجيتالتكس عام 2001 — مصرية أرضًا، إيطالية فكرًا. ما بدأ كحبٍّ للحرفة أصبح بيتًا متكاملًا يخدم نخبة من العملاء.",
-    "storyTitle": "قصتنا",
     "storyP1": "بدأنا بقناعة بسيطة: أن النسيج المصنوع بعناية يختلف ملمسه ويدوم أطول. من بداية متواضعة بنينا، خطوة بخطوة، شركة صغيرة متكاملة — تجمع الخيط والقماش والثوب تحت سقف واحد.",
     "storyP2": "من المنطقة الحرة بمدينة نصر بالقاهرة، نمزج تراث مصر في القطن بحسٍّ إيطالي راقٍ. نحن نحب ما نفعله، ونفعله على طريقتنا.",
-    "valuesTitle": "ما يقودنا",
-    "value1Title": "الحرفة قبل الكمية",
-    "value1Body": "نفضّل أن نصنع أقل بجمال، على أن نصنع أكثر بإهمال.",
-    "value2Title": "تكامل رأسي",
-    "value2Body": "امتلاك السلسلة كاملة يعني أن الجودة مسؤوليتنا وحدنا.",
-    "value3Title": "النخبة بالتصميم",
-    "value3Body": "نصنع لعملاء يلاحظون التفاصيل — ويقدّرونها.",
-    "value4Title": "خامات صادقة",
-    "value4Body": "أجود قطن في العالم، يُعامل بالاحترام الذي يستحقه.",
-    "factsTitle": "بيت مدمج، إنتاج حقيقي",
-    "fact1Label": "منشأة موجهة للتصدير",
-    "fact2Label": "قطعة مُنتجة يوميًا",
-    "fact3Label": "خطوط إنتاج داخلية",
     "marketsLabel": "يُصدَّر حول العالم إلى",
     "markets": [
       "إيطاليا",
@@ -146,11 +132,111 @@
       "جنوب أفريقيا"
     ],
     "timelineTitle": "رحلة عبر المواسم",
-    "t2001": "تأسست في القاهرة بعقلية إيطالية وحبٍّ للحرفة.",
-    "t2008": "توسعنا إلى تصنيع متكامل — من الخيط إلى الثوب تحت سقف واحد.",
-    "t2015": "طوّرنا التشطيب لخدمة قاعدة عملاء مميزة متنامية.",
-    "tToday": "بيت موثوق للعلامات التي تقدّر كيفية الصنع.",
-    "quote": "نفخر أن نقولها بلا خجل: نحن نعملها على طريقتنا."
+    "quote": "نفخر أن نقولها بلا خجل: نحن نعملها على طريقتنا.",
+    "heroKicker": "الشركة",
+    "heroImageAlt": "نظرة من أسفل إلى ماكينة تريكو دائرية ومغذيات الغزل فيها",
+    "storyLabel": "قصتنا",
+    "manifesto": "المنسوجات المصنوعة بعناية تختلف في ملمسها — وتدوم أطول في خزانة الملابس.",
+    "quoteBy": "TBD",
+    "groupLabel": "المجموعة",
+    "groupTitle": "مجموعة واحدة، من الغزل حتى كرتونة التصدير",
+    "groupLead": "كل مرحلة من مراحل القطعة تتم داخل مجموعة شركاتنا، فتبقى الجودة مسؤوليتنا وحدنا.",
+    "groupSister": "شركة شقيقة",
+    "groupHome": "هذه نحن",
+    "groupRole": "الدور",
+    "groupSteps": "تتولى هذه المراحل",
+    "tbd": "TBD",
+    "floorLabel": "داخل المصنع",
+    "floorTitle": "في صالة الإنتاج بالمنطقة الحرة",
+    "floorLead": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh lkasjd oasdjh asdlkj qwe oiasd lkasjd.",
+    "photoSoon": "الصورة قريبًا",
+    "floor": [
+      {
+        "title": "التريكو الدائري",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "الصباغة والتجهيز",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "القص",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "الخياطة",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "مراقبة الجودة",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "التعبئة",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      }
+    ],
+    "capacityLabel": "الطاقة الإنتاجية",
+    "capacityTitle": "مصمَّم لإنتاج حقيقي",
+    "capacity": {
+      "area": "مساحة المصنع",
+      "knitting": "ماكينات تريكو دائرية",
+      "lines": "خطوط خياطة",
+      "staff": "عاملون في الإنتاج",
+      "daily": "قطعة يوميًا",
+      "moq": "الحد الأدنى للموديل (قطعة)",
+      "leadTime": "مدة التسليم (يوم)",
+      "markets": "أسواق التصدير"
+    },
+    "qualityLabel": "الجودة والامتثال",
+    "qualityTitle": "فحص في كل مرحلة",
+    "qualityLead": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh lkasjd oasdjh asdlkj qwe oiasd lkasjd.",
+    "qualitySteps": [
+      {
+        "title": "فحص الغزل",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "فحص القماش",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "فحص أثناء الإنتاج",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      },
+      {
+        "title": "الفحص النهائي",
+        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+      }
+    ],
+    "certsTitle": "الشهادات والتدقيق",
+    "marketsTitle": "إلى أين تذهب منتجاتنا",
+    "marketsLink": "تعرّف على من نصنع لهم",
+    "timeline": [
+      {
+        "year": "TBD",
+        "body": "TBD"
+      },
+      {
+        "year": "TBD",
+        "body": "TBD"
+      },
+      {
+        "year": "TBD",
+        "body": "TBD"
+      },
+      {
+        "year": "TBD",
+        "body": "TBD"
+      },
+      {
+        "year": "TBD",
+        "body": "TBD"
+      }
+    ],
+    "visitTitle": "تعالوا وشاهدوا كيف نصنع",
+    "visitBody": "المشترون والمدققون مرحَّب بهم في مصنعنا بمدينة نصر. احجزوا زيارة أو اطلبوا جولة افتراضية.",
+    "visitButton": "احجز زيارة للمصنع"
   },
   "products": {
     "heroTitle": "تريكو يُصنع حسب الطلب.",
