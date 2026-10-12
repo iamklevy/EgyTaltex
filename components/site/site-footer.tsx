@@ -3,7 +3,6 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { EMAIL, PHONE_1, PHONE_2, telHref } from "@/lib/contact";
 import { NAV_LINKS } from "@/components/site/nav-links";
-import { LanguageSwitch } from "@/components/site/language-switch";
 
 export async function SiteFooter() {
   const t = await getTranslations();
@@ -48,11 +47,6 @@ export async function SiteFooter() {
               </a>
             </li>
           </ul>
-        </div>
-
-        <div className="md:col-span-2">
-          <h2 className="text-sm font-medium">{t("footer.language")}</h2>
-          <LanguageSwitch className="mt-4" />
         </div>
       </div>
 

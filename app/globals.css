@@ -2,6 +2,10 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+/* header contents while the bar floats over a dark section (SiteHeader sets data-tone="dark") */
+@custom-variant nav-dark (&:where([data-tone="dark"] *));
+/* header contents while the mobile header rests at the top of the home page (SiteHeader sets data-rest) */
+@custom-variant nav-rest (&:where([data-rest] *));
 
 /*  Egytaltex brand tokens — a quiet catalogue: white pages, near-black type,
     light grey tiles behind the garment photography, hairline rules. No accent
@@ -43,11 +47,16 @@
 
 :root {
   --radius: 0;
+  /* floating header: top-3 gap + h-16 bar. Heroes pad by this so nothing hides under it. */
+  --header-h: 4.75rem;
+  /* one curve for the whole UI: the floating header, its menus and every button */
+  --ui-radius: 1.5rem;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-h) + 1rem);
     overflow-x: clip;
   }
   body {
@@ -79,8 +88,64 @@
   @apply text-sm text-ink-muted;
 }
 
+/* Frosted glass surface: the floating header and its dropdowns. A thin tint, light blur and
+   boosted saturation let the colours behind show through. The tint is tunable per element:
+   --glass-rgb (tint colour), --glass-top / --glass-bottom (its opacity at each edge).
+   Browsers without backdrop-filter get a near-solid white instead. */
+@utility glass {
+  @apply border border-white/50 bg-paper/90 shadow-[inset_0_1px_0_rgb(255_255_255/0.7),0_10px_30px_-12px_rgb(0_0_0/0.25)] ring-1 ring-ink/5;
+  @apply backdrop-blur-lg backdrop-brightness-110 backdrop-saturate-200;
+  @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+    background-color: transparent;
+    background-image: linear-gradient(
+      to bottom,
+      rgb(var(--glass-rgb, 255 255 255) / var(--glass-top, 0.55)),
+      rgb(var(--glass-rgb, 255 255 255) / var(--glass-bottom, 0.4))
+    );
+  }
+}
+/* Same look, painted on a ::before layer. A backdrop-filter on an ancestor stops descendants
+   (the header dropdowns) from blurring the page, so the header keeps its own blur off itself.
+   Over a dark section it turns to smoked glass so the (now white) text stays readable. */
+@utility glass-layer {
+  &::before {
+    content: "";
+    @apply glass pointer-events-none absolute inset-0 -z-10 rounded-[inherit] transition-opacity duration-500;
+  }
+  &[data-tone="dark"] {
+    --glass-rgb: 17 17 17;
+    --glass-top: 0.4;
+    --glass-bottom: 0.25;
+  }
+  &[data-tone="dark"]::before {
+    --tw-backdrop-brightness: brightness(90%);
+    border-color: rgb(255 255 255 / 0.15);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.15), 0 10px 30px -12px rgb(0 0 0 / 0.4);
+  }
+}
+/* Its own glass behind one header control (the mobile menu button). Hidden by default; while the
+   mobile header rests at the top of the home page, the bar's glass fades out and this fades in,
+   so the button floats as a chip until you scroll (`nav-rest:before:opacity-100`). */
+@utility glass-chip {
+  @apply relative isolate;
+  &::before {
+    content: "";
+    @apply glass pointer-events-none absolute inset-0 -z-10 rounded-[inherit] opacity-0 transition-opacity duration-500;
+  }
+  &:where([data-tone="dark"] *)::before {
+    --tw-backdrop-brightness: brightness(90%);
+    border-color: rgb(255 255 255 / 0.15);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.15), 0 10px 30px -12px rgb(0 0 0 / 0.4);
+  }
+}
+/* Dropdown panels inside the header: the glass edge, highlight and shadow, but a near-solid fill
+   and NO backdrop-filter. A blurred element nested in the blurred header makes Chrome repaint a
+   padded rectangle over the bar on hover, which shows as a grey box behind the menu. */
+@utility glass-dense {
+  @apply border border-white/50 bg-paper/95 shadow-[inset_0_1px_0_rgb(255_255_255/0.7),0_10px_30px_-12px_rgb(0_0_0/0.25)] ring-1 ring-ink/5;
+}
 @utility btn {
-  @apply inline-flex h-12 items-center justify-center gap-2 px-6 text-[0.95rem] font-medium whitespace-nowrap transition-colors duration-200;
+  @apply inline-flex h-12 items-center rounded-(--ui-radius) justify-center gap-2 px-6 text-[0.95rem] font-medium whitespace-nowrap transition-colors duration-200;
 }
 @utility btn-primary {
   @apply btn bg-ink text-paper hover:bg-ink-soft;

@@ -3,14 +3,14 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Dialog } from "radix-ui";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 import { Link, usePathname } from "@/i18n/navigation";
 import { EMAIL, PHONE_1, telHref } from "@/lib/contact";
 import { cn } from "@/lib/utils";
 import { NAV_LINKS } from "./nav-links";
-import { LanguageSwitch } from "./language-switch";
 import { WhatsAppIcon } from "./brand-icons";
+import { useProductLinks } from "./products-menu";
 
 const WHATSAPP = `https://wa.me/${PHONE_1.replace(/\D/g, "")}`;
 
@@ -19,13 +19,18 @@ export function MobileMenu() {
   const t = useTranslations();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
+  const products = useProductLinks();
   const close = () => setOpen(false);
 
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
-      <Dialog.Trigger className="-me-2 p-2 lg:hidden" aria-label={t("common.menu")}>
+      <Dialog.Trigger
+        className="glass-chip grid size-11 place-items-center rounded-full lg:hidden nav-rest:before:opacity-100"
+        aria-label={t("common.menu")}
+      >
         <Menu className="size-6" strokeWidth={1.5} />
       </Dialog.Trigger>
 
@@ -36,13 +41,13 @@ export function MobileMenu() {
         >
           <Dialog.Title className="sr-only">{t("common.menu")}</Dialog.Title>
 
-          <div className="border-b border-line">
-            <div className="container-x flex h-16 items-center justify-between">
-              <Link href="/" onClick={close} aria-label={t("common.homeLabel")}>
+          <div className="container-x pt-3">
+            <div className="flex h-16 items-center justify-between px-2">
+              <Link href="/" onClick={close} aria-label={t("common.homeLabel")} className="flex h-11 items-center px-3">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/logo.png" alt={t("common.brand")} className="h-7 w-auto" />
               </Link>
-              <Dialog.Close className="-me-2 p-2" aria-label={t("nav.close")}>
+              <Dialog.Close className="grid size-11 place-items-center" aria-label={t("nav.close")}>
                 <X className="size-6" strokeWidth={1.5} />
               </Dialog.Close>
             </div>
@@ -52,24 +57,51 @@ export function MobileMenu() {
             <ul>
               {NAV_LINKS.map(({ href, key }) => (
                 <li key={href} className="border-b border-line">
-                  <Link
-                    href={href}
-                    onClick={close}
-                    aria-current={isActive(href) ? "page" : undefined}
-                    className={cn(
-                      "block py-4 text-2xl font-medium tracking-tight",
-                      !isActive(href) && "text-ink-muted",
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={href}
+                      onClick={close}
+                      aria-current={isActive(href) ? "page" : undefined}
+                      className={cn(
+                        "block flex-1 py-4 text-2xl font-medium tracking-tight",
+                        !isActive(href) && "text-ink-muted",
+                      )}
+                    >
+                      {t(`nav.${key}`)}
+                    </Link>
+                    {key === "products" && (
+                      <button
+                        type="button"
+                        onClick={() => setProductsOpen((o) => !o)}
+                        aria-label={t("nav.products")}
+                        aria-expanded={productsOpen}
+                        aria-controls="mobile-products"
+                        className="-me-2 p-2"
+                      >
+                        <ChevronDown
+                          className={cn("size-6 transition-transform duration-200", productsOpen && "rotate-180")}
+                          strokeWidth={1.5}
+                        />
+                      </button>
                     )}
-                  >
-                    {t(`nav.${key}`)}
-                  </Link>
+                  </div>
+                  {key === "products" && productsOpen && (
+                    <ul id="mobile-products" className="grid grid-cols-2 gap-x-4 pb-5">
+                      {products.map((p) => (
+                        <li key={p.href}>
+                          <Link href={p.href} onClick={close} className="block py-2 text-ink-muted hover:text-ink">
+                            {p.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
             </ul>
 
             <div className="mt-auto pt-10">
-              <LanguageSwitch onSelect={close} className="text-base" />
-              <Link href="/contact" onClick={close} className="btn-primary mt-6 w-full">
+              <Link href="/contact" onClick={close} className="btn-primary w-full">
                 {t("nav.cta")}
               </Link>
               <div className="mt-6 flex flex-col gap-2 text-sm text-ink-muted">

@@ -1,12 +1,8 @@
 import type { ProductSlug } from "@/components/site/nav-links";
 
-// Unsplash photos — used only where no real Egytaltex photography exists yet.
-const UNSPLASH_IDS = {
-  hero: "1476683874822-744764a2438f", // rows of raw cotton yarn cones, soft warm backlight
-} as const;
-
-export const unsplash = (key: keyof typeof UNSPLASH_IDS, w = 1200) =>
-  `https://images.unsplash.com/photo-${UNSPLASH_IDS[key]}?auto=format&fit=crop&q=80&w=${w}`;
+// Home hero: a circular knitting machine beside its creel of yarn cones, on the Egytaltex floor.
+// Portrait (3:4), so the full-width hero shows a horizontal slice of it.
+export const heroPhoto = "/hero-knitting.jpg";
 
 // Real Egytaltex product photography, sourced from egytaltex.com. Only these
 // categories were photographed; the rest show as typographic swatch cards.

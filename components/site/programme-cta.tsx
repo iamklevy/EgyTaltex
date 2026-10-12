@@ -9,7 +9,7 @@ export async function ProgrammeCta() {
   const h = await getTranslations("home");
 
   return (
-    <section className="bg-ink text-paper">
+    <section data-nav-dark className="bg-ink text-paper">
       <div className="container-x grid gap-10 py-20 md:py-24 lg:grid-cols-12">
         <div className="lg:col-span-7">
           <h2 className="h-section">{h("ctaTitle")}</h2>
