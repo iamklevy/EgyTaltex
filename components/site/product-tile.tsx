@@ -5,17 +5,19 @@ import { cn } from "@/lib/utils";
 /**
  * Garment photo on a light grey tile. The studio shots have white backdrops,
  * so multiply melts them into the tile. Categories without a photo show their
- * name instead.
+ * name instead. Pass `eager` for tiles that sit above the fold so they aren't lazy-loaded.
  */
 export function ProductTile({
   src,
   alt,
   sizes,
+  eager,
   className,
 }: {
   src?: string;
   alt: string;
   sizes: string;
+  eager?: boolean;
   className?: string;
 }) {
   return (
@@ -26,6 +28,7 @@ export function ProductTile({
           alt={alt}
           fill
           sizes={sizes}
+          loading={eager ? "eager" : undefined}
           className="object-cover mix-blend-multiply transition-transform duration-500 ease-out group-hover:scale-[1.03]"
         />
       ) : (

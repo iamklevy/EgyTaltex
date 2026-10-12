@@ -2,7 +2,7 @@ import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
-import { categoryPhotos, clientLogos, unsplash } from "@/content/images";
+import { categoryPhotos, clientLogos, heroPhoto } from "@/content/images";
 import { Arrow } from "@/components/site/editorial";
 import { PRODUCT_SLUGS } from "@/components/site/nav-links";
 import { ProductTile } from "@/components/site/product-tile";
@@ -47,37 +47,43 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <>
-      {/* HERO */}
+      {/* HERO: full-bleed photo, centred copy. The floating header sits over the top of it. */}
       <section>
-        <div className="container-x grid gap-10 pt-12 pb-16 md:pt-20 lg:grid-cols-12 lg:gap-16 lg:pb-24">
-          <div className="flex flex-col justify-center lg:col-span-6">
-            <p className="label">{h("heroKicker")}</p>
-            <h1 className="h-display mt-5">{h("heroTitle")}</h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted">{h("heroLead")}</p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <Link href="/contact" className="btn-primary">
+        <div
+          data-nav-dark
+          className="relative isolate flex min-h-svh items-center justify-center overflow-hidden bg-ink text-paper"
+        >
+          <Image
+            src={heroPhoto}
+            alt={h("heroImageAlt")}
+            fill
+            priority
+            sizes="100vw"
+            className="-z-10 object-cover object-[center_40%]"
+          />
+          {/* darkens the photo so white type reads on any part of it */}
+          <div aria-hidden className="absolute inset-0 -z-10 bg-linear-to-b from-ink/55 via-ink/45 to-ink/70" />
+
+          <div className="container-x flex flex-col items-center pt-[calc(var(--header-h)+3rem)] pb-20 text-center md:pb-24">
+            <h1 className="h-display max-w-4xl">{h("heroTitle")}</h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-paper/80">{h("heroLead")}</p>
+            <p className="mt-5 text-sm text-paper/80">{h("heroKicker")}</p>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <Link href="/contact" className="btn bg-paper text-ink hover:bg-surface">
                 {h("heroCtaPrimary")}
               </Link>
-              <Link href="/products" className="btn-secondary">
+              <Link
+                href="/products"
+                className="btn border border-paper/40 text-paper hover:border-paper hover:bg-paper/10"
+              >
                 {h("heroCtaProducts")}
               </Link>
             </div>
           </div>
-
-          <div className="relative aspect-4/3 overflow-hidden bg-surface lg:col-span-6 lg:aspect-auto lg:min-h-[34rem]">
-            <Image
-              src={unsplash("hero", 1200)}
-              alt={h("heroImageAlt")}
-              fill
-              priority
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </div>
         </div>
 
         <div className="container-x">
-          <dl className="grid grid-cols-2 gap-x-6 border-t border-line md:grid-cols-4">
+          <dl className="grid grid-cols-2 gap-x-6 md:grid-cols-4">
             {stats.map((s) => (
               <div key={s.label} className="flex flex-col-reverse py-8">
                 <dt className="label mt-2">{s.label}</dt>
@@ -164,7 +170,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </section>
 
       {/* HOW IT'S MADE */}
-      <section id="process" className="scroll-mt-16 bg-surface py-20 md:py-28">
+      <section id="process" className="bg-surface py-20 md:py-28">
         <div className="container-x">
           <div className="max-w-2xl">
             <h2 className="h-section">{h("processTitle")}</h2>

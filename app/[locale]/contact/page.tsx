@@ -71,7 +71,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         <iframe
           title={t("common.mapIframe")}
           src={MAP_SRC}
-          className="block h-[28rem] w-full border-0 grayscale"
+          className="block h-[28rem] w-full border-0"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           allowFullScreen

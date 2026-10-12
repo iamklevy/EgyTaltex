@@ -40,12 +40,13 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
         <div className="container-x">
           <h2 className="sr-only">{p("catalogueTitle")}</h2>
           <div className="grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-            {items.map((item) => (
-              <article key={item.slug} id={item.slug} className="group scroll-mt-24">
+            {items.map((item, i) => (
+              <article key={item.slug} id={item.slug} className="group">
                 <ProductTile
                   src={item.photo}
                   alt={item.name}
                   sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  eager={i < 4} // first row of the 4-column grid is above the fold
                 />
                 <h3 className="mt-4 text-lg font-medium">{item.name}</h3>
                 <p className="mt-1 leading-relaxed text-ink-muted">{item.desc}</p>
@@ -56,7 +57,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
             ))}
 
             {/* anything else they can knit */}
-            <Link href="/contact" className="flex aspect-4/5 flex-col justify-end bg-ink p-6 text-paper hover:bg-ink-soft">
+            <Link href="/contact" data-nav-dark className="flex aspect-4/5 flex-col justify-end bg-ink p-6 text-paper hover:bg-ink-soft">
               <span className="text-2xl font-medium tracking-tight">{p("customTitle")}</span>
               <span className="mt-3 leading-relaxed text-paper/70">{p("customBody")}</span>
               <span className="mt-6 inline-flex items-center gap-2 text-sm">
