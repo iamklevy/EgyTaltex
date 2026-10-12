@@ -59,14 +59,14 @@ export function MobileMenu({ tone, rest }: { tone: NavTone; rest: boolean }) {
         <Dialog.Overlay className="fixed inset-0 z-[55] bg-ink/25 duration-300 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0 lg:hidden" />
 
         {/* Must be a direct child of Portal: Radix waits for *this* element's close animation before
-            unmounting. Placed exactly where the header bar is (container-x gutters, top-3). While the
+            unmounting. Placed exactly where the header bar is (container-x gutters, top-2). While the
             header rests (no bar, logo on the gutter) it's 0.5rem wider each side, so the panel clears
             the logo and the row's px-2 still lands the logo and X exactly where the header has them. */}
         <Dialog.Content
           aria-describedby={undefined}
           data-tone={tone}
           data-rest={rest ? "" : undefined}
-          className="group menu-origin glass-layer fixed inset-x-5 top-3 z-[60] isolate data-rest:inset-x-3 flex max-h-[calc(100svh-1.5rem)] flex-col overflow-hidden rounded-(--ui-radius) text-ink outline-none data-[tone=dark]:text-paper data-[state=closed]:animate-menu-close data-[state=open]:animate-menu-open motion-reduce:animate-none! md:inset-x-10 md:data-rest:inset-x-8 lg:hidden"
+          className="group menu-origin glass-layer fixed inset-x-5 top-2 z-[60] isolate data-rest:inset-x-3 flex max-h-[calc(100svh-1rem)] flex-col overflow-hidden rounded-(--ui-radius) text-ink outline-none data-[tone=dark]:text-paper data-[state=closed]:animate-menu-close data-[state=open]:animate-menu-open motion-reduce:animate-none! md:inset-x-10 md:data-rest:inset-x-8 lg:hidden"
         >
           <PanelMounted onChange={setPanelShown} />
           <Dialog.Title className="sr-only">{t("common.menu")}</Dialog.Title>

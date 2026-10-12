@@ -3,6 +3,8 @@ import type { ProductSlug } from "@/components/site/nav-links";
 // Home hero: a circular knitting machine beside its creel of yarn cones, on the Egytaltex floor.
 // Portrait (3:4), so the full-width hero shows a horizontal slice of it.
 export const heroPhoto = "/hero-knitting.jpg";
+// Contact page side card: a seam running under the presser foot. Portrait, cropped to a landscape card.
+export const contactPhoto = "/contact-sewing.jpg";
 
 // Real Egytaltex product photography, sourced from egytaltex.com. Only these
 // categories were photographed; the rest show as typographic swatch cards.

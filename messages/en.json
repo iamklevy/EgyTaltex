@@ -20,7 +20,6 @@
     "production": "production"
   },
   "home": {
-    "heroKicker": "Vertical knitwear manufacturer · Cairo · Since 2001",
     "heroLead": "We make polos, T-shirts and jerseywear for European and American brands. Every step, from dyed yarn to the packed export carton, happens inside our own group.",
     "heroCtaPrimary": "Request a quote",
     "statFounded": "Founded",
@@ -144,6 +143,7 @@
     "groupSister": "Sister company",
     "groupHome": "This is us",
     "groupRole": "Role",
+    "groupHomeRole": "Knitting, garment making & export",
     "groupSteps": "Runs these steps",
     "tbd": "TBD",
     "floorLabel": "Inside the factory",
@@ -350,13 +350,12 @@
   },
   "contact": {
     "heroTitle": "Let's talk textiles",
-    "heroLead": "Tell us about your project. We build to order and reply to every serious enquiry.",
+    "heroLead": "Whether you have a full programme or just a first idea, we'd love to hear about it. Tell us a little and we'll take it from there.",
     "formName": "Your name",
     "formEmail": "Email address",
     "formCompany": "Company",
     "formMessage": "How can we help?",
     "formSubmit": "Send message",
-    "formSent": "Thank you — we will be in touch shortly.",
     "formError": "Something went wrong — please try again or email us directly.",
     "addressLabel": "Address",
     "address": "Free Zone, Nasr City, Cairo, Egypt",
@@ -365,7 +364,24 @@
     "emailLabel": "Email",
     "hoursLabel": "Hours",
     "hours": "Sun – Thu · 9:00 – 17:00",
-    "mapTitle": "Find us"
+    "mapTitle": "Find us",
+    "formTitle": "Tell us what you're making",
+    "formIntro": "A few lines are enough to start: the product, rough quantities and when you need it.",
+    "topicLabel": "What's this about?",
+    "topics": [
+      "A quote for a programme",
+      "Samples & development",
+      "A factory visit",
+      "Something else"
+    ],
+    "formOptional": "Optional",
+    "formMessagePlaceholder": "E.g. 5,000 piqué polos in three colours, delivered in spring…",
+    "formSending": "Sending…",
+    "formReplyNote": "We'll reply by email.",
+    "formSentTitle": "Thank you, {name}. Message received.",
+    "formSentBody": "We'll read it carefully and get back to you by email. If it's urgent, WhatsApp is the quickest way to reach us.",
+    "formSendAnother": "Send another message",
+    "directTitle": "Prefer to talk directly?"
   },
   "footer": {
     "blurb": "A vertical knitwear house in Cairo, making for European and American brands since 2001.",

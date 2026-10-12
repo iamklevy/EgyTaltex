@@ -20,7 +20,6 @@
     "production": "produzione"
   },
   "home": {
-    "heroKicker": "Produttore verticale di maglieria · Il Cairo · Dal 2001",
     "heroLead": "Produciamo polo, T-shirt e jersey per marchi europei e americani. Ogni fase, dal filato tinto al cartone pronto per l'export, avviene all'interno del nostro gruppo.",
     "heroCtaPrimary": "Richiedi un preventivo",
     "statFounded": "Fondata",
@@ -144,6 +143,7 @@
     "groupSister": "Azienda sorella",
     "groupHome": "Siamo noi",
     "groupRole": "Ruolo",
+    "groupHomeRole": "Maglieria, confezione ed export",
     "groupSteps": "Gestisce queste fasi",
     "tbd": "TBD",
     "floorLabel": "Dentro la fabbrica",
@@ -350,13 +350,12 @@
   },
   "contact": {
     "heroTitle": "Parliamo di tessuti",
-    "heroLead": "Raccontaci del tuo progetto. Produciamo su ordinazione e rispondiamo a ogni richiesta seria.",
+    "heroLead": "Che si tratti di un programma completo o di una prima idea, ci farebbe piacere sentirla. Raccontaci qualcosa e al resto pensiamo noi.",
     "formName": "Il tuo nome",
     "formEmail": "Indirizzo email",
     "formCompany": "Azienda",
     "formMessage": "Come possiamo aiutarti?",
     "formSubmit": "Invia messaggio",
-    "formSent": "Grazie — ti contatteremo a breve.",
     "formError": "Qualcosa è andato storto — riprova o scrivici direttamente.",
     "addressLabel": "Indirizzo",
     "address": "Zona Franca, Nasr City, Il Cairo, Egitto",
@@ -365,7 +364,24 @@
     "emailLabel": "Email",
     "hoursLabel": "Orari",
     "hours": "Dom – Gio · 9:00 – 17:00",
-    "mapTitle": "Dove siamo"
+    "mapTitle": "Dove siamo",
+    "formTitle": "Raccontaci cosa vuoi produrre",
+    "formIntro": "Bastano poche righe per iniziare: il prodotto, le quantità indicative e i tempi.",
+    "topicLabel": "Di cosa si tratta?",
+    "topics": [
+      "Un preventivo per un programma",
+      "Campionatura e sviluppo",
+      "Una visita in fabbrica",
+      "Altro"
+    ],
+    "formOptional": "Facoltativo",
+    "formMessagePlaceholder": "Es. 5.000 polo in piquet in tre colori, consegna in primavera…",
+    "formSending": "Invio in corso…",
+    "formReplyNote": "Ti risponderemo via email.",
+    "formSentTitle": "Grazie, {name}. Messaggio ricevuto.",
+    "formSentBody": "Lo leggeremo con attenzione e ti risponderemo via email. Se è urgente, WhatsApp è il modo più rapido per contattarci.",
+    "formSendAnother": "Invia un altro messaggio",
+    "directTitle": "Preferisci parlarci direttamente?"
   },
   "footer": {
     "blurb": "Una maglieria verticale al Cairo, che produce per marchi europei e americani dal 2001.",

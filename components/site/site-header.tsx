@@ -37,7 +37,7 @@ export function SiteHeader() {
   const rest = pathname === "/" && !scrolled;
 
   return (
-    <header className="fixed inset-x-0 top-3 z-50">
+    <header className="fixed inset-x-0 top-2 z-50 lg:top-3">
       <div className="container-x">
         <div
           ref={bar}

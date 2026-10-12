@@ -2,7 +2,7 @@
 
 export type GroupCompany = { id: string; name: string; sister: boolean };
 
-// TODO(owners): confirm the group's companies and what each one does (see company page "The group").
+// Sister companies' roles come from messages `clients.sisterList`, matched by name.
 export const GROUP: GroupCompany[] = [
   { id: "gti", name: "Global Textile Industries", sister: true },
   { id: "egytaltex", name: "Egytaltex", sister: false },

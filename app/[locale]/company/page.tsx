@@ -22,11 +22,14 @@ export default async function CompanyPage({ params }: { params: Promise<{ locale
   const c = await getTranslations("company");
   const h = await getTranslations("home");
 
-  // each company with the chain steps it runs (an owner like "Egytaltex · Italian Touch" counts for both)
+  // each company with its role (sisters' roles live with the clients page) and the chain steps it
+  // runs, by number (an owner like "Egytaltex · Italian Touch" counts for both)
   const journey = h.raw("journey") as { title: string }[];
+  const sisterRoles = (await getTranslations("clients")).raw("sisterList") as { name: string; role: string }[];
   const group = GROUP.map((co) => ({
     ...co,
-    steps: journey.filter((_, i) => JOURNEY_OWNERS[i].who.split(" · ").includes(co.name)).map((s) => s.title),
+    role: co.sister ? sisterRoles.find((s) => s.name === co.name)?.role : c("groupHomeRole"),
+    steps: journey.flatMap((_, i) => (JOURNEY_OWNERS[i].who.split(" · ").includes(co.name) ? [pad(i + 1)] : [])),
   }));
 
   const floor = (c.raw("floor") as { title: string; body: string }[]).map((s, i) => ({ ...s, photo: FLOOR_PHOTOS[i] }));
@@ -103,12 +106,11 @@ export default async function CompanyPage({ params }: { params: Promise<{ locale
                 <dl className="mt-6 space-y-4 text-sm">
                   <div>
                     <dt className="text-ink-muted">{c("groupRole")}</dt>
-                    {/* TODO(owners): what this company does */}
-                    <dd className="mt-1">{c("tbd")}</dd>
+                    <dd className="mt-1">{co.role ?? c("tbd")}</dd>
                   </div>
                   <div>
                     <dt className="text-ink-muted">{c("groupSteps")}</dt>
-                    <dd className="mt-1">{co.steps.length ? co.steps.join(", ") : c("tbd")}</dd>
+                    <dd className="mt-1 tabular-nums">{co.steps.length ? co.steps.join(" · ") : c("tbd")}</dd>
                   </div>
                 </dl>
               </article>
