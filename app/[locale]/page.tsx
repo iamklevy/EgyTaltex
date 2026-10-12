@@ -5,7 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { clientLogos, unsplash } from "@/content/images";
 import { cn } from "@/lib/utils";
 import { Appear, Reveal } from "@/components/site/motion";
-import { Arrow, Chapter } from "@/components/site/editorial";
+import { Arrow } from "@/components/site/editorial";
 import { PRODUCT_SLUGS } from "@/components/site/nav-links";
 import { ProgrammeCta } from "@/components/site/programme-cta";
 import { StitchUnderline, ThreadJourney, type JourneyStep } from "@/components/home/stitch";
@@ -137,10 +137,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       {/* I — THE HOUSE */}
       <section className="py-28 md:py-40">
         <div className="container-x grid gap-10 lg:grid-cols-12">
-          <Reveal className="lg:col-span-3">
-            <Chapter>{h("manifestoChapter")}</Chapter>
-          </Reveal>
-          <div className="lg:col-span-9">
+          <div className="lg:col-span-9 lg:col-start-4">
             <Reveal>
               <blockquote className="heading-serif text-[clamp(2.2rem,5vw,4.6rem)] leading-[1.06]">
                 <span className="text-stitch">“</span>
@@ -169,8 +166,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="lg:col-span-5">
             <div className="lg:sticky lg:top-32">
               <Reveal>
-                <Chapter>{h("journeyChapter")}</Chapter>
-                <h2 className="heading-serif mt-6 text-5xl md:text-6xl">{h("journeyTitle")}</h2>
+                <h2 className="heading-serif text-5xl md:text-6xl">{h("journeyTitle")}</h2>
                 <p className="mt-6 max-w-md text-lg leading-relaxed text-ink-muted">{h("journeyLead")}</p>
               </Reveal>
             </div>
@@ -186,8 +182,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="container-x">
           <div className="grid gap-8 lg:grid-cols-12">
             <Reveal className="lg:col-span-7">
-              <Chapter>{h("rangeChapter")}</Chapter>
-              <h2 className="heading-serif mt-6 text-5xl md:text-6xl">{h("rangeTitle")}</h2>
+              <h2 className="heading-serif text-5xl md:text-6xl">{h("rangeTitle")}</h2>
             </Reveal>
             <Reveal delay={0.1} className="flex flex-col items-start justify-end gap-5 lg:col-span-5">
               <p className="text-lg leading-relaxed text-ink-muted">{h("rangeLead")}</p>
@@ -248,8 +243,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="weave-bg pointer-events-none absolute inset-0 opacity-40" />
         <div className="container-x relative">
           <Reveal>
-            <Chapter className="text-stitch-light">{h("marketsChapter")}</Chapter>
-            <h2 className="heading-serif mt-6 max-w-3xl text-5xl text-paper md:text-6xl">{h("marketsTitle")}</h2>
+            <h2 className="heading-serif max-w-3xl text-5xl text-paper md:text-6xl">{h("marketsTitle")}</h2>
           </Reveal>
 
           <div className="mt-16 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-4">

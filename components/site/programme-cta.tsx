@@ -3,18 +3,17 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { EMAIL, PHONE_1, telHref } from "@/lib/contact";
 import { Reveal } from "@/components/site/motion";
-import { Arrow, Chapter } from "@/components/site/editorial";
+import { Arrow } from "@/components/site/editorial";
 
 /** "Have a programme in mind?" — the closing enquiry block shared by editorial pages. */
-export async function ProgrammeCta({ chapter }: { chapter?: string }) {
+export async function ProgrammeCta() {
   const h = await getTranslations("home");
 
   return (
     <section className="py-28 md:py-40">
       <div className="container-x">
         <Reveal>
-          <Chapter>{chapter ?? h("ctaChapter")}</Chapter>
-          <h2 className="heading-serif mt-6 max-w-4xl text-[clamp(3rem,7.5vw,6.75rem)] leading-[0.98]">
+          <h2 className="heading-serif max-w-4xl text-[clamp(3rem,7.5vw,6.75rem)] leading-[0.98]">
             {h("ctaTitle")}
           </h2>
         </Reveal>
