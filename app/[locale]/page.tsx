@@ -56,7 +56,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="container-x flex flex-col items-center pt-[calc(var(--header-h)+3rem)] pb-20 text-center md:pb-24">
             <h1 className="h-display max-w-4xl">{h("heroTitle")}</h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-paper/80">{h("heroLead")}</p>
-            <p className="mt-5 text-sm text-paper/80">{h("heroKicker")}</p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link href="/contact" className="btn bg-paper text-ink hover:bg-surface">
                 {h("heroCtaPrimary")}
@@ -85,34 +84,39 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      {/* CLIENTS */}
-      <section className="border-y border-line">
-        <div className="container-x pt-12">
-          <p className="label">{h("clientsLabel")}</p>
+      {/* CLIENTS: a centred label, then a rail of equal logo cards drifting past on a tinted band */}
+      <section className="bg-surface py-14 md:py-16">
+        <div className="container-x flex items-center gap-4">
+          <span aria-hidden className="h-px flex-1 bg-line" />
+          <p className="label shrink-0">{h("clientsLabel")}</p>
+          <span aria-hidden className="h-px flex-1 bg-line" />
         </div>
         {/* Two identical halves slide by -50% for a seamless loop; each half repeats the logos so it
             outruns wide screens. Kept LTR so the loop direction doesn't flip in Arabic. */}
-        <div dir="ltr" className="group mt-8 overflow-hidden pb-12 mask-x-from-90% mask-x-to-100%">
+        <div dir="ltr" className="group mt-10 overflow-hidden mask-x-from-85% mask-x-to-100%">
           <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:w-full motion-reduce:animate-none">
             {[0, 1].map((half) => (
               <ul
                 key={half}
                 aria-hidden={half === 1 || undefined}
-                className={`flex shrink-0 items-center motion-reduce:w-full motion-reduce:flex-wrap motion-reduce:justify-center ${half === 1 ? "motion-reduce:hidden" : ""}`}
+                className={`flex shrink-0 gap-3 pe-3 md:gap-4 md:pe-4 motion-reduce:w-full motion-reduce:flex-wrap motion-reduce:justify-center ${half === 1 ? "motion-reduce:hidden" : ""}`}
               >
                 {[...clientLogos, ...clientLogos].map((c, i) => (
                   <li
                     key={`${c.name}-${i}`}
                     aria-hidden={i >= clientLogos.length || undefined}
-                    className={`flex h-12 items-center px-8 md:px-12 ${i >= clientLogos.length ? "motion-reduce:hidden" : ""}`}
+                    className={`group/logo grid h-20 w-36 place-items-center rounded-(--ui-radius) border border-line bg-paper px-6 transition duration-300 hover:-translate-y-0.5 hover:border-ink/15 hover:shadow-[0_12px_30px_-18px_rgb(0_0_0/0.35)] md:h-28 md:w-52 md:px-8 ${i >= clientLogos.length ? "motion-reduce:hidden" : ""}`}
                   >
-                    <Image
-                      src={c.logo}
-                      alt={half === 0 && i < clientLogos.length ? c.name : ""}
-                      width={140}
-                      height={56}
-                      className="max-h-10 w-auto object-contain opacity-60 grayscale transition hover:opacity-100 hover:grayscale-0"
-                    />
+                    {/* fixed box + object-contain: every logo gets the same footprint, whatever its shape */}
+                    <div className="relative h-9 w-full md:h-12">
+                      <Image
+                        src={c.logo}
+                        alt={half === 0 && i < clientLogos.length ? c.name : ""}
+                        fill
+                        sizes="160px"
+                        className="object-contain opacity-80 grayscale transition duration-300 group-hover/logo:opacity-100 group-hover/logo:grayscale-0"
+                      />
+                    </div>
                   </li>
                 ))}
               </ul>

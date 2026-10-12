@@ -10,3 +10,12 @@ export const telHref = (phone: string) => `tel:${phone.replace(/\s/g, "")}`;
 
 /** Hidden contact-form field real visitors never fill; bots that auto-fill every input do. */
 export const HONEYPOT_FIELD = "website";
+
+/** Contact-form topics, in messages `contact.topics` order. English labels go in the enquiry email. */
+export const CONTACT_TOPICS = ["quote", "samples", "visit", "other"] as const;
+export const CONTACT_TOPIC_LABELS: Record<(typeof CONTACT_TOPICS)[number], string> = {
+  quote: "Quote for a programme",
+  samples: "Samples & development",
+  visit: "Factory visit",
+  other: "Something else",
+};

@@ -1,6 +1,6 @@
 "use server";
 
-import { EMAIL, HONEYPOT_FIELD } from "@/lib/contact";
+import { CONTACT_TOPIC_LABELS, EMAIL, HONEYPOT_FIELD } from "@/lib/contact";
 import { sendEmail } from "@/lib/email/client";
 
 const MAX_LEN = { name: 200, email: 320, company: 200, message: 5000 };
@@ -18,10 +18,15 @@ export async function sendContactMessage(formData: FormData): Promise<{ ok: bool
   const email = field(formData, "email");
   const company = field(formData, "company");
   const message = field(formData, "message");
+  const topicId = String(formData.get("topic") ?? "");
+  const topic = Object.hasOwn(CONTACT_TOPIC_LABELS, topicId)
+    ? CONTACT_TOPIC_LABELS[topicId as keyof typeof CONTACT_TOPIC_LABELS]
+    : "—";
 
   if (!name || !message || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return { ok: false };
 
   const rows = [
+    ["Topic", topic],
     ["Name", name],
     ["Email", email],
     ["Company", company || "—"],
@@ -32,7 +37,7 @@ export async function sendContactMessage(formData: FormData): Promise<{ ok: bool
   const ok = await sendEmail({
     to: process.env.CONTACT_TO ?? EMAIL,
     replyTo: email,
-    subject: `Website enquiry from ${name}${company ? ` (${company})` : ""}`,
+    subject: `${topic === "—" ? "Website enquiry" : topic} from ${name}${company ? ` (${company})` : ""}`,
     html: `<table style="font-family:sans-serif;font-size:14px">${rows}</table>
 <p style="font-family:sans-serif;font-size:14px;white-space:pre-wrap">${escapeHtml(message)}</p>`,
   });
