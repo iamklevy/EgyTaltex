@@ -20,7 +20,7 @@ export function LanguageMenu({ className }: { className?: string }) {
   const current = languages.find((l) => l.code === locale) ?? languages[0];
 
   return (
-    <div {...rootProps} className={cn("relative", className)}>
+    <div {...rootProps} data-lang-menu className={cn("relative", className)}>
       <button
         type="button"
         onClick={toggle}
