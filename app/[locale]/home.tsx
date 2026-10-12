@@ -92,21 +92,37 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       {/* CLIENTS */}
       <section className="border-y border-line">
-        <div className="container-x py-12">
+        <div className="container-x pt-12">
           <p className="label">{h("clientsLabel")}</p>
-          <ul className="mt-8 grid grid-cols-2 items-center gap-x-10 gap-y-10 sm:grid-cols-4 lg:grid-cols-8">
-            {clientLogos.map((c) => (
-              <li key={c.name} className="flex h-12 items-center justify-center">
-                <Image
-                  src={c.logo}
-                  alt={c.name}
-                  width={140}
-                  height={56}
-                  className="max-h-10 w-auto object-contain opacity-60 grayscale transition hover:opacity-100 hover:grayscale-0"
-                />
-              </li>
+        </div>
+        {/* Two identical halves slide by -50% for a seamless loop; each half repeats the logos so it
+            outruns wide screens. Kept LTR so the loop direction doesn't flip in Arabic. */}
+        <div dir="ltr" className="group mt-8 overflow-hidden pb-12 mask-x-from-90% mask-x-to-100%">
+          <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:w-full motion-reduce:animate-none">
+            {[0, 1].map((half) => (
+              <ul
+                key={half}
+                aria-hidden={half === 1 || undefined}
+                className={`flex shrink-0 items-center motion-reduce:w-full motion-reduce:flex-wrap motion-reduce:justify-center ${half === 1 ? "motion-reduce:hidden" : ""}`}
+              >
+                {[...clientLogos, ...clientLogos].map((c, i) => (
+                  <li
+                    key={`${c.name}-${i}`}
+                    aria-hidden={i >= clientLogos.length || undefined}
+                    className={`flex h-12 items-center px-8 md:px-12 ${i >= clientLogos.length ? "motion-reduce:hidden" : ""}`}
+                  >
+                    <Image
+                      src={c.logo}
+                      alt={half === 0 && i < clientLogos.length ? c.name : ""}
+                      width={140}
+                      height={56}
+                      className="max-h-10 w-auto object-contain opacity-60 grayscale transition hover:opacity-100 hover:grayscale-0"
+                    />
+                  </li>
+                ))}
+              </ul>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 

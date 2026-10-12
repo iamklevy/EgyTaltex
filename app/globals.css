@@ -31,6 +31,16 @@
   --color-ring: var(--color-ink);
 }
 
+@theme {
+  /* client logo strip on the home page */
+  --animate-marquee: marquee 45s linear infinite;
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
 :root {
   --radius: 0;
 }
