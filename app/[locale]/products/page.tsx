@@ -6,7 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/seo";
 import { categoryPhotos, poloGallery, productionGallery } from "@/content/images";
 import { Appear, Reveal } from "@/components/site/motion";
-import { Arrow, Chapter } from "@/components/site/editorial";
+import { Arrow } from "@/components/site/editorial";
 import { PRODUCT_SLUGS } from "@/components/site/nav-links";
 import { ProgrammeCta } from "@/components/site/programme-cta";
 
@@ -37,10 +37,6 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
       {/* HERO — title page of the catalogue, with its index */}
       <section className="pt-28 md:pt-32">
         <div className="container-x">
-          <Appear y={0} duration={0.8} className="border-b border-ink/15 pb-4">
-            <Chapter>{p("heroChapter")}</Chapter>
-          </Appear>
-
           <div className="grid gap-14 pt-10 pb-20 md:pt-14 md:pb-28 lg:grid-cols-12">
             <div className="lg:col-span-7">
               <Appear as="h1" y={40} delay={0.1} className="heading-serif text-[clamp(3.2rem,8vw,7.25rem)] leading-[0.95]">
@@ -101,8 +97,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
           <div className="lg:col-span-5">
             <div className="lg:sticky lg:top-32">
               <Reveal>
-                <Chapter>{p("featureChapter")}</Chapter>
-                <h2 className="heading-serif mt-6 text-5xl md:text-6xl">{p("featureTitle")}</h2>
+                <h2 className="heading-serif text-5xl md:text-6xl">{p("featureTitle")}</h2>
                 <p className="mt-6 text-lg leading-relaxed text-ink-muted">{p("featureBody")}</p>
               </Reveal>
               <Reveal delay={0.1}>
@@ -127,8 +122,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
       <section className="py-28 md:py-36">
         <div className="container-x">
           <Reveal>
-            <Chapter>{p("catalogueChapter")}</Chapter>
-            <h2 className="heading-serif mt-6 text-5xl md:text-6xl">{p("catalogueTitle")}</h2>
+            <h2 className="heading-serif text-5xl md:text-6xl">{p("catalogueTitle")}</h2>
           </Reveal>
 
           <div className="mt-16 grid gap-x-6 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
@@ -195,8 +189,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
         <div className="weave-bg pointer-events-none absolute inset-0 opacity-40" />
         <div className="container-x relative">
           <Reveal>
-            <Chapter className="text-stitch-light">{p("finishChapter")}</Chapter>
-            <h2 className="heading-serif mt-6 max-w-3xl text-5xl text-paper md:text-6xl">{p("finishTitle")}</h2>
+            <h2 className="heading-serif max-w-3xl text-5xl text-paper md:text-6xl">{p("finishTitle")}</h2>
           </Reveal>
           <ul className="mt-14 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
             {finishes.map((f, i) => (
@@ -213,8 +206,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
       <section className="pt-28 md:pt-36">
         <div className="container-x">
           <Reveal>
-            <Chapter>{p("galleryChapter")}</Chapter>
-            <h2 className="heading-serif mt-6 max-w-xl text-5xl md:text-6xl">{p("galleryTitle")}</h2>
+            <h2 className="heading-serif max-w-xl text-5xl md:text-6xl">{p("galleryTitle")}</h2>
           </Reveal>
           <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-5">
             {productionGallery.map((src, i) => (
@@ -234,7 +226,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
         </div>
       </section>
 
-      <ProgrammeCta chapter={t("nav.cta")} />
+      <ProgrammeCta />
     </>
   );
 }
