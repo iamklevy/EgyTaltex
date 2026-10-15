@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
-import { EMAIL, PHONE_1, PHONE_2, telHref } from "@/lib/contact";
+import { EMAIL, PHONE_1, PHONE_2, PROFILE_PDF, telHref } from "@/lib/contact";
 import { NAV_LINKS } from "@/components/site/nav-links";
 
 export async function SiteFooter() {
@@ -44,6 +44,11 @@ export async function SiteFooter() {
             <li>
               <a href={`mailto:${EMAIL}`} className="hover:text-ink">
                 {EMAIL}
+              </a>
+            </li>
+            <li>
+              <a href={PROFILE_PDF} target="_blank" rel="noopener" className="underline underline-offset-4 hover:text-ink">
+                {t("footer.profile")}
               </a>
             </li>
           </ul>

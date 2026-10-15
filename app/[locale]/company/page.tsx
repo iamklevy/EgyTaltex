@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import { FileDown } from "lucide-react";
+
 import { Link } from "@/i18n/navigation";
+import { PROFILE_PDF } from "@/lib/contact";
 import { alternatesFor } from "@/lib/seo";
-import { CAPACITY, FLOOR_PHOTOS, companyHeroPhoto } from "@/content/company";
+import { CAPACITY, CERTIFICATIONS, FLOOR_PHOTOS, MACHINERY, companyHeroPhoto } from "@/content/company";
 import { GROUP, JOURNEY_OWNERS } from "@/content/group";
 import { Arrow } from "@/components/site/editorial";
 
@@ -163,6 +166,42 @@ export default async function CompanyPage({ params }: { params: Promise<{ locale
         </div>
       </section>
 
+      {/* MACHINERY: the machine park, one block per department */}
+      <section className="bg-surface py-20 md:py-28">
+        <div className="container-x grid gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <p className="label">{c("machineryLabel")}</p>
+            <h2 className="h-section mt-3">{c("machineryTitle")}</h2>
+            <p className="mt-5 text-lg leading-relaxed text-ink-muted">{c("machineryLead")}</p>
+          </div>
+          <div className="gap-x-10 md:columns-2 lg:col-span-8">
+            {MACHINERY.map((d) => (
+              <div key={d.dept} className="mb-10 break-inside-avoid">
+                <h3 className="flex items-baseline justify-between border-b border-ink pb-3 text-lg font-medium">
+                  {c(`machineryDepts.${d.dept}`)}
+                  <span className="text-sm text-ink-muted tabular-nums">{d.machines.reduce((n, m) => n + m.count, 0)}</span>
+                </h3>
+                <ul>
+                  {d.machines.map((m) => (
+                    <li key={m.key} className="flex items-baseline justify-between gap-4 border-b border-line py-3 text-sm">
+                      <span>
+                        {c(`machines.${m.key}`)}
+                        {m.detail && (
+                          <span dir="ltr" className="mt-0.5 block text-ink-muted rtl:text-right">
+                            {m.detail}
+                          </span>
+                        )}
+                      </span>
+                      <span className="tabular-nums">{m.count}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* QUALITY & COMPLIANCE */}
       <section className="py-20 md:py-28">
         <div className="container-x grid gap-12 lg:grid-cols-12">
@@ -184,16 +223,15 @@ export default async function CompanyPage({ params }: { params: Promise<{ locale
           </ol>
         </div>
 
-        {/* TODO(owners): certifications / audits with their logos */}
         <div className="container-x mt-16">
           <h3 className="text-lg font-medium">{c("certsTitle")}</h3>
-          <ul className="mt-6 grid grid-cols-2 gap-5 md:grid-cols-4">
-            {[1, 2, 3, 4].map((n) => (
-              <li
-                key={n}
-                className="grid aspect-3/2 place-items-center border border-dashed border-ink/20 text-sm text-ink-muted"
-              >
-                {c("tbd")}
+          <ul className="mt-6 grid gap-5 sm:grid-cols-3">
+            {CERTIFICATIONS.map((cert) => (
+              <li key={cert.key} className="flex flex-col justify-between gap-8 border border-line p-6">
+                <span dir="ltr" className="text-2xl font-medium tracking-tight tabular-nums rtl:text-right">
+                  {cert.code}
+                </span>
+                <span className="text-sm text-ink-muted">{c(`certs.${cert.key}`)}</span>
               </li>
             ))}
           </ul>
@@ -242,9 +280,19 @@ export default async function CompanyPage({ params }: { params: Promise<{ locale
             <h2 className="h-section">{c("visitTitle")}</h2>
             <p className="mt-5 text-lg leading-relaxed text-paper/70">{c("visitBody")}</p>
           </div>
-          <Link href="/contact" className="btn shrink-0 bg-paper text-ink hover:bg-surface">
-            {c("visitButton")} <Arrow />
-          </Link>
+          <div className="flex shrink-0 flex-wrap gap-3">
+            <Link href="/contact" className="btn bg-paper text-ink hover:bg-surface">
+              {c("visitButton")} <Arrow />
+            </Link>
+            <a
+              href={PROFILE_PDF}
+              target="_blank"
+              rel="noopener"
+              className="btn border border-paper/40 text-paper hover:border-paper hover:bg-paper/10"
+            >
+              <FileDown className="size-4" strokeWidth={1.75} /> {c("profileButton")}
+            </a>
+          </div>
         </div>
       </section>
     </>

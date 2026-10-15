@@ -59,7 +59,7 @@
       },
       {
         "title": "Imballato per l'export",
-        "body": "Controllato, piegato e spedito in Italia, USA, Inghilterra e Sudafrica."
+        "body": "Controllato, piegato e spedito in Europa, USA e Canada."
       }
     ],
     "clientsLabel": "Marchi per cui produciamo",
@@ -72,7 +72,7 @@
     "heroImageAlt": "Una macchina circolare per maglieria accanto a una cantra di coni di filato di cotone",
     "productsTitle": "Cosa produciamo",
     "productsLead": "100% cotone, su ordinazione, nelle quantità di cui una vera collezione ha bisogno.",
-    "productsCta": "Tutte le 11 categorie",
+    "productsCta": "Tutte le 12 categorie",
     "processTitle": "Dal filato al cartone, in un unico gruppo",
     "processLead": "Otto fasi, una sola filiera. Sei si svolgono nel nostro stabilimento; la tintura di filati e tessuti è affidata alle nostre aziende sorelle.",
     "workTitle": "Come si svolge un programma",
@@ -98,37 +98,40 @@
     "glance": [
       {
         "label": "Capacità",
-        "value": "3.000 capi al giorno"
+        "value": "Oltre 3.000 capi al giorno · da 500 per modello"
       },
       {
-        "label": "Materiali",
-        "value": "Piquet, jersey e interlock 100% cotone"
+        "label": "Prodotti",
+        "value": "Polo, T-shirt, felpe, divise, giacche"
       },
       {
         "label": "Servizi",
-        "value": "Private label, ricamo, stampa, lavaggio capo"
+        "value": "Private label, personalizzazione, ricamo, etichettatura, stampa, lavaggio capo"
+      },
+      {
+        "label": "Certificazioni",
+        "value": "ISO 9001 · ISO 14001 · ISO 45001"
       },
       {
         "label": "Mercati",
-        "value": "Italia, USA, Inghilterra, Sudafrica"
+        "value": "Europa, USA, Canada"
       },
       {
         "label": "Sede",
-        "value": "Zona Franca, Nasr City, Il Cairo (orientata all'export)"
+        "value": "Zona Franca Pubblica, Nasr City, Il Cairo (orientata all'export)"
       }
     ]
   },
   "company": {
     "heroTitle": "Terra egiziana, mentalità italiana",
-    "heroLead": "Egytaltex è nata nel 2001 — egiziana per terra, italiana per mentalità. Ciò che è iniziato come amore per l'artigianato è diventato una casa verticale al servizio di una clientela d'élite.",
+    "heroLead": "Egytaltex è nata nel 2001 — egiziana per terra, italiana per mentalità. Venticinque anni dopo siamo una casa di maglieria nella Zona Franca Pubblica del Cairo, al servizio di marchi in Europa e Nord America.",
     "storyP1": "Siamo partiti da una convinzione semplice: che i tessuti realizzati con cura si sentano diversi al tatto e durino più a lungo nel guardaroba. Da un inizio modesto abbiamo costruito, passo dopo passo, una piccola azienda verticale — mantenendo filato, tessuto e capo sotto lo stesso tetto.",
-    "storyP2": "Operando dalla Zona Franca di Nasr City, al Cairo, uniamo l'eredità egiziana nel cotone a un senso italiano di raffinatezza. Amiamo davvero ciò che facciamo, e lo facciamo a modo nostro.",
+    "storyP2": "Operando dalla Zona Franca Pubblica di Nasr City, al Cairo, uniamo il know-how produttivo italiano alla competitività della manifattura egiziana — qualità, flessibilità ed efficienza dei costi, in quest'ordine. Amiamo davvero ciò che facciamo, e lo facciamo a modo nostro.",
     "marketsLabel": "Esportato in tutto il mondo verso",
     "markets": [
-      "Italia",
+      "Europa",
       "USA",
-      "Inghilterra",
-      "Sud Africa"
+      "Canada"
     ],
     "timelineTitle": "Un viaggio tra le stagioni",
     "quote": "Siamo orgogliosi di dirlo, senza timidezza: lo facciamo a modo nostro.",
@@ -136,80 +139,114 @@
     "heroImageAlt": "Uno sguardo dal basso dentro una macchina circolare e i suoi alimentatori di filato",
     "storyLabel": "La nostra storia",
     "manifesto": "I tessuti fatti con cura si sentono diversi in mano — e durano più a lungo nel guardaroba.",
-    "quoteBy": "TBD",
+    "quoteBy": "Ing. Farid Narchi, Amministratore Delegato",
     "groupLabel": "Il gruppo",
     "groupTitle": "Un unico gruppo, dal filato al cartone d'export",
     "groupLead": "Ogni fase di un capo avviene all'interno del nostro gruppo di aziende, così la qualità risponde solo a noi.",
     "groupSister": "Azienda sorella",
     "groupHome": "Siamo noi",
     "groupRole": "Ruolo",
-    "groupHomeRole": "Maglieria, confezione ed export",
+    "groupHomeRole": "Maglieria, ricamo, confezione, lavaggio ed export",
     "groupSteps": "Gestisce queste fasi",
     "tbd": "TBD",
     "floorLabel": "Dentro la fabbrica",
     "floorTitle": "Il nostro reparto nella Free Zone",
-    "floorLead": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh lkasjd oasdjh asdlkj qwe oiasd lkasjd.",
+    "floorLead": "Maglieria, taglio, confezione, ricamo, lavaggio e finissaggio sono tutti interni, così qualità e tempi restano sotto il nostro controllo.",
     "photoSoon": "Foto in arrivo",
     "floor": [
       {
-        "title": "Maglieria circolare",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "title": "Maglieria",
+        "body": "Circolari per jersey e piquet; rettilinee per colli e polsini coordinati."
       },
       {
-        "title": "Tintura e finissaggio",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "title": "Ricamo",
+        "body": "Due ricamatrici multitesta Barudan — 29 teste in tutto — per grandi serie e loghi fini."
       },
       {
         "title": "Taglio",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "body": "Un tavolo da taglio di 8 metri, taglierine verticali e termoadesivatura a nastro."
       },
       {
         "title": "Confezione",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "body": "Quattro linee con lineari, tagliacuci, flatlock, flatseam, travettatrici e orlatrici."
       },
       {
-        "title": "Controllo qualità",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "title": "Lavaggio e finissaggio",
+        "body": "Lavatrici ed essiccatoi per capi, poi tavoli da stiro aspiranti per una finitura pulita."
       },
       {
-        "title": "Imballaggio",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "title": "Controllo e imballaggio",
+        "body": "Ogni ordine viene ispezionato prima di essere piegato, imballato su specifica e spedito."
       }
     ],
     "capacityLabel": "Capacità",
     "capacityTitle": "Pensati per una produzione reale",
     "capacity": {
-      "area": "Superficie produttiva",
-      "knitting": "Macchine circolari",
-      "lines": "Linee di confezione",
-      "staff": "Persone in produzione",
       "daily": "Capi al giorno",
+      "lines": "Linee di confezione",
+      "machines": "Macchine di confezione e finissaggio",
+      "staff": "Addetti specializzati",
+      "sampling": "Tempi di campionatura (giorni)",
+      "leadTime": "Tempi di produzione (giorni)",
       "moq": "Minimo per modello (capi)",
-      "leadTime": "Tempi di consegna (giorni)",
       "markets": "Mercati di export"
+    },
+    "machineryLabel": "Macchinari",
+    "machineryTitle": "Il parco macchine",
+    "machineryLead": "Oltre 130 macchine di confezione e finissaggio, accanto ai nostri reparti di maglieria, ricamo e taglio.",
+    "machineryDepts": {
+      "knitting": "Maglieria",
+      "embroidery": "Ricamo",
+      "cutting": "Taglio",
+      "sewing": "Confezione",
+      "finishing": "Lavaggio e finissaggio"
+    },
+    "machines": {
+      "circular": "Macchine circolari",
+      "flatKnit": "Rettilinee (colli e polsini)",
+      "yarnWrapping": "Macchina avvolgifilo (6 coni)",
+      "embroidery": "Ricamatrici multitesta (12 e 17 teste)",
+      "cuttingTable": "Tavolo da taglio",
+      "cuttingKnife": "Taglierine verticali",
+      "fusing": "Presse per termoadesivo (a nastro e a piano)",
+      "singleNeedle": "Lineari a un ago",
+      "doubleNeedle": "Lineari a due aghi",
+      "overlock": "Tagliacuci a 4 e 5 fili",
+      "hemming": "Orlatrici, bordatrici ed elastico",
+      "flatSeam": "Flatseam",
+      "chainStitch": "Catenella",
+      "buttonhole": "Asolatrici e attaccabottoni",
+      "barTack": "Travettatrici",
+      "specialty": "Zigzag e punti speciali",
+      "heatPress": "Presse a caldo (etichette e transfer)",
+      "ironing": "Tavoli da stiro aspiranti",
+      "steamClean": "Smacchiatrice a vapore e aspirazione",
+      "washers": "Lavatrici per capi",
+      "dryers": "Essiccatoi per capi"
     },
     "qualityLabel": "Qualità e conformità",
     "qualityTitle": "Controllato a ogni fase",
-    "qualityLead": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh lkasjd oasdjh asdlkj qwe oiasd lkasjd.",
+    "qualityLead": "La qualità è parte del processo, non un controllo alla fine. Ogni ispezione segue procedure documentate allineate agli standard internazionali di qualità dell'abbigliamento.",
     "qualitySteps": [
       {
-        "title": "Ispezione del filato",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "title": "Controllo in linea",
+        "body": "Verifiche durante la confezione per correggere i difetti quando si è ancora alla macchina."
       },
       {
-        "title": "Ispezione del tessuto",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
-      },
-      {
-        "title": "Controlli in linea",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "title": "Controllo di fine linea",
+        "body": "Ogni linea ispeziona i propri capi appena escono dalla produzione."
       },
       {
         "title": "Ispezione finale",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "body": "Un ultimo controllo prima dell'imballaggio e della spedizione, con un report trasparente per il buyer."
       }
     ],
-    "certsTitle": "Certificazioni e audit",
+    "certsTitle": "Certificazioni",
+    "certs": {
+      "iso9001": "Gestione della qualità",
+      "iso14001": "Gestione ambientale",
+      "iso45001": "Salute e sicurezza sul lavoro"
+    },
     "marketsTitle": "Dove vanno i nostri capi",
     "marketsLink": "Scopri per chi produciamo",
     "timeline": [
@@ -236,11 +273,12 @@
     ],
     "visitTitle": "Venite a vedere come nasce",
     "visitBody": "Buyer e auditor sono i benvenuti nel nostro stabilimento a Nasr City. Prenotate una visita o chiedete un tour virtuale.",
-    "visitButton": "Prenota una visita"
+    "visitButton": "Prenota una visita",
+    "profileButton": "Scarica il profilo aziendale"
   },
   "products": {
     "heroTitle": "Maglieria su ordinazione.",
-    "heroLead": "Undici categorie, un solo standard. Ogni programma viene sviluppato con il cliente, campionato e prodotto all'interno della nostra filiera — dal filato tinto al capo finito.",
+    "heroLead": "Dodici categorie, un solo standard. Ogni programma viene sviluppato con il cliente, campionato in circa una settimana e prodotto all'interno della nostra filiera — dal filato tinto al capo finito.",
     "items": [
       {
         "name": "Polo",
@@ -259,6 +297,10 @@
         "desc": "Girocollo, felpe con cappuccio e full zip per tutti i giorni."
       },
       {
+        "name": "Divise e abbigliamento da lavoro",
+        "desc": "Polo, T-shirt e felpe per team e personale, con il vostro marchio."
+      },
+      {
         "name": "Abbigliamento sportivo",
         "desc": "Capi active e tempo libero, tagliati per il movimento."
       },
@@ -267,8 +309,8 @@
         "desc": "Boxer da mare e beachwear per collezioni resort."
       },
       {
-        "name": "Tute da allenamento",
-        "desc": "Felpe e pantaloni coordinati, in set o separati."
+        "name": "Tute e pantaloni felpati",
+        "desc": "Felpe e pantaloni coordinati, pantaloni felpati e shorts, in set o separati."
       },
       {
         "name": "Canotte",
@@ -358,7 +400,7 @@
     "formSubmit": "Invia messaggio",
     "formError": "Qualcosa è andato storto — riprova o scrivici direttamente.",
     "addressLabel": "Indirizzo",
-    "address": "Zona Franca, Nasr City, Il Cairo, Egitto",
+    "address": "Zona Franca Pubblica, Nasr City, Il Cairo, Egitto",
     "phoneLabel": "Telefono",
     "faxLabel": "Fax",
     "emailLabel": "Email",
@@ -387,11 +429,12 @@
     "blurb": "Una maglieria verticale al Cairo, che produce per marchi europei e americani dal 2001.",
     "explore": "Esplora",
     "contact": "Contatti",
+    "profile": "Profilo aziendale (PDF)",
     "rights": "Tutti i diritti riservati."
   },
   "meta": {
     "title": "Egytaltex · Tessuti e Abbigliamento Egiziano Italiano",
-    "description": "Egytaltex — Compagnia Egiziana Italiana per Tessuti e Abbigliamento. Filati di cotone pregiati, tessuti e confezione verticale dal 2001."
+    "description": "Egytaltex — produttore italo-egiziano di capi in maglia al Cairo dal 2001. Polo, T-shirt, felpe, divise e giacche per marchi in Europa, USA e Canada. Certificata ISO 9001, 14001 e 45001."
   },
   "notFound": {
     "title": "Pagina non trovata",

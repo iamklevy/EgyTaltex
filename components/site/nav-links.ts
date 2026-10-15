@@ -15,6 +15,7 @@ export const PRODUCT_SLUGS = [
   "t-shirts",
   "jackets",
   "sweatshirts",
+  "uniforms",
   "sportswear",
   "swimwear",
   "training-suits",

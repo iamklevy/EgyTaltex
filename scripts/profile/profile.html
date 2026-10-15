@@ -1,0 +1,377 @@
+<!doctype html>
+<!--
+  Source of public/downloads/egytaltex-company-profile.pdf (A4, 7 pages). After editing, rebuild from the repo root:
+  "C:/Program Files/Google/Chrome/Application/chrome.exe" --headless=new --no-pdf-header-footer --virtual-time-budget=15000
+    --allow-file-access-from-files --print-to-pdf="public/downloads/egytaltex-company-profile.pdf" "file:///D:/egytaltex/scripts/profile/profile.html"
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Egytaltex · Company Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  @page { size: A4; margin: 0; }
+  :root {
+    --ink: #111; --ink-soft: #2a2a2a; --muted: #6b6b6b; --line: #e2e2df;
+    --paper: #fff; --surface: #f3f3f1; --surface-2: #e9e9e6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "Geist", "Segoe UI", system-ui, sans-serif; color: var(--ink); font-size: 9.5pt; line-height: 1.55; }
+
+  .page { position: relative; width: 210mm; height: 297mm; overflow: hidden; page-break-after: always; padding: 22mm 20mm 26mm; }
+  .page:last-child { page-break-after: auto; }
+
+  /* running header / footer on inner pages */
+  .run-head { position: absolute; top: 10mm; left: 20mm; right: 20mm; display: flex; justify-content: space-between; align-items: center; font-size: 7.5pt; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
+  .run-head img { height: 4.2mm; }
+  .run-foot { position: absolute; bottom: 10mm; left: 20mm; right: 20mm; display: flex; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 3mm; font-size: 7.5pt; color: var(--muted); }
+
+  .label { font-size: 7.5pt; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .num { font-variant-numeric: tabular-nums; }
+  h1 { font-size: 44pt; font-weight: 500; line-height: 1; letter-spacing: -.03em; }
+  h2 { font-size: 24pt; font-weight: 500; line-height: 1.1; letter-spacing: -.02em; margin-top: 3mm; }
+  h3 { font-size: 11pt; font-weight: 500; }
+  .lead { font-size: 12pt; line-height: 1.5; color: var(--ink-soft); }
+  .muted { color: var(--muted); }
+  .section { margin-top: 12mm; }
+  .rule { border-top: 1.5px solid var(--ink); }
+
+  /* COVER */
+  .cover { padding: 0; color: #fff; background: #111; }
+  .cover .photo { position: absolute; inset: 0; background: url("img/cover.jpg") center 40% / cover; }
+  .cover .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(17,17,17,.55) 0%, rgba(17,17,17,.35) 40%, rgba(17,17,17,.92) 100%); }
+  .cover .inner { position: absolute; inset: 20mm; display: flex; flex-direction: column; justify-content: space-between; }
+  .cover .logo { height: 11mm; filter: invert(1); align-self: flex-start; }
+  .cover h1 { font-size: 54pt; }
+  .cover .tag { margin-top: 6mm; font-size: 14pt; line-height: 1.4; color: rgba(255,255,255,.85); max-width: 130mm; }
+  .cover .meta { margin-top: 14mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm; border-top: 1px solid rgba(255,255,255,.3); padding-top: 5mm; font-size: 8.5pt; color: rgba(255,255,255,.75); }
+  .cover .meta b { display: block; font-weight: 500; color: #fff; font-size: 10pt; margin-bottom: 1mm; }
+
+  /* figures strip */
+  .figures { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .figures div { padding: 5mm 0; }
+  .figures div + div { padding-left: 5mm; border-left: 1px solid var(--line); }
+  .figures b { display: block; font-size: 22pt; font-weight: 500; letter-spacing: -.02em; line-height: 1.1; }
+  .figures span { font-size: 7.5pt; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
+
+  /* key/value list */
+  .kv { width: 100%; border-collapse: collapse; }
+  .kv th, .kv td { text-align: left; vertical-align: top; padding: 2.6mm 0; border-bottom: 1px solid var(--line); }
+  .kv th { width: 42%; font-weight: 400; color: var(--muted); }
+  .kv td { font-weight: 500; }
+  .kv tr:first-child th, .kv tr:first-child td { border-top: 1.5px solid var(--ink); }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; }
+  .img { background-size: cover; background-position: center; background-color: var(--surface); }
+
+  /* product grid */
+  .products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1.5px solid var(--ink); }
+  .products div { padding: 4mm 4mm 4mm 0; border-bottom: 1px solid var(--line); }
+  .products .n { font-size: 7.5pt; color: var(--muted); }
+  .products b { display: block; font-weight: 500; font-size: 11pt; margin-top: 1mm; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 2mm; margin-top: 4mm; }
+  .chips span { border: 1px solid var(--line); border-radius: 99px; padding: 1.2mm 3.5mm; font-size: 8.5pt; }
+
+  /* process */
+  .process { display: grid; grid-template-columns: repeat(6, 1fr); border: 1px solid var(--line); margin-top: 6mm; }
+  .process div { padding: 4mm 3.5mm 5mm; min-height: 24mm; }
+  .process div + div { border-left: 1px solid var(--line); }
+  .process .n { font-size: 7.5pt; color: var(--muted); }
+  .process b { display: block; font-weight: 500; margin-top: 5mm; font-size: 10pt; }
+
+  /* QC */
+  .qc li { list-style: none; display: grid; grid-template-columns: 10mm 1fr; padding: 3.5mm 0; border-bottom: 1px solid var(--line); }
+  .qc li:first-child { border-top: 1.5px solid var(--ink); }
+  .qc .n { color: var(--muted); font-size: 8pt; padding-top: .6mm; }
+  .qc b { font-weight: 500; display: block; }
+
+  .certs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; margin-top: 5mm; }
+  .certs div { border: 1px solid var(--line); padding: 5mm; height: 30mm; display: flex; flex-direction: column; justify-content: space-between; }
+  .certs b { font-size: 17pt; font-weight: 500; letter-spacing: -.02em; }
+  .certs span { font-size: 8.5pt; color: var(--muted); }
+
+  /* machinery */
+  .machinery { columns: 2; column-gap: 10mm; margin-top: 8mm; }
+  .dept { break-inside: avoid; margin-bottom: 7mm; }
+  .dept h3 { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1.5px solid var(--ink); padding-bottom: 2mm; }
+  .dept h3 span { font-size: 8.5pt; color: var(--muted); font-weight: 400; }
+  .dept table { width: 100%; border-collapse: collapse; font-size: 8.5pt; }
+  .dept td { padding: 2mm 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .dept td:first-child { width: 42%; padding-right: 3mm; }
+  .dept td.b { color: var(--muted); }
+  .dept td.q { text-align: right; width: 9mm; font-weight: 500; }
+
+  /* strengths */
+  .strengths { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 10mm; border-top: 1.5px solid var(--ink); }
+  .strengths div { display: grid; grid-template-columns: 9mm 1fr; padding: 3.5mm 0; border-bottom: 1px solid var(--line); }
+  .strengths .n { color: var(--muted); font-size: 8pt; padding-top: .5mm; }
+
+  .markets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm; font-size: 20pt; font-weight: 500; letter-spacing: -.02em; margin-top: 4mm; }
+
+  /* back cover */
+  .back { background: #111; color: #fff; display: flex; flex-direction: column; justify-content: space-between; }
+  .back .logo { height: 10mm; filter: invert(1); align-self: flex-start; }
+  .back h2 { font-size: 34pt; max-width: 150mm; }
+  .back .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm 10mm; border-top: 1px solid rgba(255,255,255,.25); padding-top: 7mm; margin-top: 12mm; }
+  .back .label { color: rgba(255,255,255,.55); }
+  .back .contact p:not(.label) { margin-top: 1.5mm; font-size: 11pt; }
+  .back .small { font-size: 8pt; color: rgba(255,255,255,.5); }
+</style>
+</head>
+<body>
+
+<!-- 1 · COVER -->
+<section class="page cover">
+  <div class="photo"></div>
+  <div class="shade"></div>
+  <div class="inner">
+    <img class="logo" src="../../public/logo.png" alt="Egytaltex" />
+    <div>
+      <p class="label" style="color: rgba(255,255,255,.7)">Company Profile · 2026</p>
+      <h1 style="margin-top: 5mm">Cotton knitwear,<br />made in Cairo<br />since 2001.</h1>
+      <p class="tag">Egyptian Italian Textile Company — your reliable garment manufacturing partner in Egypt.</p>
+      <div class="meta">
+        <div><b>Established</b>2001</div>
+        <div><b>Location</b>Public Free Zone, Nasr City, Cairo</div>
+        <div><b>Markets</b>Europe · USA · Canada</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · ABOUT -->
+<section class="page">
+  <div class="run-head"><img src="../../public/logo.png" alt="" /><span>Company Profile</span></div>
+
+  <p class="label">01 · About us</p>
+  <h2>Italian know-how,<br />Egyptian manufacturing.</h2>
+
+  <div class="two section" style="margin-top: 8mm">
+    <div>
+      <p class="lead">EGYTALTEX is a well-established Egyptian–Italian garment manufacturer with more than 25 years of experience in textile and apparel production.</p>
+      <p style="margin-top: 4mm">Operating from a fully equipped facility in Cairo, we specialise in high-quality knitted garments for export markets. We serve clients in Europe, the United States and Canada, supplying reliable, consistent and compliant production tailored to international standards.</p>
+      <p style="margin-top: 3mm">Our strength lies in combining Italian production know-how with competitive manufacturing in Egypt — ensuring quality, flexibility and cost efficiency.</p>
+    </div>
+    <div class="img" style="background-image: url('img/floor.jpg'); height: 78mm; background-position: center 42%"></div>
+  </div>
+
+  <div class="figures section">
+    <div><b class="num">25+</b><span>Years of experience</span></div>
+    <div><b class="num">3,000+</b><span>Pieces per day</span></div>
+    <div><b class="num">100</b><span>Skilled workers</span></div>
+    <div><b class="num">130+</b><span>Machines</span></div>
+  </div>
+
+  <div class="section">
+    <p class="label">Company identity</p>
+    <table class="kv" style="margin-top: 4mm">
+      <tr><th>Company name</th><td>EGYTALTEX – Egyptian Italian Textile Company</td></tr>
+      <tr><th>Established</th><td>2001</td></tr>
+      <tr><th>Legal form</th><td>Limited Liability Company (LLC)</td></tr>
+      <tr><th>Location</th><td>Public Free Zone, Nasr City, Cairo, Egypt</td></tr>
+      <tr><th>Managing Director</th><td>Eng. Farid Narchi</td></tr>
+      <tr><th>Phone</th><td>+20 100 213 0316 · +20 122 213 0316</td></tr>
+      <tr><th>Email · Website</th><td>egytaltex@yahoo.com · www.egytaltex.com</td></tr>
+    </table>
+  </div>
+
+  <div class="run-foot"><span>EGYTALTEX · Egyptian Italian Textile Company</span><span class="num">02</span></div>
+</section>
+
+<!-- 3 · PRODUCTS & CAPACITY -->
+<section class="page">
+  <div class="run-head"><img src="../../public/logo.png" alt="" /><span>Company Profile</span></div>
+
+  <p class="label">02 · Products</p>
+  <h2>What we make</h2>
+  <p class="lead" style="margin-top: 4mm; max-width: 140mm">Knitted garments in 100% cotton piqué, jersey and interlock — developed with each client, sampled and produced to order.</p>
+
+  <div class="products" style="margin-top: 7mm">
+    <div><span class="n">01</span><b>Polo shirts</b></div>
+    <div><span class="n">02</span><b>T-shirts</b></div>
+    <div><span class="n">03</span><b>Hoodies &amp; sweatshirts</b></div>
+    <div><span class="n">04</span><b>Uniforms &amp; workwear</b></div>
+    <div><span class="n">05</span><b>Shorts &amp; sweatpants</b></div>
+    <div><span class="n">06</span><b>Jackets</b></div>
+  </div>
+
+  <p class="label" style="margin-top: 7mm">Services on every order</p>
+  <div class="chips">
+    <span>Private label</span><span>Custom branding</span><span>Embroidery</span><span>Labelling</span><span>Garment washing</span><span>Packing to client spec</span>
+  </div>
+
+  <div class="img" style="background-image: url('img/tees.jpg'); height: 50mm; margin-top: 7mm; background-position: center 48%"></div>
+
+  <div class="section" style="margin-top: 8mm">
+    <p class="label">03 · Production capacity</p>
+    <table class="kv" style="margin-top: 4mm">
+      <tr><th>Daily capacity</th><td>3,000+ pieces <span class="muted" style="font-weight: 400">(depending on style workmanship)</span></td></tr>
+      <tr><th>Production lines</th><td>4 sewing lines</td></tr>
+      <tr><th>Total employees</th><td>100 skilled workers</td></tr>
+      <tr><th>Sampling lead time</th><td>7 days</td></tr>
+      <tr><th>Production lead time</th><td>60 days</td></tr>
+      <tr><th>Minimum order quantity</th><td>500 pieces per style</td></tr>
+    </table>
+  </div>
+
+  <div class="run-foot"><span>EGYTALTEX · Egyptian Italian Textile Company</span><span class="num">03</span></div>
+</section>
+
+<!-- 4 · CAPABILITIES, QC, CERTIFICATIONS -->
+<section class="page">
+  <div class="run-head"><img src="../../public/logo.png" alt="" /><span>Company Profile</span></div>
+
+  <p class="label">04 · Manufacturing capabilities</p>
+  <h2>Everything under one roof</h2>
+  <p class="lead" style="margin-top: 4mm; max-width: 150mm">A comprehensive in-house setup covering every stage of production, so quality and timelines stay fully under our control.</p>
+
+  <div class="process">
+    <div><span class="n">01</span><b>Knitting</b></div>
+    <div><span class="n">02</span><b>Cutting</b></div>
+    <div><span class="n">03</span><b>Sewing</b></div>
+    <div><span class="n">04</span><b>Embroidery</b></div>
+    <div><span class="n">05</span><b>Washing</b></div>
+    <div><span class="n">06</span><b>Finishing</b></div>
+  </div>
+
+  <p style="margin-top: 5mm; max-width: 160mm" class="muted">130+ sewing and finishing machines — lockstitch, overlock, flatlock, flat seam, bar tack, hemming and specialty operations — plus high-capacity multi-head embroidery for both bulk and detailed designs.</p>
+
+  <div class="two section">
+    <div>
+      <p class="label">05 · Quality control system</p>
+      <p style="margin-top: 3mm; margin-bottom: 5mm">Quality is embedded throughout the process. All inspections follow documented procedures aligned with international garment quality standards.</p>
+      <ol class="qc">
+        <li><span class="n">01</span><div><b>Inline inspection</b><span class="muted">During sewing, while faults can still be fixed at the machine.</span></div></li>
+        <li><span class="n">02</span><div><b>End-line inspection</b><span class="muted">Per production line, as garments leave the line.</span></div></li>
+        <li><span class="n">03</span><div><b>Final inspection</b><span class="muted">Before packing and shipment, with a transparent report.</span></div></li>
+      </ol>
+    </div>
+    <div class="img" style="background-image: url('img/sewing.jpg'); background-position: center 55%"></div>
+  </div>
+
+  <div class="section">
+    <p class="label">06 · Certifications</p>
+    <div class="certs">
+      <div><b>ISO 9001</b><span>Quality Management System</span></div>
+      <div><b>ISO 14001</b><span>Environmental Management System</span></div>
+      <div><b>ISO 45001</b><span>Occupational Health &amp; Safety Management</span></div>
+    </div>
+  </div>
+
+  <div class="run-foot"><span>EGYTALTEX · Egyptian Italian Textile Company</span><span class="num">04</span></div>
+</section>
+
+<!-- 5 · MACHINERY -->
+<section class="page">
+  <div class="run-head"><img src="../../public/logo.png" alt="" /><span>Company Profile</span></div>
+
+  <p class="label">07 · Machinery</p>
+  <h2>Machinery list</h2>
+
+  <div class="machinery">
+    <div class="dept">
+      <h3>Knitting <span class="num">5 machines</span></h3>
+      <table>
+        <tr><td>Circular knitting</td><td class="b">Orizio 1 · Monarch 1</td><td class="q num">2</td></tr>
+        <tr><td>Flat knitting (collars &amp; cuffs)</td><td class="b">Stoll 1 · Protti 1</td><td class="q num">2</td></tr>
+        <tr><td>Yarn wrapping</td><td class="b">6 cones</td><td class="q num">1</td></tr>
+      </table>
+    </div>
+    <div class="dept">
+      <h3>Embroidery <span class="num">29 heads</span></h3>
+      <table>
+        <tr><td>Multi-head embroidery</td><td class="b">Barudan 12 heads · Barudan 17 heads</td><td class="q num">2</td></tr>
+      </table>
+    </div>
+    <div class="dept">
+      <h3>Cutting <span class="num">6 units</span></h3>
+      <table>
+        <tr><td>Cutting table</td><td class="b">8 metres</td><td class="q num">1</td></tr>
+        <tr><td>Straight-knife cutters</td><td class="b">8″</td><td class="q num">3</td></tr>
+        <tr><td>Fusing machines</td><td class="b">Conveyor belt 1 · Pallet 1</td><td class="q num">2</td></tr>
+      </table>
+    </div>
+    <div class="dept">
+      <h3>Finishing <span class="num">16 units</span></h3>
+      <table>
+        <tr><td>Ironing tables</td><td class="b">Vacuum</td><td class="q num">9</td></tr>
+        <tr><td>Spot-cleaning machine</td><td class="b">Steam &amp; vacuum</td><td class="q num">1</td></tr>
+        <tr><td>Garment washers</td><td class="b"></td><td class="q num">3</td></tr>
+        <tr><td>Garment dryers</td><td class="b"></td><td class="q num">3</td></tr>
+      </table>
+    </div>
+    <div class="dept">
+      <h3>Sewing <span class="num">123 machines</span></h3>
+      <table>
+        <tr><td>Single-needle lockstitch</td><td class="b">Juki 23 · Jack 7 · Siruba 4 · Sunstar 3 · Russo 2 · Brother (placket) 1</td><td class="q num">40</td></tr>
+        <tr><td>Double-needle lockstitch</td><td class="b">Brother 3 · Juki 1</td><td class="q num">4</td></tr>
+        <tr><td>Overlock, 4 threads</td><td class="b">Juki 13 · Siruba 6 · Jack 6 · Simba (cylinder) 2 · Pegasus 1</td><td class="q num">28</td></tr>
+        <tr><td>Overlock, 5 threads</td><td class="b">Jack 8 · Juki 1</td><td class="q num">9</td></tr>
+        <tr><td>Hemming</td><td class="b">Pegasus 11 (incl. cylinder, flat, binding, trimming) · Siruba 8 (incl. trimming, elastic) · Yamato 5 (elastic) · Rimoldi 2 (trimming)</td><td class="q num">26</td></tr>
+        <tr><td>Flat seam</td><td class="b">Pegasus 1 · Yamato 1</td><td class="q num">2</td></tr>
+        <tr><td>Chain stitch</td><td class="b">Jack, 3 threads</td><td class="q num">2</td></tr>
+        <tr><td>Bar tack</td><td class="b">Juki 1 · Joyee 1 · Sunstar 1</td><td class="q num">3</td></tr>
+        <tr><td>Buttonhole</td><td class="b">Juki 2 · Brother 1</td><td class="q num">3</td></tr>
+        <tr><td>Button sewing</td><td class="b">Juki</td><td class="q num">2</td></tr>
+        <tr><td>“Adidas” specialty stitch</td><td class="b">Siruba</td><td class="q num">1</td></tr>
+        <tr><td>Zigzag</td><td class="b"></td><td class="q num">1</td></tr>
+        <tr><td>Heat presses</td><td class="b">Labels 1 · 60 × 40 cm 1</td><td class="q num">2</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="run-foot"><span>EGYTALTEX · Egyptian Italian Textile Company</span><span class="num">05</span></div>
+</section>
+
+<!-- 6 · STRENGTHS & MARKETS -->
+<section class="page">
+  <div class="run-head"><img src="../../public/logo.png" alt="" /><span>Company Profile</span></div>
+
+  <p class="label">08 · Why Egytaltex</p>
+  <h2>Key strengths</h2>
+  <div class="strengths" style="margin-top: 7mm">
+    <div><span class="n">01</span><span>Consistent and reliable product quality</span></div>
+    <div><span class="n">02</span><span>Flexible minimum order quantities</span></div>
+    <div><span class="n">03</span><span>Strong and experienced sampling team</span></div>
+    <div><span class="n">04</span><span>On-time delivery performance</span></div>
+    <div><span class="n">05</span><span>Transparent production and inspection reports</span></div>
+    <div><span class="n">06</span><span>ISO 9001, 14001 and 45001 certified</span></div>
+  </div>
+
+  <div class="section" style="margin-top: 14mm">
+    <p class="label">09 · Target markets</p>
+    <div class="markets"><span>European Union</span><span>United States</span><span>Canada</span></div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; margin-top: 12mm">
+    <div class="img" style="background-image: url('img/polo-green.jpg'); height: 70mm"></div>
+    <div class="img" style="background-image: url('img/polo-navy.jpg'); height: 70mm"></div>
+    <div class="img" style="background-image: url('img/jacket.jpg'); height: 70mm"></div>
+  </div>
+
+  <p class="lead" style="margin-top: 10mm; max-width: 150mm">EGYTALTEX is committed to long-term partnerships built on trust, quality and professional communication.</p>
+
+  <div class="run-foot"><span>EGYTALTEX · Egyptian Italian Textile Company</span><span class="num">06</span></div>
+</section>
+
+<!-- 7 · BACK COVER -->
+<section class="page back">
+  <img class="logo" src="../../public/logo.png" alt="Egytaltex" />
+  <div>
+    <p class="label">Contact</p>
+    <h2 style="margin-top: 5mm">Your reliable garment manufacturing partner in Egypt.</h2>
+    <div class="contact">
+      <div><p class="label">Managing Director</p><p>Eng. Farid Narchi</p></div>
+      <div><p class="label">Address</p><p>Public Free Zone, Nasr City<br />Cairo, Egypt</p></div>
+      <div><p class="label">Phone</p><p class="num">+20 100 213 0316<br />+20 122 213 0316</p></div>
+      <div><p class="label">Email · Web</p><p>egytaltex@yahoo.com<br />www.egytaltex.com</p></div>
+    </div>
+  </div>
+  <p class="small">© 2026 EGYTALTEX – Egyptian Italian Textile Company LLC</p>
+</section>
+
+</body>
+</html>
