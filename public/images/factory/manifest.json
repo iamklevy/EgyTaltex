@@ -1,0 +1,218 @@
+[
+  {
+    "id": "knitting-02",
+    "source": "IMG_7377.HEIC",
+    "section": "knitting",
+    "orientation": "portrait",
+    "files": {
+      "1920": "knitting-02-1920.webp"
+    },
+    "width": 1440,
+    "height": 1920,
+    "alt": "Circular knitting machine surrounded by its creel of white yarn cones",
+    "identifiable_person": false,
+    "sharpness": 2737.0,
+    "burst_scores": {
+      "IMG_7377.HEIC": 2737.0,
+      "IMG_7376.HEIC": 2230.9
+    }
+  },
+  {
+    "id": "embroidery-02",
+    "source": "IMG_7537.HEIC",
+    "section": "embroidery",
+    "orientation": "portrait",
+    "files": {
+      "1920": "embroidery-02-1920.webp"
+    },
+    "width": 1440,
+    "height": 1920,
+    "alt": "Multi-head embroidery machine stitching a row of orange garments",
+    "identifiable_person": false,
+    "sharpness": 544.7,
+    "burst_scores": {
+      "IMG_7535.HEIC": 435.9,
+      "IMG_7537.HEIC": 544.7
+    }
+  },
+  {
+    "id": "sewing-02",
+    "source": "IMG_7414.JPG",
+    "section": "sewing",
+    "orientation": "portrait",
+    "files": {
+      "1920": "sewing-02-1920.webp"
+    },
+    "width": 1080,
+    "height": 1920,
+    "alt": "Operator's hands guiding fabric under a Juki lockstitch machine",
+    "identifiable_person": false,
+    "sharpness": 405.6,
+    "burst_scores": {
+      "IMG_7413.JPG": 358.5,
+      "IMG_7414.JPG": 405.6,
+      "IMG_7416.JPG": 365.8,
+      "IMG_7417.JPG": 399.9
+    }
+  },
+  {
+    "id": "knitting-03",
+    "source": "IMG_7375.HEIC",
+    "section": "knitting",
+    "orientation": "portrait",
+    "files": {
+      "1920": "knitting-03-1920.webp"
+    },
+    "width": 1440,
+    "height": 1920,
+    "alt": "Circular knitting machine and yarn creels on the knitting floor",
+    "identifiable_person": false,
+    "sharpness": 2868.4,
+    "burst_scores": null
+  },
+  {
+    "id": "embroidery-03",
+    "source": "IMG_7539.HEIC",
+    "section": "embroidery",
+    "orientation": "portrait",
+    "files": {
+      "1920": "embroidery-03-1920.webp"
+    },
+    "width": 1440,
+    "height": 1920,
+    "alt": "Embroidery needles stitching a logo onto orange fabric in the hoop",
+    "identifiable_person": false,
+    "sharpness": 197.3,
+    "burst_scores": {
+      "IMG_7539.HEIC": 197.3,
+      "IMG_7540.HEIC": 121.4
+    }
+  },
+  {
+    "id": "sewing-03",
+    "source": "IMG_7470.JPG",
+    "section": "sewing",
+    "orientation": "portrait",
+    "files": {
+      "1920": "sewing-03-1920.webp"
+    },
+    "width": 1080,
+    "height": 1920,
+    "alt": "Overlock machine finishing the seam of an orange garment",
+    "identifiable_person": false,
+    "sharpness": 150.3,
+    "burst_scores": {
+      "IMG_7469.JPG": 147.7,
+      "IMG_7470.JPG": 150.3
+    }
+  },
+  {
+    "id": "embroidery-04",
+    "source": "IMG_7263.HEIC",
+    "section": "embroidery",
+    "orientation": "landscape",
+    "files": {
+      "1920": "embroidery-04-1920.webp"
+    },
+    "width": 1920,
+    "height": 1440,
+    "alt": "Row of embroidery heads working on red garments",
+    "identifiable_person": false,
+    "sharpness": 1246.8,
+    "burst_scores": {
+      "IMG_7262.HEIC": 1139.8,
+      "IMG_7263.HEIC": 1246.8
+    }
+  },
+  {
+    "id": "cutting-03",
+    "source": "IMG_7388.HEIC",
+    "section": "cutting",
+    "orientation": "portrait",
+    "files": {
+      "1920": "cutting-03-1920.webp"
+    },
+    "width": 1440,
+    "height": 1920,
+    "alt": "Band-knife cutter with freshly cut pieces and pattern papers in the cutting room",
+    "identifiable_person": false,
+    "sharpness": 615.6,
+    "burst_scores": null
+  },
+  {
+    "id": "floor-wide-01",
+    "source": "IMG_8804.HEIC",
+    "section": "floor",
+    "orientation": "landscape",
+    "files": {
+      "2560": "floor-wide-01-2560.webp"
+    },
+    "width": 2560,
+    "height": 1920,
+    "alt": "The sewing floor: rows of machines down a long central aisle",
+    "identifiable_person": false,
+    "sharpness": 1326.0,
+    "burst_scores": null
+  },
+  {
+    "id": "floor-wide-02",
+    "source": "IMG_8805.HEIC",
+    "section": "floor",
+    "orientation": "landscape",
+    "files": {
+      "1920": "floor-wide-02-1920.webp"
+    },
+    "width": 1920,
+    "height": 1440,
+    "alt": "Operators at their machines on the sewing floor",
+    "identifiable_person": true,
+    "sharpness": 1421.2,
+    "burst_scores": null
+  },
+  {
+    "id": "knitting-wide-01",
+    "source": "IMG_8629.HEIC",
+    "section": "knitting",
+    "orientation": "landscape",
+    "files": {
+      "3024": "knitting-wide-01-3024.webp"
+    },
+    "width": 3024,
+    "height": 1512,
+    "alt": "The ring of yarn feeders above a circular knitting machine's needle cylinder",
+    "identifiable_person": false,
+    "sharpness": 4278.3,
+    "burst_scores": null
+  },
+  {
+    "id": "finishing-03",
+    "source": "IMG_8792.JPG",
+    "section": "finishing",
+    "orientation": "portrait",
+    "files": {
+      "1920": "finishing-03-1920.webp"
+    },
+    "width": 1440,
+    "height": 1920,
+    "alt": "Hands guiding a steam iron over a white T-shirt on the pressing table",
+    "identifiable_person": false,
+    "sharpness": 939.7,
+    "burst_scores": null,
+    "crop": "bottom 1702x2270 of the frame, cut below the presser's face"
+  },
+  {
+    "id": "packing-02",
+    "source": "IMG_8645.HEIC",
+    "section": "packing",
+    "orientation": "portrait",
+    "files": {
+      "1920": "packing-02-1920.webp"
+    },
+    "width": 1440,
+    "height": 1920,
+    "alt": "Packed export cartons and bagged garments stacked down the store aisle",
+    "identifiable_person": false,
+    "sharpness": 951.6,
+    "burst_scores": null
+  }
+]
