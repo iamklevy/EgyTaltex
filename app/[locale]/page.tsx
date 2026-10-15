@@ -1,10 +1,12 @@
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
-import { categoryPhotos, clientLogos, heroPhoto } from "@/content/images";
+import { categoryPhotos, clientLogos, heroPhoto, processPhotos } from "@/content/images";
 import { JOURNEY_OWNERS } from "@/content/group";
 import { Arrow } from "@/components/site/editorial";
+import { RevealGroup } from "@/components/site/reveal-group";
+import { StepPhoto } from "@/components/site/step-photo";
 import { PRODUCT_SLUGS } from "@/components/site/nav-links";
 import { ProductTile } from "@/components/site/product-tile";
 import { ProgrammeCta } from "@/components/site/programme-cta";
@@ -34,6 +36,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     { value: "3", label: h("statMarkets") },
   ];
 
+  // two possible LCP images (one per orientation), so eager + high priority rather than a preload
+  const heroCommon = { alt: "", sizes: "100vw", loading: "eager", fetchPriority: "high" } as const;
+  const { srcSet: heroLandscape } = getImageProps({ ...heroCommon, ...heroPhoto.landscape }).props;
+  const { props: heroPortrait } = getImageProps({ ...heroCommon, ...heroPhoto.portrait });
+
   return (
     <>
       {/* HERO: full-bleed photo, centred copy. The floating header sits over the top of it. */}
@@ -42,16 +49,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           data-nav-dark
           className="relative isolate flex min-h-svh items-center justify-center overflow-hidden bg-ink text-paper"
         >
-          <Image
-            src={heroPhoto}
-            alt={h("heroImageAlt")}
-            fill
-            priority
-            sizes="100vw"
-            className="-z-10 object-cover object-[center_40%]"
-          />
-          {/* darkens the photo so white type reads on any part of it */}
-          <div aria-hidden className="absolute inset-0 -z-10 bg-linear-to-b from-ink/55 via-ink/45 to-ink/70" />
+          {/* art direction: a landscape photo for landscape screens, a portrait one for portrait screens */}
+          <picture>
+            <source media="(orientation: landscape)" srcSet={heroLandscape} sizes="100vw" />
+            <img {...heroPortrait} alt={h("heroImageAlt")} className="absolute inset-0 -z-10 size-full object-cover object-[center_40%]" />
+          </picture>
+          {/* darkens the photo so white type reads on any part of it; the landscape floor photo is busier,
+              so landscape screens get a deeper wash plus a soft pool of shade behind the centred copy */}
+          <div aria-hidden className="absolute inset-0 -z-10 bg-linear-to-b from-ink/55 via-ink/45 to-ink/70 landscape:from-ink/65 landscape:via-ink/60 landscape:to-ink/80" />
+          <div aria-hidden className="absolute inset-0 -z-10 hidden bg-[radial-gradient(ellipse_55%_45%_at_50%_52%,rgb(0_0_0/0.35),transparent)] landscape:block" />
 
           <div className="container-x flex flex-col items-center pt-[calc(var(--header-h)+3rem)] pb-20 text-center md:pb-24">
             <h1 className="h-display max-w-4xl">{h("heroTitle")}</h1>
@@ -84,8 +90,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      {/* CLIENTS: a centred label, then a rail of equal logo cards drifting past on a tinted band */}
-      <section className="bg-surface py-14 md:py-16">
+      {/* CLIENTS: a centred label, then the bare logos drifting past on a tinted band. Each logo is
+          flattened to ink and shows its real colours on hover. */}
+      <section className="bg-surface py-12 md:py-16">
         <div className="container-x flex items-center gap-4">
           <span aria-hidden className="h-px flex-1 bg-line" />
           <p className="label shrink-0">{h("clientsLabel")}</p>
@@ -93,30 +100,30 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
         {/* Two identical halves slide by -50% for a seamless loop; each half repeats the logos so it
             outruns wide screens. Kept LTR so the loop direction doesn't flip in Arabic. */}
-        <div dir="ltr" className="group mt-10 overflow-hidden mask-x-from-85% mask-x-to-100%">
+        <div dir="ltr" className="group mt-8 overflow-hidden mask-x-from-85% mask-x-to-100% md:mt-10">
           <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:w-full motion-reduce:animate-none">
             {[0, 1].map((half) => (
               <ul
                 key={half}
                 aria-hidden={half === 1 || undefined}
-                className={`flex shrink-0 gap-3 pe-3 md:gap-4 md:pe-4 motion-reduce:w-full motion-reduce:flex-wrap motion-reduce:justify-center ${half === 1 ? "motion-reduce:hidden" : ""}`}
+                className={`flex shrink-0 items-center gap-12 pe-12 md:gap-20 md:pe-20 motion-reduce:w-full motion-reduce:flex-wrap motion-reduce:justify-center motion-reduce:gap-y-8 ${half === 1 ? "motion-reduce:hidden" : ""}`}
               >
                 {[...clientLogos, ...clientLogos].map((c, i) => (
                   <li
                     key={`${c.name}-${i}`}
                     aria-hidden={i >= clientLogos.length || undefined}
-                    className={`group/logo grid h-20 w-36 place-items-center rounded-(--ui-radius) border border-line bg-paper px-6 transition duration-300 hover:-translate-y-0.5 hover:border-ink/15 hover:shadow-[0_12px_30px_-18px_rgb(0_0_0/0.35)] md:h-28 md:w-52 md:px-8 ${i >= clientLogos.length ? "motion-reduce:hidden" : ""}`}
+                    className={`flex h-16 items-center md:h-20 ${i >= clientLogos.length ? "motion-reduce:hidden" : ""}`}
                   >
-                    {/* fixed box + object-contain: every logo gets the same footprint, whatever its shape */}
-                    <div className="relative h-9 w-full md:h-12">
-                      <Image
-                        src={c.logo}
-                        alt={half === 0 && i < clientLogos.length ? c.name : ""}
-                        fill
-                        sizes="160px"
-                        className="object-contain opacity-80 grayscale transition duration-300 group-hover/logo:opacity-100 group-hover/logo:grayscale-0"
-                      />
-                    </div>
+                    {/* equal visual area: height = sqrt(area / aspect), scaled up from md */}
+                    <Image
+                      src={c.logo}
+                      alt={half === 0 && i < clientLogos.length ? c.name : ""}
+                      width={c.w}
+                      height={c.h}
+                      sizes="200px"
+                      style={{ "--logo-h": `${(Math.sqrt(3600 / (c.w / c.h)) * (c.scale ?? 1)).toFixed(1)}px` } as React.CSSProperties}
+                      className="h-(--logo-h) w-auto opacity-60 brightness-0 transition duration-300 hover:opacity-100 hover:filter-none md:h-[calc(var(--logo-h)*1.3)]"
+                    />
                   </li>
                 ))}
               </ul>
@@ -162,17 +169,34 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      {/* HOW IT'S MADE */}
-      <section id="process" className="bg-surface py-20 md:py-28">
+      {/* HOW IT'S MADE: the photos and the eight steps are swipeable rows on phones, grids from sm up */}
+      <section id="process" className="bg-surface py-16 md:py-28">
         <div className="container-x">
           <div className="max-w-2xl">
             <h2 className="h-section">{h("processTitle")}</h2>
-            <p className="mt-4 text-lg leading-relaxed text-ink-muted">{h("processLead")}</p>
+            <p className="mt-4 leading-relaxed text-ink-muted md:text-lg">{h("processLead")}</p>
           </div>
+          <p className="mt-6 flex items-center gap-2 text-sm text-ink-muted sm:hidden">
+            {h("processSwipe")} <Arrow />
+          </p>
 
-          <ol className="mt-14 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+          <RevealGroup className="no-scrollbar -mx-5 mt-4 flex snap-x snap-mandatory scroll-px-5 gap-3 overflow-x-auto px-5 pb-1 sm:mx-0 sm:mt-12 sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:px-0">
+            {processPhotos.map((p) => (
+              <div key={p.src} data-reveal-item className="group w-[78%] shrink-0 snap-start sm:w-auto">
+                <StepPhoto
+                  src={p.src}
+                  alt={journey[p.step].title}
+                  title={journey[p.step].title}
+                  sizes="(min-width: 640px) 33vw, 78vw"
+                  className="aspect-4/5"
+                />
+              </div>
+            ))}
+          </RevealGroup>
+
+          <ol className="no-scrollbar -mx-5 mt-8 flex snap-x snap-mandatory scroll-px-5 gap-3 overflow-x-auto px-5 pb-1 sm:mx-0 sm:mt-12 sm:grid sm:grid-cols-2 sm:gap-px sm:overflow-hidden sm:border sm:border-line sm:bg-line sm:px-0 sm:pb-0 lg:grid-cols-4">
             {journey.map((s, i) => (
-              <li key={s.title} className="flex flex-col bg-paper p-6 md:p-7">
+              <li key={s.title} className="flex w-[78%] shrink-0 snap-start flex-col border border-line bg-paper p-6 sm:w-auto sm:border-0 md:p-7">
                 <span className="text-sm text-ink-muted tabular-nums">{pad(i + 1)}</span>
                 <h3 className="mt-6 text-lg font-medium">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-muted">{s.body}</p>

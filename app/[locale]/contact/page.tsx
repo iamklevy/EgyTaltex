@@ -63,7 +63,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 alt=""
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
-                className="-z-10 object-cover object-[center_60%]"
+                className="-z-10 object-cover object-[center_80%]"
               />
               <div aria-hidden className="absolute inset-0 -z-10 bg-linear-to-t from-ink/90 via-ink/50 to-ink/0" />
               <div>

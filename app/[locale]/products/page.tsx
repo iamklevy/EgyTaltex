@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/seo";
-import { categoryPhotos, poloGallery, productionGallery } from "@/content/images";
+import { categoryPhotos, optionsPhoto, poloGallery, productionGallery } from "@/content/images";
 import { Arrow } from "@/components/site/editorial";
 import { PRODUCT_SLUGS } from "@/components/site/nav-links";
 import { PageHero } from "@/components/site/page-hero";
@@ -108,8 +108,20 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
       {/* OPTIONS */}
       <section className="py-20 md:py-28">
         <div className="container-x grid gap-10 lg:grid-cols-12">
-          <h2 className="h-section lg:col-span-4">{p("finishTitle")}</h2>
-          <ul className="grid border-t border-line sm:grid-cols-2 sm:gap-x-10 lg:col-span-8">
+          <div className="lg:col-span-4">
+            <h2 className="h-section">{p("finishTitle")}</h2>
+            <div className="group relative mt-8 aspect-4/3 overflow-hidden rounded-(--ui-radius) bg-surface">
+              <Image
+                src={optionsPhoto}
+                alt={finishes[3]}
+                fill
+                sizes="(min-width: 1024px) 30vw, 100vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04] motion-reduce:transition-none"
+              />
+              <div aria-hidden className="pointer-events-none absolute inset-0 rounded-[inherit] ring-1 ring-ink/10 ring-inset" />
+            </div>
+          </div>
+          <ul className="grid content-start border-t border-line sm:grid-cols-2 sm:gap-x-10 lg:col-span-8">
             {finishes.map((f) => (
               <li key={f} className="border-b border-line py-4">
                 {f}

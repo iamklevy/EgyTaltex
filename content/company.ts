@@ -68,10 +68,22 @@ export const CERTIFICATIONS: { key: string; code: string }[] = [
   { key: "iso45001", code: "ISO 45001" },
 ];
 
-// Steps shown in "Inside the factory", in messages `company.floor` order.
-// TODO(owners): one real photo per step; until then each tile shows a "photo coming soon" placeholder.
-export const FLOOR_PHOTOS: (string | null)[] = [null, null, null, null, null, null];
+// Steps shown in "Inside the factory", in messages `company.floor` order (portrait 3:4).
+// Sources and alt text are in public/images/factory/manifest.json. Washing & finishing shows pressing:
+// there is no photo of the washers yet. A null shows "photo coming soon".
+export const FLOOR_PHOTOS: (string | null)[] = [
+  "/images/factory/knitting-02-1920.webp", // IMG_7377
+  "/images/factory/embroidery-02-1920.webp", // IMG_7537
+  "/images/factory/cutting-03-1920.webp", // IMG_7388
+  "/images/factory/sewing-02-1920.webp", // IMG_7414
+  "/images/factory/finishing-03-1920.webp", // IMG_8792, cropped below the presser's face
+  "/images/factory/packing-02-1920.webp", // IMG_8645
+];
 
-// Company hero: looking up into a circular knitting machine and its ring of yarn feeders.
-// Portrait (3:4); the page frames the feeder ring.
-export const companyHeroPhoto = "/company-hero.jpg";
+// Company hero, art-directed by screen orientation. Portrait screens: looking up into a circular knitting
+// machine and its ring of yarn feeders (3:4, IMG_7149). Landscape screens: a full-resolution 2:1 band cut
+// from IMG_8629, the feeder ring head-on with the yarn running down to the needle cylinder.
+export const companyHeroPhoto = {
+  landscape: { src: "/images/factory/knitting-wide-01-3024.webp", width: 3024, height: 1512 },
+  portrait: { src: "/company-hero.jpg", width: 2400, height: 3200 },
+};

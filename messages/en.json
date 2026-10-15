@@ -69,7 +69,7 @@
     "ctaOr": "Or write to us directly",
     "heroTitle": "Cotton knitwear, made from yarn to carton in Cairo.",
     "heroCtaProducts": "View products",
-    "heroImageAlt": "A circular knitting machine beside a creel of cotton yarn cones",
+    "heroImageAlt": "The Egytaltex factory floor in Cairo",
     "productsTitle": "What we make",
     "productsLead": "100% cotton, made to order, in the quantities a real collection needs.",
     "productsCta": "All 12 categories",
@@ -120,13 +120,14 @@
         "label": "Location",
         "value": "Public Free Zone, Nasr City, Cairo (export-oriented)"
       }
-    ]
+    ],
+    "processSwipe": "Swipe through the chain"
   },
   "company": {
     "heroTitle": "Egyptian land, Italian mentality",
-    "heroLead": "Egytaltex was born in 2001 — Egyptian by ground, Italian by mindset. Twenty-five years on, we are a knitted-garment house in Cairo's Public Free Zone, making for brands in Europe and North America.",
-    "storyP1": "We started with a simple conviction: that textiles made with care feel different in the hand and last longer in the wardrobe. From a modest beginning we built, step by step, a small vertical company — keeping yarn, fabric and garment under one roof.",
-    "storyP2": "Operating from the Public Free Zone in Nasr City, Cairo, we pair Italian production know-how with competitive manufacturing in Egypt — quality, flexibility and cost efficiency in the same order. We do love what we do, and we do it our way.",
+    "heroLead": "Egytaltex was born in 2001, Egyptian by ground, Italian by mindset. Twenty-five years on, we are a knitted-garment house in Cairo's Public Free Zone, making for brands in Europe and North America.",
+    "storyP1": "From a modest beginning we built, step by step, a small vertical company, keeping yarn, fabric and garment under one roof.",
+    "storyP2": "Operating from the Public Free Zone in Nasr City, Cairo, we pair Italian production know-how with competitive manufacturing in Egypt, for quality, flexibility and cost efficiency in the same order. We do love what we do, and we do it our way.",
     "marketsLabel": "Exported worldwide to",
     "markets": [
       "Europe",
@@ -136,9 +137,9 @@
     "timelineTitle": "A journey in seasons",
     "quote": "We are proud to say, not in a shy way, that we do it our way.",
     "heroKicker": "Company",
-    "heroImageAlt": "Looking up into a circular knitting machine and its yarn feeders",
+    "heroImageAlt": "A circular knitting machine and its ring of yarn feeders",
     "storyLabel": "Our story",
-    "manifesto": "Textiles made with care feel different in the hand — and last longer in the wardrobe.",
+    "manifesto": "Textiles made with care feel different in the hand, and last longer in the wardrobe.",
     "quoteBy": "Eng. Farid Narchi, Managing Director",
     "groupLabel": "The group",
     "groupTitle": "One group, from yarn to export carton",
@@ -147,7 +148,6 @@
     "groupHome": "This is us",
     "groupRole": "Role",
     "groupHomeRole": "Knitting, embroidery, garment making, washing & export",
-    "groupSteps": "Runs these steps",
     "tbd": "TBD",
     "floorLabel": "Inside the factory",
     "floorTitle": "On the floor in the Free Zone",
@@ -160,7 +160,7 @@
       },
       {
         "title": "Embroidery",
-        "body": "Two multi-head Barudan machines — 29 heads in all — for bulk runs and fine logos."
+        "body": "Two multi-head Barudan machines, 29 heads in all, for bulk runs and fine logos."
       },
       {
         "title": "Cutting",
@@ -251,34 +251,36 @@
     "marketsLink": "See who we make for",
     "timeline": [
       {
-        "year": "TBD",
-        "body": "TBD"
+        "year": "2001",
+        "body": "Founded in the Public Free Zone of Nasr City, Cairo: an Egyptian factory with an Italian mentality, 100% export oriented from day one."
       },
       {
-        "year": "TBD",
-        "body": "TBD"
+        "year": "The early years",
+        "body": "Small is beautiful. High-quality knitted polos and T-shirts in the best cotton yarn, made for Italian and European brands."
       },
       {
-        "year": "TBD",
-        "body": "TBD"
+        "year": "Going vertical",
+        "body": "To control quality at every step we brought it in-house: circular knitting for our fabric, flat knitting for collars, embroidery, and enzyme and softening washes."
       },
       {
-        "year": "TBD",
-        "body": "TBD"
+        "year": "Growing the range",
+        "body": "From polos and T-shirts to jackets, sweatshirts, sportswear, training suits and more, with around 3,000 pieces leaving the floor every day."
       },
       {
-        "year": "TBD",
-        "body": "TBD"
+        "year": "Today",
+        "body": "25 years on: ISO 9001, 14001 and 45001 certified, four sewing lines and 130+ machines, exporting to Europe, the USA and Canada."
       }
     ],
     "visitTitle": "Come and see how it's made",
     "visitBody": "Buyers and auditors are welcome on our floor in Nasr City. Book a visit, or ask for a virtual walkthrough.",
     "visitButton": "Book a factory visit",
-    "profileButton": "Download company profile"
+    "profileButton": "Download company profile",
+    "timelineLabel": "Our history",
+    "floorSwipe": "Swipe to walk the floor"
   },
   "products": {
     "heroTitle": "Knitwear, made to order.",
-    "heroLead": "Twelve categories, one standard. Every programme is developed with the client, sampled in about a week, and produced inside our own chain — from dyed yarn to the finished garment.",
+    "heroLead": "Twelve categories, one standard. Every programme is developed with the client, sampled in about a week, and produced inside our own chain, from dyed yarn to the finished garment.",
     "items": [
       {
         "name": "Polo shirts",
@@ -368,7 +370,7 @@
   },
   "clients": {
     "heroTitle": "In good company",
-    "heroLead": "We craft quietly for an elite clientele — brands and houses that value how a thing is made as much as how it looks.",
+    "heroLead": "We craft quietly for an elite clientele, brands and houses that value how a thing is made as much as how it looks.",
     "bodyTitle": "Trusted by those who notice the details",
     "bodyText": "Our clients return not for the lowest price, but for the surest quality. We work as a partner: developing programs, protecting standards, and delivering with the consistency a serious brand requires.",
     "sisterTitle": "Sister companies",
@@ -387,7 +389,7 @@
         "role": "T-shirt printing"
       }
     ],
-    "testimonialQuote": "“They treat our product like their own. The hand-feel, the finishing, the consistency — it is exactly why we keep coming back.”",
+    "testimonialQuote": "“They treat our product like their own. The hand-feel, the finishing, the consistency: that is exactly why we keep coming back.”",
     "testimonialName": "A long-standing client"
   },
   "contact": {
@@ -398,7 +400,7 @@
     "formCompany": "Company",
     "formMessage": "How can we help?",
     "formSubmit": "Send message",
-    "formError": "Something went wrong — please try again or email us directly.",
+    "formError": "Something went wrong, please try again or email us directly.",
     "addressLabel": "Address",
     "address": "Public Free Zone, Nasr City, Cairo, Egypt",
     "phoneLabel": "Phone",
@@ -434,7 +436,7 @@
   },
   "meta": {
     "title": "Egytaltex · Egyptian Italian Textiles & Garments",
-    "description": "Egytaltex — Egyptian Italian knitted-garment manufacturer in Cairo since 2001. Polos, T-shirts, hoodies, uniforms and jackets for brands in Europe, the USA and Canada. ISO 9001, 14001 and 45001 certified."
+    "description": "Egytaltex, Egyptian Italian knitted-garment manufacturer in Cairo since 2001. Polos, T-shirts, hoodies, uniforms and jackets for brands in Europe, the USA and Canada. ISO 9001, 14001 and 45001 certified."
   },
   "notFound": {
     "title": "Page not found",

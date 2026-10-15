@@ -69,7 +69,7 @@
     "ctaOr": "Oppure scriveteci direttamente",
     "heroTitle": "Maglieria in cotone, dal filato al cartone, al Cairo.",
     "heroCtaProducts": "Vedi i prodotti",
-    "heroImageAlt": "Una macchina circolare per maglieria accanto a una cantra di coni di filato di cotone",
+    "heroImageAlt": "Il reparto produttivo di Egytaltex al Cairo",
     "productsTitle": "Cosa produciamo",
     "productsLead": "100% cotone, su ordinazione, nelle quantità di cui una vera collezione ha bisogno.",
     "productsCta": "Tutte le 12 categorie",
@@ -120,13 +120,14 @@
         "label": "Sede",
         "value": "Zona Franca Pubblica, Nasr City, Il Cairo (orientata all'export)"
       }
-    ]
+    ],
+    "processSwipe": "Scorri lungo la filiera"
   },
   "company": {
     "heroTitle": "Terra egiziana, mentalità italiana",
-    "heroLead": "Egytaltex è nata nel 2001 — egiziana per terra, italiana per mentalità. Venticinque anni dopo siamo una casa di maglieria nella Zona Franca Pubblica del Cairo, al servizio di marchi in Europa e Nord America.",
-    "storyP1": "Siamo partiti da una convinzione semplice: che i tessuti realizzati con cura si sentano diversi al tatto e durino più a lungo nel guardaroba. Da un inizio modesto abbiamo costruito, passo dopo passo, una piccola azienda verticale — mantenendo filato, tessuto e capo sotto lo stesso tetto.",
-    "storyP2": "Operando dalla Zona Franca Pubblica di Nasr City, al Cairo, uniamo il know-how produttivo italiano alla competitività della manifattura egiziana — qualità, flessibilità ed efficienza dei costi, in quest'ordine. Amiamo davvero ciò che facciamo, e lo facciamo a modo nostro.",
+    "heroLead": "Egytaltex è nata nel 2001, egiziana per terra, italiana per mentalità. Venticinque anni dopo siamo una casa di maglieria nella Zona Franca Pubblica del Cairo, al servizio di marchi in Europa e Nord America.",
+    "storyP1": "Da un inizio modesto abbiamo costruito, passo dopo passo, una piccola azienda verticale, mantenendo filato, tessuto e capo sotto lo stesso tetto.",
+    "storyP2": "Operando dalla Zona Franca Pubblica di Nasr City, al Cairo, uniamo il know-how produttivo italiano alla competitività della manifattura egiziana, per qualità, flessibilità ed efficienza dei costi, nello stesso ordine. Amiamo davvero ciò che facciamo, e lo facciamo a modo nostro.",
     "marketsLabel": "Esportato in tutto il mondo verso",
     "markets": [
       "Europa",
@@ -136,9 +137,9 @@
     "timelineTitle": "Un viaggio tra le stagioni",
     "quote": "Siamo orgogliosi di dirlo, senza timidezza: lo facciamo a modo nostro.",
     "heroKicker": "Azienda",
-    "heroImageAlt": "Uno sguardo dal basso dentro una macchina circolare e i suoi alimentatori di filato",
+    "heroImageAlt": "Una macchina per maglieria circolare e la sua corona di alimentatori del filo",
     "storyLabel": "La nostra storia",
-    "manifesto": "I tessuti fatti con cura si sentono diversi in mano — e durano più a lungo nel guardaroba.",
+    "manifesto": "I tessuti fatti con cura si sentono diversi in mano, e durano più a lungo nel guardaroba.",
     "quoteBy": "Ing. Farid Narchi, Amministratore Delegato",
     "groupLabel": "Il gruppo",
     "groupTitle": "Un unico gruppo, dal filato al cartone d'export",
@@ -147,7 +148,6 @@
     "groupHome": "Siamo noi",
     "groupRole": "Ruolo",
     "groupHomeRole": "Maglieria, ricamo, confezione, lavaggio ed export",
-    "groupSteps": "Gestisce queste fasi",
     "tbd": "TBD",
     "floorLabel": "Dentro la fabbrica",
     "floorTitle": "Il nostro reparto nella Free Zone",
@@ -160,7 +160,7 @@
       },
       {
         "title": "Ricamo",
-        "body": "Due ricamatrici multitesta Barudan — 29 teste in tutto — per grandi serie e loghi fini."
+        "body": "Due ricamatrici multitesta Barudan, 29 teste in tutto, per grandi serie e loghi fini."
       },
       {
         "title": "Taglio",
@@ -251,34 +251,36 @@
     "marketsLink": "Scopri per chi produciamo",
     "timeline": [
       {
-        "year": "TBD",
-        "body": "TBD"
+        "year": "2001",
+        "body": "Nasce nella Zona Franca Pubblica di Nasr City, al Cairo: una fabbrica egiziana con mentalità italiana, orientata al 100% all'export fin dal primo giorno."
       },
       {
-        "year": "TBD",
-        "body": "TBD"
+        "year": "I primi anni",
+        "body": "Piccolo è bello. Polo e T-shirt in maglia di alta qualità, con il miglior filato di cotone, per marchi italiani ed europei."
       },
       {
-        "year": "TBD",
-        "body": "TBD"
+        "year": "Verso la filiera verticale",
+        "body": "Per controllare la qualità a ogni passaggio l'abbiamo portata in casa: maglieria circolare per i tessuti, maglieria rettilinea per i colli, ricamo e lavaggi enzimatici e ammorbidenti."
       },
       {
-        "year": "TBD",
-        "body": "TBD"
+        "year": "La gamma cresce",
+        "body": "Dalle polo e T-shirt a giacche, felpe, abbigliamento sportivo, tute e altro ancora, con circa 3.000 capi che escono ogni giorno dal reparto."
       },
       {
-        "year": "TBD",
-        "body": "TBD"
+        "year": "Oggi",
+        "body": "25 anni dopo: certificati ISO 9001, 14001 e 45001, quattro linee di cucito e oltre 130 macchine, con export in Europa, Stati Uniti e Canada."
       }
     ],
     "visitTitle": "Venite a vedere come nasce",
     "visitBody": "Buyer e auditor sono i benvenuti nel nostro stabilimento a Nasr City. Prenotate una visita o chiedete un tour virtuale.",
     "visitButton": "Prenota una visita",
-    "profileButton": "Scarica il profilo aziendale"
+    "profileButton": "Scarica il profilo aziendale",
+    "timelineLabel": "La nostra storia",
+    "floorSwipe": "Scorri per percorrere il reparto"
   },
   "products": {
     "heroTitle": "Maglieria su ordinazione.",
-    "heroLead": "Dodici categorie, un solo standard. Ogni programma viene sviluppato con il cliente, campionato in circa una settimana e prodotto all'interno della nostra filiera — dal filato tinto al capo finito.",
+    "heroLead": "Dodici categorie, un solo standard. Ogni programma viene sviluppato con il cliente, campionato in circa una settimana e prodotto all'interno della nostra filiera, dal filato tinto al capo finito.",
     "items": [
       {
         "name": "Polo",
@@ -368,7 +370,7 @@
   },
   "clients": {
     "heroTitle": "In buona compagnia",
-    "heroLead": "Lavoriamo silenziosamente per una clientela d'élite — marchi e case che apprezzano come una cosa è fatta tanto quanto il suo aspetto.",
+    "heroLead": "Lavoriamo silenziosamente per una clientela d'élite, marchi e case che apprezzano come una cosa è fatta tanto quanto il suo aspetto.",
     "bodyTitle": "Scelti da chi nota i dettagli",
     "bodyText": "I nostri clienti tornano non per il prezzo più basso, ma per la qualità più sicura. Lavoriamo come partner: sviluppando programmi, proteggendo gli standard e consegnando con la costanza che un marchio serio richiede.",
     "sisterTitle": "Aziende consociate",
@@ -387,7 +389,7 @@
         "role": "Stampa su t-shirt"
       }
     ],
-    "testimonialQuote": "«Trattano il nostro prodotto come se fosse il loro. La mano, la finitura, la coerenza — è esattamente per questo che continuiamo a tornare.»",
+    "testimonialQuote": "«Trattano il nostro prodotto come se fosse il loro. La mano, la finitura, la coerenza: è esattamente per questo che continuiamo a tornare.»",
     "testimonialName": "Un cliente di lunga data"
   },
   "contact": {
@@ -398,7 +400,7 @@
     "formCompany": "Azienda",
     "formMessage": "Come possiamo aiutarti?",
     "formSubmit": "Invia messaggio",
-    "formError": "Qualcosa è andato storto — riprova o scrivici direttamente.",
+    "formError": "Qualcosa è andato storto, riprova o scrivici direttamente.",
     "addressLabel": "Indirizzo",
     "address": "Zona Franca Pubblica, Nasr City, Il Cairo, Egitto",
     "phoneLabel": "Telefono",
@@ -434,7 +436,7 @@
   },
   "meta": {
     "title": "Egytaltex · Tessuti e Abbigliamento Egiziano Italiano",
-    "description": "Egytaltex — produttore italo-egiziano di capi in maglia al Cairo dal 2001. Polo, T-shirt, felpe, divise e giacche per marchi in Europa, USA e Canada. Certificata ISO 9001, 14001 e 45001."
+    "description": "Egytaltex, produttore italo-egiziano di capi in maglia al Cairo dal 2001. Polo, T-shirt, felpe, divise e giacche per marchi in Europa, USA e Canada. Certificata ISO 9001, 14001 e 45001."
   },
   "notFound": {
     "title": "Pagina non trovata",
