@@ -1,15 +1,71 @@
-// Company page figures. TODO(owners): EVERY value here is a placeholder invented for the layout;
-// replace each one with the real figure. Labels live in messages `company.capacity`.
+// Company page figures, from the Egytaltex company profile. Labels live in messages `company.capacity`.
 
 export const CAPACITY: { key: string; value: string }[] = [
-  { key: "area", value: "12,000 m²" },
-  { key: "knitting", value: "38" },
-  { key: "lines", value: "6" },
-  { key: "staff", value: "450+" },
-  { key: "daily", value: "3,000" }, // same as the home page's "Pieces a day"
+  { key: "daily", value: "3,000+" }, // same as the home page's "Pieces a day"
+  { key: "lines", value: "4" },
+  { key: "machines", value: "130+" },
+  { key: "staff", value: "100" },
+  { key: "sampling", value: "7" },
+  { key: "leadTime", value: "60" },
   { key: "moq", value: "500" },
-  { key: "leadTime", value: "60–75" },
-  { key: "markets", value: "4" }, // same as the home page's "Export markets"
+  { key: "markets", value: "3" }, // same as the home page's "Export markets"
+];
+
+// The machine park by department. Labels live in messages `company.machineryDepts` / `company.machines`;
+// `detail` is brands and sizes, which read the same in every language.
+export type Machine = { key: string; detail?: string; count: number };
+export const MACHINERY: { dept: string; machines: Machine[] }[] = [
+  {
+    dept: "knitting",
+    machines: [
+      { key: "circular", detail: "Orizio · Monarch", count: 2 },
+      { key: "flatKnit", detail: "Stoll · Protti", count: 2 },
+      { key: "yarnWrapping", count: 1 },
+    ],
+  },
+  {
+    dept: "embroidery",
+    machines: [{ key: "embroidery", detail: "Barudan", count: 2 }],
+  },
+  {
+    dept: "cutting",
+    machines: [
+      { key: "cuttingTable", detail: "8 m", count: 1 },
+      { key: "cuttingKnife", detail: "8″", count: 3 },
+      { key: "fusing", count: 2 },
+    ],
+  },
+  {
+    dept: "sewing",
+    machines: [
+      { key: "singleNeedle", detail: "Juki · Jack · Siruba · Sunstar · Russo · Brother", count: 40 },
+      { key: "doubleNeedle", detail: "Brother · Juki", count: 4 },
+      { key: "overlock", detail: "Juki · Jack · Siruba · Simba · Pegasus", count: 37 },
+      { key: "hemming", detail: "Pegasus · Siruba · Yamato · Rimoldi", count: 26 },
+      { key: "flatSeam", detail: "Pegasus · Yamato", count: 2 },
+      { key: "chainStitch", detail: "Jack", count: 2 },
+      { key: "buttonhole", detail: "Juki · Brother", count: 5 },
+      { key: "barTack", detail: "Juki · Sunstar · Joyee", count: 3 },
+      { key: "specialty", detail: "Siruba", count: 2 },
+      { key: "heatPress", detail: "60 × 40 cm", count: 2 },
+    ],
+  },
+  {
+    dept: "finishing",
+    machines: [
+      { key: "washers", count: 3 },
+      { key: "dryers", count: 3 },
+      { key: "ironing", count: 9 },
+      { key: "steamClean", count: 1 },
+    ],
+  },
+];
+
+// Names live in messages `company.certs`.
+export const CERTIFICATIONS: { key: string; code: string }[] = [
+  { key: "iso9001", code: "ISO 9001" },
+  { key: "iso14001", code: "ISO 14001" },
+  { key: "iso45001", code: "ISO 45001" },
 ];
 
 // Steps shown in "Inside the factory", in messages `company.floor` order.

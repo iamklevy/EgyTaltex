@@ -29,9 +29,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   const stats = [
     { value: "2001", label: h("statFounded") },
-    { value: "3,000", label: h("statDaily") },
+    { value: "3,000+", label: h("statDaily") },
     { value: "100%", label: h("statExport") },
-    { value: "4", label: h("statMarkets") },
+    { value: "3", label: h("statMarkets") },
   ];
 
   return (

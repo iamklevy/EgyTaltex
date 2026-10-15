@@ -3,6 +3,9 @@ export const PHONE_2 = "+20 100 213 0316";
 export const FAX = "+20 2 2271 6032";
 export const EMAIL = "egytaltex@yahoo.com";
 
+/** The printable company profile; rebuilt from scripts/profile/profile.html. */
+export const PROFILE_PDF = "/downloads/egytaltex-company-profile.pdf";
+
 export const SITE_URL = "https://egytaltex.com";
 
 /** tel: link for a display-formatted number ("+20 122 …" -> "tel:+20122…"). */

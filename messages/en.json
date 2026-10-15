@@ -59,7 +59,7 @@
       },
       {
         "title": "Packed for export",
-        "body": "Inspected, folded and shipped to Italy, the USA, England and South Africa."
+        "body": "Inspected, folded and shipped to Europe, the USA and Canada."
       }
     ],
     "clientsLabel": "Brands we make for",
@@ -72,7 +72,7 @@
     "heroImageAlt": "A circular knitting machine beside a creel of cotton yarn cones",
     "productsTitle": "What we make",
     "productsLead": "100% cotton, made to order, in the quantities a real collection needs.",
-    "productsCta": "All 11 categories",
+    "productsCta": "All 12 categories",
     "processTitle": "From yarn to carton, in one group",
     "processLead": "Eight steps, one chain. Six run on our own floor; yarn and fabric dyeing are done by our sister companies.",
     "workTitle": "How a programme runs",
@@ -98,37 +98,40 @@
     "glance": [
       {
         "label": "Capacity",
-        "value": "3,000 pieces per day"
+        "value": "3,000+ pieces a day · from 500 per style"
       },
       {
-        "label": "Materials",
-        "value": "100% cotton piqué, jersey and interlock"
+        "label": "Products",
+        "value": "Polos, T-shirts, hoodies, uniforms, jackets"
       },
       {
         "label": "Services",
-        "value": "Private label, embroidery, printing, garment wash"
+        "value": "Private label, custom branding, embroidery, labelling, printing, garment wash"
+      },
+      {
+        "label": "Certifications",
+        "value": "ISO 9001 · ISO 14001 · ISO 45001"
       },
       {
         "label": "Markets",
-        "value": "Italy, USA, England, South Africa"
+        "value": "Europe, USA, Canada"
       },
       {
         "label": "Location",
-        "value": "Free Zone, Nasr City, Cairo (export-oriented)"
+        "value": "Public Free Zone, Nasr City, Cairo (export-oriented)"
       }
     ]
   },
   "company": {
     "heroTitle": "Egyptian land, Italian mentality",
-    "heroLead": "Egytaltex was born in 2001 — Egyptian by ground, Italian by mindset. What began as a love for the craft became a vertical house serving an elite clientele.",
+    "heroLead": "Egytaltex was born in 2001 — Egyptian by ground, Italian by mindset. Twenty-five years on, we are a knitted-garment house in Cairo's Public Free Zone, making for brands in Europe and North America.",
     "storyP1": "We started with a simple conviction: that textiles made with care feel different in the hand and last longer in the wardrobe. From a modest beginning we built, step by step, a small vertical company — keeping yarn, fabric and garment under one roof.",
-    "storyP2": "Operating from the Free Zone in Nasr City, Cairo, we pair Egyptian heritage in cotton with an Italian sense of refinement. We do love what we do, and we do it our way.",
+    "storyP2": "Operating from the Public Free Zone in Nasr City, Cairo, we pair Italian production know-how with competitive manufacturing in Egypt — quality, flexibility and cost efficiency in the same order. We do love what we do, and we do it our way.",
     "marketsLabel": "Exported worldwide to",
     "markets": [
-      "Italy",
+      "Europe",
       "USA",
-      "England",
-      "South Africa"
+      "Canada"
     ],
     "timelineTitle": "A journey in seasons",
     "quote": "We are proud to say, not in a shy way, that we do it our way.",
@@ -136,80 +139,114 @@
     "heroImageAlt": "Looking up into a circular knitting machine and its yarn feeders",
     "storyLabel": "Our story",
     "manifesto": "Textiles made with care feel different in the hand — and last longer in the wardrobe.",
-    "quoteBy": "TBD",
+    "quoteBy": "Eng. Farid Narchi, Managing Director",
     "groupLabel": "The group",
     "groupTitle": "One group, from yarn to export carton",
     "groupLead": "Every step of a garment happens inside our own group of companies, so quality answers to us alone.",
     "groupSister": "Sister company",
     "groupHome": "This is us",
     "groupRole": "Role",
-    "groupHomeRole": "Knitting, garment making & export",
+    "groupHomeRole": "Knitting, embroidery, garment making, washing & export",
     "groupSteps": "Runs these steps",
     "tbd": "TBD",
     "floorLabel": "Inside the factory",
     "floorTitle": "On the floor in the Free Zone",
-    "floorLead": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh lkasjd oasdjh asdlkj qwe oiasd lkasjd.",
+    "floorLead": "Knitting, cutting, sewing, embroidery, washing and finishing all run in-house, so quality and timelines stay under our control.",
     "photoSoon": "Photo coming soon",
     "floor": [
       {
-        "title": "Circular knitting",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "title": "Knitting",
+        "body": "Circular machines for jersey and piqué; flat machines for matching collars and cuffs."
       },
       {
-        "title": "Dyeing & finishing",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "title": "Embroidery",
+        "body": "Two multi-head Barudan machines — 29 heads in all — for bulk runs and fine logos."
       },
       {
         "title": "Cutting",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "body": "An 8-metre cutting table, straight-knife cutters and conveyor fusing."
       },
       {
         "title": "Sewing",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "body": "Four sewing lines covering lockstitch, overlock, flatlock, flat seam, bar tack and hemming."
       },
       {
-        "title": "Quality control",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "title": "Washing & finishing",
+        "body": "Garment washers and dryers, then vacuum ironing tables for a clean, settled finish."
       },
       {
-        "title": "Packing",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "title": "Inspection & packing",
+        "body": "Every order is inspected before it is folded, packed to spec and shipped."
       }
     ],
     "capacityLabel": "Capacity",
     "capacityTitle": "Built for real production",
     "capacity": {
-      "area": "Factory floor",
-      "knitting": "Circular knitting machines",
-      "lines": "Sewing lines",
-      "staff": "People on the floor",
       "daily": "Pieces a day",
+      "lines": "Sewing lines",
+      "machines": "Sewing & finishing machines",
+      "staff": "Skilled workers",
+      "sampling": "Sampling lead time (days)",
+      "leadTime": "Production lead time (days)",
       "moq": "Minimum per style (pieces)",
-      "leadTime": "Lead time (days)",
       "markets": "Export markets"
+    },
+    "machineryLabel": "Machinery",
+    "machineryTitle": "The machine park",
+    "machineryLead": "More than 130 sewing and finishing machines, alongside our own knitting, embroidery and cutting rooms.",
+    "machineryDepts": {
+      "knitting": "Knitting",
+      "embroidery": "Embroidery",
+      "cutting": "Cutting",
+      "sewing": "Sewing",
+      "finishing": "Washing & finishing"
+    },
+    "machines": {
+      "circular": "Circular knitting machines",
+      "flatKnit": "Flat-knit machines (collars & cuffs)",
+      "yarnWrapping": "Yarn wrapping machine (6 cones)",
+      "embroidery": "Multi-head embroidery machines (12 & 17 heads)",
+      "cuttingTable": "Cutting table",
+      "cuttingKnife": "Straight-knife cutters",
+      "fusing": "Fusing presses (conveyor & flatbed)",
+      "singleNeedle": "Single-needle lockstitch",
+      "doubleNeedle": "Double-needle lockstitch",
+      "overlock": "Overlock, 4 & 5 thread",
+      "hemming": "Hemming, binding & elastic",
+      "flatSeam": "Flat seam",
+      "chainStitch": "Chain stitch",
+      "buttonhole": "Buttonhole & button sewing",
+      "barTack": "Bar tack",
+      "specialty": "Zigzag & specialty stitch",
+      "heatPress": "Heat presses (labels & transfers)",
+      "ironing": "Vacuum ironing tables",
+      "steamClean": "Steam & vacuum spot cleaner",
+      "washers": "Garment washers",
+      "dryers": "Garment dryers"
     },
     "qualityLabel": "Quality & compliance",
     "qualityTitle": "Checked at every step",
-    "qualityLead": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh lkasjd oasdjh asdlkj qwe oiasd lkasjd.",
+    "qualityLead": "Quality is built into the process, not checked at the end. Every inspection follows documented procedures aligned with international garment quality standards.",
     "qualitySteps": [
       {
-        "title": "Yarn inspection",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "title": "Inline inspection",
+        "body": "Checks during sewing catch faults while they can still be fixed at the machine."
       },
       {
-        "title": "Fabric inspection",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
-      },
-      {
-        "title": "In-line checks",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "title": "End-line inspection",
+        "body": "Each production line inspects its own garments as they come off the line."
       },
       {
         "title": "Final inspection",
-        "body": "lkasjdoasdjhasd lkasjd oasdjhasd lkjasd oiqwe asdlkj qwoeiu asdjh."
+        "body": "A last check before packing and shipment, with a transparent report for the buyer."
       }
     ],
-    "certsTitle": "Certifications & audits",
+    "certsTitle": "Certifications",
+    "certs": {
+      "iso9001": "Quality management",
+      "iso14001": "Environmental management",
+      "iso45001": "Occupational health & safety"
+    },
     "marketsTitle": "Where our garments go",
     "marketsLink": "See who we make for",
     "timeline": [
@@ -236,11 +273,12 @@
     ],
     "visitTitle": "Come and see how it's made",
     "visitBody": "Buyers and auditors are welcome on our floor in Nasr City. Book a visit, or ask for a virtual walkthrough.",
-    "visitButton": "Book a factory visit"
+    "visitButton": "Book a factory visit",
+    "profileButton": "Download company profile"
   },
   "products": {
     "heroTitle": "Knitwear, made to order.",
-    "heroLead": "Eleven categories, one standard. Every programme is developed with the client, sampled, and produced inside our own chain — from dyed yarn to the finished garment.",
+    "heroLead": "Twelve categories, one standard. Every programme is developed with the client, sampled in about a week, and produced inside our own chain — from dyed yarn to the finished garment.",
     "items": [
       {
         "name": "Polo shirts",
@@ -259,6 +297,10 @@
         "desc": "Crewnecks, hoodies and zip-throughs for everyday wear."
       },
       {
+        "name": "Uniforms & workwear",
+        "desc": "Polos, tees and sweatshirts for teams and staff, with your branding."
+      },
+      {
         "name": "Sportswear",
         "desc": "Active and leisure pieces cut for movement."
       },
@@ -267,8 +309,8 @@
         "desc": "Swim shorts and beachwear for resort collections."
       },
       {
-        "name": "Training suits",
-        "desc": "Matching tops and joggers, as sets or separates."
+        "name": "Training suits & sweatpants",
+        "desc": "Matching tops and joggers, sweatpants and shorts, as sets or separates."
       },
       {
         "name": "Vests",
@@ -358,7 +400,7 @@
     "formSubmit": "Send message",
     "formError": "Something went wrong — please try again or email us directly.",
     "addressLabel": "Address",
-    "address": "Free Zone, Nasr City, Cairo, Egypt",
+    "address": "Public Free Zone, Nasr City, Cairo, Egypt",
     "phoneLabel": "Phone",
     "faxLabel": "Fax",
     "emailLabel": "Email",
@@ -387,11 +429,12 @@
     "blurb": "A vertical knitwear house in Cairo, making for European and American brands since 2001.",
     "explore": "Explore",
     "contact": "Contact",
+    "profile": "Company profile (PDF)",
     "rights": "All rights reserved."
   },
   "meta": {
     "title": "Egytaltex · Egyptian Italian Textiles & Garments",
-    "description": "Egytaltex — Egyptian Italian Company for Textiles and Garments. Premium cotton yarn, fabrics and vertical garment manufacturing since 2001."
+    "description": "Egytaltex — Egyptian Italian knitted-garment manufacturer in Cairo since 2001. Polos, T-shirts, hoodies, uniforms and jackets for brands in Europe, the USA and Canada. ISO 9001, 14001 and 45001 certified."
   },
   "notFound": {
     "title": "Page not found",
