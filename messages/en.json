@@ -98,7 +98,7 @@
     "glance": [
       {
         "label": "Capacity",
-        "value": "3,000+ pieces a day · from 500 per style"
+        "value": "3,000+ pieces a day · from 1,000 per style"
       },
       {
         "label": "Products",
@@ -193,13 +193,14 @@
     },
     "machineryLabel": "Machinery",
     "machineryTitle": "The machine park",
-    "machineryLead": "More than 130 sewing and finishing machines, alongside our own knitting, embroidery and cutting rooms.",
+    "machineryLead": "140 sewing and finishing machines, alongside our own knitting, embroidery and cutting rooms, plus automated template and suction-table systems added in 2026.",
     "machineryDepts": {
       "knitting": "Knitting",
       "embroidery": "Embroidery",
       "cutting": "Cutting",
       "sewing": "Sewing",
-      "finishing": "Washing & finishing"
+      "finishing": "Washing & finishing",
+      "special": "Special machines (2026)"
     },
     "machines": {
       "circular": "Circular knitting machines",
@@ -222,7 +223,10 @@
       "ironing": "Vacuum ironing tables",
       "steamClean": "Steam & vacuum spot cleaner",
       "washers": "Garment washers",
-      "dryers": "Garment dryers"
+      "dryers": "Garment dryers",
+      "templateMachine": "Automated template machines",
+      "sideVent": "Side-vent template machine",
+      "suctionTable": "Suction tables"
     },
     "qualityLabel": "Quality & compliance",
     "qualityTitle": "Checked at every step",
@@ -268,7 +272,7 @@
       },
       {
         "year": "Today",
-        "body": "25 years on: ISO 9001, 14001 and 45001 certified, four sewing lines and 130+ machines, exporting to Europe, the USA and Canada."
+        "body": "25 years on: ISO 9001, 14001 and 45001 certified, four sewing lines and 140 machines, exporting to Europe, the USA and Canada."
       }
     ],
     "visitTitle": "Come and see how it's made",

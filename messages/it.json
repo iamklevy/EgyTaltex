@@ -98,7 +98,7 @@
     "glance": [
       {
         "label": "Capacità",
-        "value": "Oltre 3.000 capi al giorno · da 500 per modello"
+        "value": "Oltre 3.000 capi al giorno · da 1.000 per modello"
       },
       {
         "label": "Prodotti",
@@ -193,13 +193,14 @@
     },
     "machineryLabel": "Macchinari",
     "machineryTitle": "Il parco macchine",
-    "machineryLead": "Oltre 130 macchine di confezione e finissaggio, accanto ai nostri reparti di maglieria, ricamo e taglio.",
+    "machineryLead": "140 macchine di confezione e finissaggio, accanto ai nostri reparti di maglieria, ricamo e taglio, oltre ai sistemi automatici a dime e ai tavoli aspiranti aggiunti nel 2026.",
     "machineryDepts": {
       "knitting": "Maglieria",
       "embroidery": "Ricamo",
       "cutting": "Taglio",
       "sewing": "Confezione",
-      "finishing": "Lavaggio e finissaggio"
+      "finishing": "Lavaggio e finissaggio",
+      "special": "Macchine speciali (2026)"
     },
     "machines": {
       "circular": "Macchine circolari",
@@ -222,7 +223,10 @@
       "ironing": "Tavoli da stiro aspiranti",
       "steamClean": "Smacchiatrice a vapore e aspirazione",
       "washers": "Lavatrici per capi",
-      "dryers": "Essiccatoi per capi"
+      "dryers": "Essiccatoi per capi",
+      "templateMachine": "Macchine a dime automatiche",
+      "sideVent": "Macchina a dime per spacchi laterali",
+      "suctionTable": "Tavoli aspiranti"
     },
     "qualityLabel": "Qualità e conformità",
     "qualityTitle": "Controllato a ogni fase",
@@ -268,7 +272,7 @@
       },
       {
         "year": "Oggi",
-        "body": "25 anni dopo: certificati ISO 9001, 14001 e 45001, quattro linee di cucito e oltre 130 macchine, con export in Europa, Stati Uniti e Canada."
+        "body": "25 anni dopo: certificati ISO 9001, 14001 e 45001, quattro linee di cucito e 140 macchine, con export in Europa, Stati Uniti e Canada."
       }
     ],
     "visitTitle": "Venite a vedere come nasce",
