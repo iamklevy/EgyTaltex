@@ -3,11 +3,11 @@
 export const CAPACITY: { key: string; value: string }[] = [
   { key: "daily", value: "3,000+" }, // same as the home page's "Pieces a day"
   { key: "lines", value: "4" },
-  { key: "machines", value: "130+" },
+  { key: "machines", value: "140" },
   { key: "staff", value: "100" },
   { key: "sampling", value: "7" },
   { key: "leadTime", value: "60" },
-  { key: "moq", value: "500" },
+  { key: "moq", value: "1,000" },
   { key: "markets", value: "3" }, // same as the home page's "Export markets"
 ];
 
@@ -57,6 +57,14 @@ export const MACHINERY: { dept: string; machines: Machine[] }[] = [
       { key: "dryers", count: 3 },
       { key: "ironing", count: 9 },
       { key: "steamClean", count: 1 },
+    ],
+  },
+  {
+    dept: "special",
+    machines: [
+      { key: "templateMachine", detail: "Juita · 80 × 45, 80 × 37 cm", count: 4 },
+      { key: "sideVent", detail: "Juita · 30 × 20 cm", count: 1 },
+      { key: "suctionTable", detail: "Juita · 60 × 50 cm", count: 2 },
     ],
   },
 ];
