@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
-import { EMAIL, PHONE_1, telHref } from "@/lib/contact";
+import { EMAIL, PHONE, telHref } from "@/lib/contact";
 import { Arrow } from "@/components/site/editorial";
 
 /** Closing enquiry band shared by the main pages. */
@@ -23,8 +23,8 @@ export async function ProgrammeCta() {
           <a href={`mailto:${EMAIL}`} className="mt-3 block text-xl hover:underline">
             {EMAIL}
           </a>
-          <a href={telHref(PHONE_1)} dir="ltr" className="mt-1 block text-xl text-paper/70 hover:text-paper">
-            {PHONE_1}
+          <a href={telHref(PHONE)} dir="ltr" className="mt-1 block text-xl text-paper/70 hover:text-paper">
+            {PHONE}
           </a>
         </div>
       </div>

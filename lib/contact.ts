@@ -1,7 +1,5 @@
-export const PHONE_1 = "+20 122 213 0316";
-export const PHONE_2 = "+20 100 213 0316";
-export const FAX = "+20 2 2271 6032";
-export const EMAIL = "egytaltex@yahoo.com";
+export const PHONE = "+20 122 266 4736";
+export const EMAIL = "samer.sabet@egytaltex.com";
 
 /** The printable company profile; rebuilt from scripts/profile/profile.html. */
 export const PROFILE_PDF = "/downloads/egytaltex-company-profile.pdf";

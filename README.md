@@ -15,7 +15,7 @@ scroll animations and full RTL support.
 - **Products** — product range grid, made-to-order feature panel, and a
   "from our floor" gallery of real factory photography
 - **Clients** — real client logos (OVS, Coin, Delta Galil, Bob Company,
-  Roy Roger's, La Société, Del Mare 1911, Klevy), testimonial, sister
+  Roy Roger's, La Société, Del Mare 1911, KLEVY), testimonial, sister
   companies
 - **Contact** — form (sent via Resend, see below), contact details,
   embedded Google Map
@@ -54,7 +54,7 @@ environment variables):
 
 - `RESEND_API_KEY` — from the Resend dashboard
 - `EMAIL_FROM` — sender; its domain must be verified in Resend
-- `CONTACT_TO` — inbox that receives enquiries (defaults to `egytaltex@yahoo.com`)
+- `CONTACT_TO` — inbox that receives enquiries (defaults to `samer.sabet@egytaltex.com`)
 
 Without `RESEND_API_KEY`, submissions show the "something went wrong" state.
 

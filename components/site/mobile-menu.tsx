@@ -6,14 +6,14 @@ import { Dialog } from "radix-ui";
 import { ChevronDown, Menu, X } from "lucide-react";
 
 import { Link, usePathname } from "@/i18n/navigation";
-import { EMAIL, PHONE_1, telHref } from "@/lib/contact";
+import { EMAIL, PHONE, telHref } from "@/lib/contact";
 import { cn } from "@/lib/utils";
 import { NAV_LINKS } from "./nav-links";
 import { WhatsAppIcon } from "./brand-icons";
 import { useProductLinks } from "./products-menu";
 import type { NavTone } from "./use-nav-tone";
 
-const WHATSAPP = `https://wa.me/${PHONE_1.replace(/\D/g, "")}`;
+const WHATSAPP = `https://wa.me/${PHONE.replace(/\D/g, "")}`;
 
 /** Reports whether the panel is in the DOM (true from open until its close animation ends). */
 function PanelMounted({ onChange }: { onChange: (mounted: boolean) => void }) {
@@ -170,8 +170,8 @@ export function MobileMenu({ tone, rest }: { tone: NavTone; rest: boolean }) {
               <a href={`mailto:${EMAIL}`} className="self-start hover:text-ink nav-dark:hover:text-paper">
                 {EMAIL}
               </a>
-              <a href={telHref(PHONE_1)} dir="ltr" className="self-start hover:text-ink nav-dark:hover:text-paper">
-                {PHONE_1}
+              <a href={telHref(PHONE)} dir="ltr" className="self-start hover:text-ink nav-dark:hover:text-paper">
+                {PHONE}
               </a>
               <a
                 href={WHATSAPP}
