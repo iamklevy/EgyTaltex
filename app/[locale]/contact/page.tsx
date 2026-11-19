@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Clock, Mail, MapPin, Phone, Printer } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 
-import { EMAIL, FAX, PHONE_1, PHONE_2, telHref } from "@/lib/contact";
+import { EMAIL, PHONE, telHref } from "@/lib/contact";
 import { alternatesFor } from "@/lib/seo";
 import { PageHero } from "@/components/site/page-hero";
 import { ContactForm } from "@/components/site/contact-form";
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 const MAP_SRC =
   "https://maps.google.com/maps?q=Egytaltex%20-%20Egyptian%20Italian%20For%20Textiles%20%26%20Garments%2C%20Free%20Zone%2C%20Nasr%20City%2C%20Cairo%2C%20Egypt&output=embed";
 
-const WHATSAPP = `https://wa.me/${PHONE_1.replace(/\D/g, "")}`;
+const WHATSAPP = `https://wa.me/${PHONE.replace(/\D/g, "")}`;
 
 type Channel = { icon: React.ReactNode; label: string; value: string; href?: string; ltr?: boolean; external?: boolean };
 
@@ -36,12 +36,12 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
     {
       icon: <WhatsAppIcon className={icon} />,
       label: t("nav.whatsapp"),
-      value: PHONE_1,
+      value: PHONE,
       href: WHATSAPP,
       ltr: true,
       external: true,
     },
-    { icon: <Phone className={icon} strokeWidth={1.5} />, label: c("phoneLabel"), value: PHONE_2, href: telHref(PHONE_2), ltr: true },
+    { icon: <Phone className={icon} strokeWidth={1.5} />, label: c("phoneLabel"), value: PHONE, href: telHref(PHONE), ltr: true },
   ];
 
   return (
@@ -111,15 +111,6 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                   <div>
                     <dt className="text-ink-muted">{c("hoursLabel")}</dt>
                     <dd className="mt-0.5">{c("hours")}</dd>
-                  </div>
-                </div>
-                <div className="flex gap-3">
-                  <Printer className="mt-0.5 size-4 shrink-0 text-ink-muted" strokeWidth={1.5} />
-                  <div>
-                    <dt className="text-ink-muted">{c("faxLabel")}</dt>
-                    <dd className="mt-0.5" dir="ltr">
-                      {FAX}
-                    </dd>
                   </div>
                 </div>
               </dl>

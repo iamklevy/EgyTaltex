@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
-import { EMAIL, PHONE_1, PHONE_2, PROFILE_PDF, telHref } from "@/lib/contact";
+import { EMAIL, PHONE, PROFILE_PDF, telHref } from "@/lib/contact";
 import { NAV_LINKS } from "@/components/site/nav-links";
 
 export async function SiteFooter() {
@@ -34,7 +34,7 @@ export async function SiteFooter() {
           <h2 className="text-sm font-medium">{t("footer.contact")}</h2>
           <ul className="mt-4 space-y-2.5 text-sm text-ink-muted">
             <li>{t("contact.address")}</li>
-            {[PHONE_1, PHONE_2].map((p) => (
+            {[PHONE].map((p) => (
               <li key={p}>
                 <a href={telHref(p)} dir="ltr" className="hover:text-ink">
                   {p}

@@ -59,5 +59,5 @@ export const clientLogos: { name: string; logo: string; w: number; h: number; sc
   { name: "La Societe", logo: "/clients/la-societe.png", w: 1372, h: 240, scale: 1.25 }, // thin, very wide wordmark
   { name: "Del Mare 1911", logo: "/clients/del-mare-1911.png", w: 229, h: 62 },
   { name: "Roy Rogers", logo: "/clients/roy-rogers.png", w: 281, h: 240 },
-  { name: "Klevy", logo: "/clients/klevy.png", w: 492, h: 240 },
+  { name: "KLEVY", logo: "/clients/klevy.png", w: 492, h: 240 },
 ];
